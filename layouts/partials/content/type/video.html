@@ -1,17 +1,21 @@
 {{- $post := .context -}}
 {{- $fullcontent := .fullcontent | default true -}}
+{{- $artist := first 1 (where
+            site.Data.dnb.kollitsch.music
+            "slug"
+            $post.Params.video.artist
+) -}}
+{{- $artist = index $artist 0 -}}
 
 				{{- $articleclasses := partialCached "func/getArticleClasses.html" $post $post -}}
-        <article class="{{- $articleclasses -}}">
+        <article class="{{- $articleclasses -}} music2program2 {{ $artist.slug }}">
   {{- partialCached "components/content/status.html" $post $post -}}
-  {{- $settings := dict "id" $post.Params.youtube -}}
+  {{- $settings := dict "id" $post.Params.video.youtube -}}
   <div class="post-slider">
       <figure>
         <div class="iframe-border">
           {{- partialCached "youtube.html" $settings $settings -}}
-        </div>
-
-        <div class="inline-icons">
+        </div>        <div class="inline-icons">
           {{- with $post.Title -}}
             <div class="is--copyright"
                 title="{{- . -}}"
@@ -29,11 +33,20 @@
           {{- end -}}
         </div>
       </figure>
+        {{/* <figcaption class="text-center">{{ $artist.name }}: {{ $post.Params.video.title }}</figcaption>
+      </figure> */}}
   </div>
     {{/* {{- partialCached "components/content/publishing-date.html" $post $post -}} */}}
     {{- partial "components/content/headline.html" . -}}
   <div class="prose">
-    {{- $post.Content -}}
+   {{- with $post.Content -}}
+      {{- . -}}
+    {{- end -}}
+
+  {{- with $fullcontent -}}
+      {{- partial "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
+      {{- partialCached "components/footer/footer.html" $post $post -}}
+  {{ else }}
   </div>
 	<div class="text-end">
 		<a href="{{- $post.Permalink -}}" class="btn btn-link" aria-label="{{- i18n "read_article" -}}: {{ $post.Title -}}">
@@ -42,8 +55,6 @@
 				{{- partialCached "bsicon.html" "body-text" "body-text" -}}
 			</span>
 		</a>
-    {{- with $fullcontent -}}
-      {{- partialCached "components/comments/form.html" $post $post -}}
-    {{- end -}}
+  {{- end -}}
   </div>
 </article>
