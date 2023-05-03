@@ -1,60 +1,60 @@
 #pagefind {
 
-	.pagefind-ui__form {
+  .pagefind-ui__form {
 
-		@extend .input-group;
-		@extend .mb-3;
+    @extend .input-group;
+    @extend .mb-3;
 
-		.pagefind-ui__search-input {
-			@extend .form-control;
-			@extend .mb-3;
-		}
+    .pagefind-ui__search-input {
+      @extend .form-control;
+      @extend .mb-3;
+    }
 
-		.pagefind-ui__search-clear {
-			@extend .btn;
-			@extend .btn-outline-secondary;
-			@extend .mb-3;
-		}
+    .pagefind-ui__search-clear {
+      @extend .btn;
+      @extend .btn-outline-secondary;
+      @extend .mb-3;
+    }
 
-		.pagefind-ui__drawer {
-			@extend .w-100;
-		}
+    .pagefind-ui__drawer {
+      @extend .container;
+    }
 
-	}
+  }
 
-	.pagefind-ui__results {
-		@extend .list-unstyled;
+  .pagefind-ui__button {
+    @extend .btn;
+    @extend .btn-primary;
+  }
 
-		.pagefind-ui__result {
-			.pagefind-ui__result-thumb {
-				.pagefind-ui__result-image {}
-			}
 
-			.pagefind-ui__result-inner {
-				.pagefind-ui__result-title {}
+  .pagefind-ui__results {
+    @extend .row;
+    @extend .list-unstyled;
 
-				.pagefind-ui__result-excerpt {}
-			}
+    .pagefind-ui__result {
+      @extend .card;
+      @extend .col-md-4;
+      @extend .col-12;
+      border: 0;
 
-			.pagefind-ui__result-link {}
 
-			mark {}
-		}
-	}
+      .pagefind-ui__result-thumb {
 
-	--pagefind-ui-scale: 1;
+        img {
+          max-width: 100%;
+        }
+      }
 
-	/* colors */
-	--pagefind-ui-primary: #393939;
-	--pagefind-ui-text: #393939;
-	--pagefind-ui-background: #ffffff;
-	--pagefind-ui-border: #eeeeee;
-	--pagefind-ui-tag: #eeeeee;
+      .pagefind-ui__result-inner {
 
-	/* stuff */
-	--pagefind-ui-border-width: $border-width;
-	--pagefind-ui-border-radius: $border-radius;
-	--pagefind-ui-image-border-radius: $border-radius;
-	--pagefind-ui-image-box-ratio: 2 / 1;
-	--pagefind-ui-font: $font-family-sans-serif;
+        .pagefind-ui__result-title {}
+
+        .pagefind-ui__result-excerpt {
+
+          mark {}
+        }
+      }
+    }
+  }
 }
