@@ -2,7 +2,7 @@
 <ul class="list-inline">
   {{- range $index, $value := (index site.Taxonomies .Type) -}}
     <li class="list-inline-item mx-2">
-      <a href="/tags/{{ $index }}" class="text-decoration-none">
+      <a href="/tags/{{ $index }}/" class="text-decoration-none">
         {{- if eq $current $index -}}<strong>{{- end -}}
         {{- partialCached "bsicon.html" "tag-fill" "tag-fill" -}}
         {{- $index -}} ({{- .Count -}})
