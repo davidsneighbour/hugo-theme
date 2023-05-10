@@ -6,83 +6,85 @@ const storageKey = 'theme-preference'
 const giscusDarkTheme = 'dark';
 const giscusLightTheme = 'light';
 
-const onClick = () => {
-	theme.value = theme.value === 'light' ? 'dark' : 'light';
-	setPreference();
-	changeGiscusTheme();
-	setTimeout(changeGiscusTheme, 2000);
+const onClickHandler = () => {
+  theme.value = theme.value === 'light' ? 'dark' : 'light';
+  setPreference();
+  changeGiscusTheme();
+  setTimeout(changeGiscusTheme, 2000);
 }
 
 const getColorPreference = () => {
-	if (localStorage.getItem(storageKey)) {
-		return localStorage.getItem(storageKey);
-	}
-	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  if (localStorage.getItem(storageKey)) {
+    return localStorage.getItem(storageKey);
+  }
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 const setPreference = () => {
-	localStorage.setItem(storageKey, theme.value);
-	reflectPreference();
+  localStorage.setItem(storageKey, theme.value ? theme.value : 'light');
+  reflectPreference();
 }
 
 const reflectPreference = () => {
-	// @todo get embarrassed about the following 17 lines of code and refactor
-	document.firstElementChild?.setAttribute('data-bs-theme', theme.value);
-	document.querySelector('body')?.classList.add(theme.value);
-	document.querySelector('body')?.classList.remove(theme.value === 'light' ? 'dark' : 'light');
+  // @todo get embarrassed about the following 17 lines of code and refactor
+  document.firstElementChild?.setAttribute('data-bs-theme', theme.value ? theme.value : 'light');
+  document.querySelector('body')?.classList.add(theme.value ? theme.value : 'light');
+  document.querySelector('body')?.classList.remove(theme.value === 'light' ? 'dark' : 'light');
 
-	if (theme.value === 'dark') {
-		document.querySelector('#toggle-button-dark')?.classList.add('d-inline-block');
-		document.querySelector('#toggle-button-dark')?.classList.remove('d-none');
-		document.querySelector('#toggle-button-light')?.classList.add('d-none');
-		document.querySelector('#toggle-button-light')?.classList.remove('d-inline-block');
-	} else {
-		document.querySelector('#toggle-button-light')?.classList.add('d-inline-block');
-		document.querySelector('#toggle-button-light')?.classList.remove('d-none');
-		document.querySelector('#toggle-button-dark')?.classList.add('d-none');
-		document.querySelector('#toggle-button-dark')?.classList.remove('d-inline-block');
-	}
-	document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
+  if (theme.value === 'dark') {
+    document.querySelector('#toggle-button-dark')?.classList.add('d-inline-block');
+    document.querySelector('#toggle-button-dark')?.classList.remove('d-none');
+    document.querySelector('#toggle-button-light')?.classList.add('d-none');
+    document.querySelector('#toggle-button-light')?.classList.remove('d-inline-block');
+  } else {
+    document.querySelector('#toggle-button-light')?.classList.add('d-inline-block');
+    document.querySelector('#toggle-button-light')?.classList.remove('d-none');
+    document.querySelector('#toggle-button-dark')?.classList.add('d-none');
+    document.querySelector('#toggle-button-dark')?.classList.remove('d-inline-block');
+  }
+  document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value ? theme.value : 'light');
 }
 
 // @todo move into hugo-giscus component
 const changeGiscusTheme = () => {
-	const theme = document.firstElementChild?.getAttribute('data-bs-theme') === 'dark' ? giscusDarkTheme : giscusLightTheme;
+  const theme = document.firstElementChild?.getAttribute('data-bs-theme') === 'dark' ? giscusDarkTheme : giscusLightTheme;
 
-	function sendMessage(message: object) {
-		const iframe = document.querySelector('iframe.giscus-frame');
-		if (!iframe) {
-			return;
-		}
-		iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-	}
+  function sendMessage(message: object) {
+    const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+    if (!iframe) {
+      return;
+    }
+    iframe.contentWindow?.postMessage({ giscus: message }, 'https://giscus.app');
+  }
 
-	sendMessage({
-		setConfig: {
-			theme: theme
-		}
-	});
+  sendMessage({
+    setConfig: {
+      theme: theme
+    }
+  });
 
 }
 
 const theme = {
-	value: getColorPreference(),
+  value: getColorPreference(),
 }
 reflectPreference()
 window.onload = () => {
-	reflectPreference();
-	document.querySelector('#theme-toggle').addEventListener('click', onClick);
+  reflectPreference();
+  document.querySelector('#theme-toggle')?.addEventListener('click', onClickHandler);
 }
 
 window
-	.matchMedia('(prefers-color-scheme: dark)')
-	.addEventListener('change', ({ matches: isDark }) => {
-		theme.value = isDark ? 'dark' : 'light'
-		setPreference()
-	});
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', ({ matches: isDark }) => {
+    theme.value = isDark ? 'dark' : 'light'
+    setPreference()
+  });
 
 changeGiscusTheme();
 setTimeout(changeGiscusTheme, 5000);
+
+document.querySelector('#theme-toggle')?.dispatchEvent(new CustomEvent('click'));
 
 
 // const modeToggle = document.getElementsByClassName("mode-toggle")[0];

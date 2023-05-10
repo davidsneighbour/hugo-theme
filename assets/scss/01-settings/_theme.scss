@@ -23,6 +23,7 @@ $h6-font-size: $font-size-base;
  * links
  ******************************************************************************/
 $link-color: $primary;
+$link-color-dark: $primary;
 $link-hover-color: $primary;
 $link-decoration: none;
 $link-hover-decoration: underline;
@@ -89,8 +90,8 @@ $heading-height: 70px;
  * root setup
  ******************************************************************************/
 :root {
-	// https://drafts.csswg.org/css-ui-4/#widget-accent
-	// https://caniuse.com/?search=accent-color
-	accent-color: $primary;
-	// color-scheme: dark;
+  // https://drafts.csswg.org/css-ui-4/#widget-accent
+  // https://caniuse.com/?search=accent-color
+  accent-color: $primary;
+  // color-scheme: dark;
 }

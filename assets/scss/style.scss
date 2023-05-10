@@ -5,8 +5,6 @@
 
 // DNB: theme settings
 @import '01-settings/colors';
-@import '01-settings/colormode-light';
-@import '01-settings/colormode-dark';
 @import '01-settings/theme';
 @import '01-settings/fonts';
 @import '01-settings/utilities';
@@ -17,6 +15,8 @@
 
 // DNB: map overrides
 @import '01-settings/maps';
+@import '01-settings/colormode-light';
+@import '01-settings/colormode-dark';
 
 // BS: other required parts
 @import 'bootstrap/scss/maps';
@@ -95,10 +95,10 @@
 @include dnb-scrollbars('.prose', 3px);
 
 .prose {
-	@import '05-prose/prose';
-	@import '05-prose/footnotes';
-	@import '05-prose/components';
-	// @import '05-prose/tables';
+  @import '05-prose/prose';
+  @import '05-prose/footnotes';
+  @import '05-prose/components';
+  // @import '05-prose/tables';
 }
 
 // DNB: plugins
