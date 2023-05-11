@@ -1,12 +1,12 @@
 .section--content {
-	min-height: 100%;
+  min-height: 100%;
 }
 
 a {
-	box-decoration-break: clone;
+  box-decoration-break: clone;
 
-	@extend .link-underline-secondary;
-	@extend .link-offset-2;
+  @extend .link-underline-secondary;
+  @extend .link-offset-2;
 }
 
 h1,
@@ -15,77 +15,83 @@ h3,
 h4,
 h5,
 h6 {
-	a {
-		text-decoration: none;
-	}
+  a {
+    text-decoration: none;
+  }
 
-	@extend .border-bottom;
-	@extend .border-light-subtle;
+  @extend .border-bottom;
+  @extend .border-light-subtle;
 }
 
 p {
-	text-align: justify;
+  text-align: justify;
 
-	@extend .hyphenate;
+  @extend .hyphenate;
 }
 
 >p code {
-	background-color: var(--bs-tertiary-bg);
-	padding: 0.2rem 0.35rem;
+  background-color: var(--bs-tertiary-bg);
+  padding: 0.2rem 0.35rem;
 }
 
 blockquote {
-	padding-left: 0.95rem;
-	border-left: $primary 5px solid;
-	background-color: var(--bs-tertiary-bg);
+  padding-left: 0.95rem;
+  border-left: $primary 5px solid;
+  background-color: var(--bs-tertiary-bg);
 
-	cite {
-		font-style: italic;
-	}
+  cite {
+    font-style: italic;
+  }
 }
 
 pre {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 table {
-	$table-color: $body-color;
+  $table-color: $body-color;
 
-	.dark & {
-		@extend .table-dark;
-	}
+  .dark & {
+    @extend .table-dark;
+  }
 
-	.light & {
-		@extend .table-light;
-	}
+  .light & {
+    @extend .table-light;
+  }
 
-	code,
-	pre {
-		padding: 0.25rem;
-	}
+  code,
+  pre {
+    padding: 0.25rem;
+  }
 
-	@extend .table;
-	@extend .table-bordered;
-	@extend .table-sm;
+  @extend .table;
+  @extend .table-bordered;
+  @extend .table-sm;
 }
 
 .highlight {
-	margin-bottom: $spacer;
+  margin-bottom: $spacer;
 
-	.chroma {
-		padding: 0.3rem;
-	}
+  .chroma {
+    padding: 0.3rem;
+  }
 
 }
 
-.section-meta {
-	border-top: 1px solid $primary;
+.section--meta {
+  border-top: 1px solid $primary;
+  font-size: 0.9rem;
 
-	@extend .pt-3;
+  @extend .pt-3;
 }
 
 kbd {
-	display: inline-block;
-	padding: 0.1rem 0.2rem 0;
-	line-height: 1;
+  display: inline-block;
+  padding: 0.1rem 0.2rem 0;
+  line-height: 1;
+}
+
+.text-small {
+  /* @todo see if this can be done with rem */
+  font-size: 90%;
 }

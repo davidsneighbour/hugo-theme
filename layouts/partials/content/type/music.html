@@ -55,7 +55,7 @@
     {{$artist.description | markdownify }}
   {{- with $fullcontent -}}
       {{- partial "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
-      {{- partialCached "components/footer/footer.html" $post $post -}}
+      {{- partialCached "content/meta/footer.html" $post $post -}}
   {{ else }}
   </div>
 	<div class="text-end">

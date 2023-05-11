@@ -1,0 +1,8 @@
+{{- $page := . -}}
+<div class="section-comments">
+  {{- partialCached "components/comments/form.html" $page $page -}}
+</div>
+<div class="section--meta">
+  {{- partialCached "content/meta/meta-publisher.html" $page $page -}}
+  {{- partialCached "content/meta/meta-links.html" $page $page -}}
+</div>
