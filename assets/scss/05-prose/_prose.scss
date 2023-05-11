@@ -83,6 +83,10 @@ table {
   font-size: 0.9rem;
 
   @extend .pt-3;
+
+  a {
+    @extend .text-secondary;
+  }
 }
 
 kbd {
