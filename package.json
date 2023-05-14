@@ -1,7 +1,7 @@
 {
 	"name": "hugo-theme",
 	"description": "@davidsneighbour's gohugo theme.",
-	"version": "0.0.20",
+	"version": "0.0.21",
 	"author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
 	"bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
 	"dependencies": {
