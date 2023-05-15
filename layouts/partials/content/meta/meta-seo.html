@@ -1,0 +1,49 @@
+{{- $page := . -}}
+<div class="d-flex flex-row gap-2">
+  <div class="icon">
+    {{- partialCached "bsicon.html" "shield-check" "shield-check" }}
+  </div>
+  {{- $titleLength := len $page.Title -}}
+  {{- $descriptionLength := len $page.Description -}}
+  {{- $optimumLengthTitle := 60 -}}
+  {{- $optimumLengthDescription := 160 -}}
+
+  {{ $titleDiff :=  sub $titleLength $optimumLengthTitle }}
+  {{ $descriptionDiff := sub $descriptionLength $optimumLengthDescription }}
+
+  {{ $titleDiff = int (math.Pow $titleDiff 2 | math.Sqrt) }}
+  {{ $descriptionDiff = int (math.Pow $descriptionDiff 2 | math.Sqrt) }}
+
+  {{ $titleClass := "" }}
+  {{ if gt 30 $titleDiff }}
+    {{ $titleClass = "danger" }}
+  {{ else if gt 20 $titleDiff }}
+    {{ $titleClass = "warning" }}
+  {{ else }}
+    {{ $titleClass = "success" }}
+  {{ end }}
+
+  {{ $descriptionClass := "" }}
+  {{ if gt 30 $descriptionDiff }}
+    {{ $descriptionClass = "danger" }}
+  {{ else if gt 20 $descriptionDiff }}
+    {{ $descriptionClass = "warning" }}
+  {{ else }}
+    {{ $descriptionClass = "success" }}
+  {{ end }}
+
+
+  <div class="d-flex flex-row gap-2">
+    <span>
+      Title:
+      <span class="text-{{ $titleClass }}">{{ $titleLength }} chars</span>
+    </span>
+    <span> / </span>
+    <span>
+      Description:
+      <span class="text-{{ $descriptionClass }}"
+        >{{ $descriptionLength }} chars
+      </span>
+    </span>
+  </div>
+</div>
