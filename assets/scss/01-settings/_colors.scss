@@ -1,4 +1,6 @@
 :root {
+  color-scheme: dark light;
+
   /* CSS HEX */
   --indian-red: #ef5d60;
   --russian-violet: #311847;
@@ -16,6 +18,13 @@
   $gradient-top-left: linear-gradient(225deg, #ef5d60ff, #311847ff, #720e07ff, #f1dedcff, #f5f0f6ff);
   $gradient-bottom-left: linear-gradient(315deg, #ef5d60ff, #311847ff, #720e07ff, #f1dedcff, #f5f0f6ff);
   $gradient-radial: radial-gradient(#ef5d60ff, #311847ff, #720e07ff, #f1dedcff, #f5f0f6ff);
+
+  --duration: 0.5s;
+  --timing: ease;
+
+  transition:
+    color var(--duration) var(--timing),
+    background-color var(--duration) var(--timing);
 
 }
 

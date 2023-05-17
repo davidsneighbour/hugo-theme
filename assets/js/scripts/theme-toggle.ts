@@ -1,6 +1,12 @@
-// @see ttps://web.dev/building-a-theme-switch-component/
+// @see https://web.dev/building-a-theme-switch-component/
+// @see https://drafts.csswg.org/css-color-adjust/#propdef-color-scheme
+// @see https://web.dev/color-scheme/
+// @see https://blog.jim-nielsen.com/2020/color-scheme-property/
+// @see https://web.dev/prefers-color-scheme/
+
 // @todo create a react component for this
 const storageKey = 'theme-preference'
+const defaultTheme = 'dark';
 
 // set giscus theme urls
 const giscusDarkTheme = 'dark';
@@ -129,3 +135,12 @@ document.querySelector('#theme-toggle')?.dispatchEvent(new CustomEvent('click'))
 // }
 
 // window.addEventListener('message', handleMessage);
+
+
+
+
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', (e) => {
+  const darkModeOn = e.matches;
+  console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+});

@@ -6,5 +6,13 @@
   {{- $styles = $styles | minify -}}
   {{- $styles = $styles | fingerprint "sha512" -}}
   {{- $styles = $styles | resources.PostProcess -}}
-  <link rel="stylesheet" media="all" integrity="{{- $styles.Data.Integrity -}}" href="{{- $styles.Permalink -}}" />
+  <link
+    rel="stylesheet"
+    media="all"
+    integrity="{{- $styles.Data.Integrity -}}"
+    href="{{- $styles.Permalink -}}"
+  />
 {{- end -}}
+
+{{/* @todo put at the appropriate place */}}
+<meta name="color-scheme" content="dark light" />
