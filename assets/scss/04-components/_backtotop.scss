@@ -1,0 +1,15 @@
+#back-to-top {
+
+  @extend .btn;
+  @extend .btn-secondary;
+
+  cursor: pointer;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  z-index: 9999;
+
+}
