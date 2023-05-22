@@ -3,9 +3,11 @@
 // @see https://web.dev/color-scheme/
 // @see https://blog.jim-nielsen.com/2020/color-scheme-property/
 // @see https://web.dev/prefers-color-scheme/
+// @see https://www.joshwcomeau.com/react/dark-mode/
+// @see https://github.com/GoogleChromeLabs/dark-mode-toggle
 
 // @todo create a react component for this
-const storageKey = 'theme-preference'
+const storageKey = 'dnb-theme'
 const defaultTheme = 'dark';
 
 // set giscus theme urls
@@ -19,23 +21,28 @@ const onClickHandler = () => {
   setTimeout(changeGiscusTheme, 2000);
 }
 
+// get color scheme preference (default dark)
 const getColorPreference = () => {
-  if (localStorage.getItem(storageKey)) {
-    return localStorage.getItem(storageKey);
-  }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  if (localStorage.getItem(storageKey))
+    return localStorage.getItem(storageKey)
+  else
+    return window.matchMedia('(prefers-color-scheme: light)').matches
+      ? 'light'
+      : 'dark'
 }
 
+// save selected preference into local storage
 const setPreference = () => {
-  localStorage.setItem(storageKey, theme.value ? theme.value : 'light');
+  localStorage.setItem(storageKey, theme.value ? theme.value : 'dark');
   reflectPreference();
 }
 
+// apply theme preference
 const reflectPreference = () => {
   // @todo get embarrassed about the following 17 lines of code and refactor
-  document.firstElementChild?.setAttribute('data-bs-theme', theme.value ? theme.value : 'light');
-  document.querySelector('body')?.classList.add(theme.value ? theme.value : 'light');
-  document.querySelector('body')?.classList.remove(theme.value === 'light' ? 'dark' : 'light');
+  document.firstElementChild?.setAttribute('data-bs-theme', theme.value ? theme.value : 'dark');
+  document.querySelector('body')?.classList.add(theme.value ? theme.value : 'dark');
+  document.querySelector('body')?.classList.remove(theme.value === 'dark' ? 'light' : 'dark');
 
   if (theme.value === 'dark') {
     document.querySelector('#toggle-button-dark')?.classList.add('d-inline-block');
@@ -48,7 +55,7 @@ const reflectPreference = () => {
     document.querySelector('#toggle-button-dark')?.classList.add('d-none');
     document.querySelector('#toggle-button-dark')?.classList.remove('d-inline-block');
   }
-  document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value ? theme.value : 'light');
+  document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value ? theme.value : 'dark');
 }
 
 // @todo move into hugo-giscus component
@@ -91,56 +98,3 @@ changeGiscusTheme();
 setTimeout(changeGiscusTheme, 5000);
 
 document.querySelector('#theme-toggle')?.dispatchEvent(new CustomEvent('click'));
-
-
-// const modeToggle = document.getElementsByClassName("mode-toggle")[0];
-// if (typeof modeToggle !== "undefined") {
-//   modeToggle.addEventListener('click', changeGiscusTheme);
-// }
-
-
-// (function() {
-// 	var dmmq = window.matchMedia('(prefers-color-scheme: dark)');
-// 	var giscusFrame;
-// 	function updateGiscus() {
-// 			if (!giscusFrame) giscusFrame = document.querySelector('iframe.giscus-frame');
-// 			if (dmmq.matches) {
-// 					// Dark theme
-// 					giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'dark' } } }, 'https://giscus.app');
-// 			} else {
-// 					// Light theme
-// 					giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'light' } } }, 'https://giscus.app');
-// 			}
-// 	}
-// 	setTimeout(updateGiscus, 1000); // leave time for giscus to load
-// 	dmmq.addEventListener('change', updateGiscus);
-// })();
-
-
-// function changeGiscusTheme() {
-// 	// theme can either be `dark` or `light`.
-// 	let theme = localStorage.getItem("pref-theme");
-// 	let message = { setConfig: { theme: theme } };
-// 	let iframe = document.querySelector('iframe.giscus-frame');
-// 	// iframe might not be loaded by the time this function is called.
-// 	if (iframe) {
-// 			iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-// 	}
-// }
-
-// function handleMessage(event) {
-// 	if (event.origin !== 'https://giscus.app') return;
-// 	if (!(typeof event.data === 'object' && event.data.giscus)) return;
-// 	changeGiscusTheme();
-// }
-
-// window.addEventListener('message', handleMessage);
-
-
-
-
-const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-darkModeMediaQuery.addEventListener('change', (e) => {
-  const darkModeOn = e.matches;
-  console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
-});

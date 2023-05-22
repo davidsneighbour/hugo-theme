@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 {{- partial "init.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "setup" "context" . ) -}}
-<html lang="{{- site.LanguageCode | default "en-US" -}}" data-bs-theme="light">
+<html lang="{{- site.LanguageCode | default "en-US" -}}" data-bs-theme="dark">
   <head>
     {{- partial "head.html" . -}}
   </head>
 
   {{- $classes := partialCached "func/getBodyClasses.html" . . -}}
-  <body class="light {{ $classes -}}">
+  <body class="dark {{ $classes -}}">
     <a class="visually-hidden-focusable skip-to-main-link" href="#maincontent"
       >{{- i18n "theme.skip_to_content" -}}</a
     >

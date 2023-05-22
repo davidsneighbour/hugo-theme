@@ -1,4 +1,4 @@
-import { createRoot } from 'react-dom/client';
+// import { createRoot } from 'react-dom/client';
 
 import './scripts/theme-toggle.js';
 import './scripts/logger.js';
@@ -12,8 +12,8 @@ import './scripts/bs-tabs.js';
 import './scripts/bs-tooltips.js';
 
 // import react components
-import { ThemeSwitcher } from './components/theme-switcher.js';
+// import { ThemeSwitcher } from './components/theme-switcher';
 
-const domNode = document.getElementById('themeswitcher');
-const root = createRoot(domNode);
-root.render('<ThemeSwitcher />');
+// const domNode = document.getElementById('themeswitcher');
+// const root = createRoot(domNode);
+// root.render("<ThemeSwitcher />");
