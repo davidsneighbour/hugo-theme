@@ -4,7 +4,7 @@ import './scripts/theme-toggle.js';
 //import './scripts/api-share.js';
 import './scripts/back-to-top.js';
 import './scripts/logger.js';
-//import './scripts/menu.js';
+import './scripts/menu.js';
 import './scripts/version.js';
 import 'web-vitals-element';
 

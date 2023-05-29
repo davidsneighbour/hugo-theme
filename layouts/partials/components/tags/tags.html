@@ -1,7 +1,16 @@
 {{- with (.GetTerms "tags") -}}
   <div class="is--tags">
     {{- range . -}}
-      <span class="badge text-bg-light ms-2">
+      <span
+        class="badge {{ with .Params.class -}}
+          text-bg-{{ . }}
+        {{ else }}
+          text-bg-light
+        {{ end }} ms-2"
+      >
+        {{ with .Params.icon -}}
+          {{ partialCached "bsicon.html" . . }}
+        {{ end }}
         <a rel="tag" href="{{- .Permalink -}}">#{{- .Title | lower -}}</a>
       </span>
     {{- end -}}

@@ -7,6 +7,9 @@ lastmod: "{{ .Date }}"
 
 draft: true
 
+icon: "film"
+class: "success"
+
 resources:
   - title: Photo by [Name](Link) via [Unsplash](https://unsplash.com/)
     name: image name if other than src
