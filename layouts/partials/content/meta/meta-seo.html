@@ -1,42 +1,44 @@
 {{- $page := . -}}
 <div class="d-flex flex-row gap-2">
   <div class="icon">
-    {{- partialCached "bsicon.html" "shield-check" "shield-check" }}
+    {{- partialCached "bsicon.html" "shield-check" "shield-check" -}}
   </div>
+
+  {{/* optimum 50 to 60 characters */}}
   {{- $titleLength := len $page.Title -}}
-  {{- $descriptionLength := len $page.Description -}}
   {{- $optimumLengthTitle := 60 -}}
+  {{- $titleDiff :=  sub $titleLength $optimumLengthTitle -}}
+  {{- $titleDiff = int (math.Pow $titleDiff 2 | math.Sqrt) -}}
+
+  {{/* optimum 110 to 160 characters */}}
+  {{- $descriptionLength := len $page.Description -}}
   {{- $optimumLengthDescription := 160 -}}
+  {{- $descriptionDiff := sub $descriptionLength $optimumLengthDescription -}}
+  {{- $descriptionDiff = int (math.Pow $descriptionDiff 2 | math.Sqrt) -}}
 
-  {{ $titleDiff :=  sub $titleLength $optimumLengthTitle }}
-  {{ $descriptionDiff := sub $descriptionLength $optimumLengthDescription }}
+  {{- $titleClass := "" -}}
+  {{- if gt 30 $titleDiff -}}
+    {{- $titleClass = "danger" -}}
+  {{- else if gt 20 $titleDiff -}}
+    {{- $titleClass = "warning" -}}
+  {{- else -}}
+    {{- $titleClass = "success" -}}
+  {{- end -}}
 
-  {{ $titleDiff = int (math.Pow $titleDiff 2 | math.Sqrt) }}
-  {{ $descriptionDiff = int (math.Pow $descriptionDiff 2 | math.Sqrt) }}
-
-  {{ $titleClass := "" }}
-  {{ if gt 30 $titleDiff }}
-    {{ $titleClass = "danger" }}
-  {{ else if gt 20 $titleDiff }}
-    {{ $titleClass = "warning" }}
-  {{ else }}
-    {{ $titleClass = "success" }}
-  {{ end }}
-
-  {{ $descriptionClass := "" }}
-  {{ if gt 30 $descriptionDiff }}
-    {{ $descriptionClass = "danger" }}
-  {{ else if gt 20 $descriptionDiff }}
-    {{ $descriptionClass = "warning" }}
-  {{ else }}
-    {{ $descriptionClass = "success" }}
-  {{ end }}
+  {{- $descriptionClass := "" -}}
+  {{- if gt 30 $descriptionDiff -}}
+    {{- $descriptionClass = "danger" -}}
+  {{- else if gt 20 $descriptionDiff -}}
+    {{- $descriptionClass = "warning" -}}
+  {{- else -}}
+    {{- $descriptionClass = "success" -}}
+  {{- end -}}
 
 
   <div class="d-flex flex-row gap-2">
     <span>
       Title:
-      <span class="text-{{ $titleClass }}">{{ $titleLength }} chars</span>
+      <span class="text-{{- $titleClass -}}">{{- $titleLength }} chars</span>
     </span>
     <span> / </span>
     <span>
