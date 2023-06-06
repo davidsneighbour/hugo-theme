@@ -8,7 +8,7 @@
 
 // @todo create a react component for this
 const storageKey = 'dnb-theme'
-const defaultTheme = 'dark';
+const defaultTheme = 'light';
 
 // set giscus theme urls
 const giscusDarkTheme = 'dark';
@@ -33,15 +33,15 @@ const getColorPreference = () => {
 
 // save selected preference into local storage
 const setPreference = () => {
-  localStorage.setItem(storageKey, theme.value ? theme.value : 'dark');
+  localStorage.setItem(storageKey, theme.value ? theme.value : 'light');
   reflectPreference();
 }
 
 // apply theme preference
 const reflectPreference = () => {
   // @todo get embarrassed about the following 17 lines of code and refactor
-  document.firstElementChild?.setAttribute('data-bs-theme', theme.value ? theme.value : 'dark');
-  document.querySelector('body')?.classList.add(theme.value ? theme.value : 'dark');
+  document.firstElementChild?.setAttribute('data-bs-theme', theme.value ? theme.value : 'light');
+  document.querySelector('body')?.classList.add(theme.value ? theme.value : 'light');
   document.querySelector('body')?.classList.remove(theme.value === 'dark' ? 'light' : 'dark');
 
   if (theme.value === 'dark') {
@@ -55,7 +55,7 @@ const reflectPreference = () => {
     document.querySelector('#toggle-button-dark')?.classList.add('d-none');
     document.querySelector('#toggle-button-dark')?.classList.remove('d-inline-block');
   }
-  document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value ? theme.value : 'dark');
+  document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value ? theme.value : 'light');
 }
 
 // @todo move into hugo-giscus component
