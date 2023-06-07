@@ -1,47 +1,28 @@
 {
-	"name": "hugo-theme",
-	"description": "@davidsneighbour's gohugo theme.",
+	"name": "@davidsneighbour/hugo-theme",
+	"description": "@davidsneighbour's GoHugo theme.",
 	"version": "0.0.40",
 	"author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
 	"bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
-	"dependencies": {
-		"@davidsneighbour/eslint-config": "^5.1.35",
-		"@davidsneighbour/markdownlint-config": "^5.1.29",
-		"@davidsneighbour/standard-version-config": "^5.0.16",
-		"@davidsneighbour/stylelint-config": "^5.1.37",
-		"@davidsneighbour/tools": "^5.1.35",
-		"@davidsneighbour/webpack-config": "^5.1.37",
-		"@slightlyoff/lite-vimeo": "0.1.2",
-		"all-contributors-cli": "^6.26.0",
-		"prettier-plugin-go-template": "^0.0.13",
-		"react-bootstrap-icons": "^1.10.3",
-		"workbox-cacheable-response": "^6.6.0",
-		"workbox-core": "^6.6.0",
-		"workbox-expiration": "^6.6.0",
-		"workbox-precaching": "^6.6.0",
-		"workbox-routing": "^6.6.0",
-		"workbox-strategies": "^6.6.0",
-		"workbox-webpack-plugin": "^6.6.0"
-	},
 	"homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
 	"license": "MIT",
 	"private": true,
 	"repository": "davidsneighbour/hugo-theme",
 	"scripts": {
-		"build": "run-p build:*",
-		"build:webpack": "cross-env NODE_ENV=production webpack --config webpack.js",
 		"clean": "run-p clean:**",
-		"clean:hugo": "rimraf dev/public dev/resources dev/.hugo_build.lock hugo.log",
+		"clean:hugo": "rimraf public resources .hugo_build.lock hugo.log",
 		"clean:node": "rimraf node_modules package-lock.json",
 		"release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-		"release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-		"serve:webpack": "webpack --watch --config webpack.js"
+		"release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
 	},
 	"devDependencies": {
-		"css-loader": "^6.8.1",
-		"mini-css-extract-plugin": "^2.7.6",
-		"node-sass": "^9.0.0",
-		"sass-loader": "^13.3.1",
-		"style-loader": "^3.3.3"
+		"@davidsneighbour/eslint-config": "^5.1.38",
+		"@davidsneighbour/markdownlint-config": "^5.1.39",
+		"@davidsneighbour/standard-version-config": "^5.0.16",
+		"@davidsneighbour/stylelint-config": "^5.1.37",
+		"@davidsneighbour/tools": "^5.1.35",
+		"all-contributors-cli": "^6.26.0",
+		"prettier-plugin-go-template": "^0.0.13",
+		"node-sass": "^9.0.0"
 	}
 }
