@@ -16,10 +16,10 @@
 		"release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
 	},
 	"devDependencies": {
-		"@davidsneighbour/eslint-config": "^5.1.38",
-		"@davidsneighbour/markdownlint-config": "^5.1.39",
+		"@davidsneighbour/eslint-config": "^5.1.40",
+		"@davidsneighbour/markdownlint-config": "^5.1.40",
 		"@davidsneighbour/standard-version-config": "^5.0.16",
-		"@davidsneighbour/stylelint-config": "^5.1.37",
+		"@davidsneighbour/stylelint-config": "^5.1.40",
 		"@davidsneighbour/tools": "^5.1.35",
 		"all-contributors-cli": "^6.26.0",
 		"prettier-plugin-go-template": "^0.0.13",
