@@ -10,11 +10,17 @@
  * content area
  ******************************************************************************/
 main {
-	padding-top: $heading-height + 30px;
-	padding-bottom: 0;
-	margin-bottom: 0;
-	background-color: var(--bs-body-bg);
+  padding-top: $heading-height + 30px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  background-color: var(--bs-body-bg);
 
-	@extend .min-vh-100;
-	@extend .mb-0;
+  @extend .min-vh-100;
+  @extend .mb-0;
+}
+
+/* some fun */
+body {
+  border-top: solid 10px;
+  border-image: repeating-linear-gradient(-75deg, yellow, yellow 10px, black 10px, black 20px) 20;
 }
