@@ -22,5 +22,5 @@ main {
 /* some fun */
 body {
   border-top: solid 3px;
-  border-image: repeating-linear-gradient(-75deg, yellow, yellow 10px, black 10px, black 20px) 20;
+  border-image: repeating-linear-gradient(-75deg, #ffff00, #ffff00 10px, #000000 10px, #000000 20px) 20;
 }
