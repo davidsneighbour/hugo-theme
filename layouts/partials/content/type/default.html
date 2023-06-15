@@ -10,7 +10,7 @@
     {{- with $fullcontent -}}
       {{- $post.Content -}}
     {{- else -}}
-		<p>
+		<p class="text-truncate text-truncate-5">
 			{{- with $post.Summary -}}
 				{{- . | markdownify -}}
 			{{- else -}}

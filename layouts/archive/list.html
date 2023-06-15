@@ -20,7 +20,7 @@
                       {{- $item.Title -}}
                     </a>
                   </h2>
-                  <p>{{- $item.Summary -}}</p>
+                  <p class="text-truncate text-truncate-5">{{- $item.Summary -}}</p>
                   {{- partialCached "components/tags/tags.html" . . -}}
                 </div>
               </div>

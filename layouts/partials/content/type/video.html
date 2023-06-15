@@ -44,7 +44,7 @@
       {{- partial "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
       {{- partialCached "content/meta/footer.html" $post $post -}}
   {{ else }}
-		<p>
+		<p class="text-truncate text-truncate-5">
 			{{- with $post.Summary -}}
 				{{- . | markdownify -}}
 			{{- else -}}

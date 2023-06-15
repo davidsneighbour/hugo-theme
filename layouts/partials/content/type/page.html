@@ -10,7 +10,7 @@
     {{- with $fullcontent -}}
       {{- $post.Content -}}
     {{- else -}}
-      <p>{{- $post.Summary -}}</p>
+      <p class="text-truncate text-truncate-5">{{- $post.Summary -}}</p>
   </div>
 	<div class="text-end">
 		<a href="{{- $post.Permalink -}}" class="btn btn-link" aria-label="{{- i18n "read_article" -}}: {{ $post.Title -}}">
