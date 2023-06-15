@@ -7,5 +7,8 @@
 {{- end -}}
 
 {{- printf "<h%s class=\"post-title\">" $headerlevel | safeHTML -}}
-<a href="{{- $post.Permalink -}}">{{- $post.Title -}}</a>
+<div class="text-truncate text-truncate-1">
+  <a href="{{- $post.Permalink -}}"
+    title="{{- $post.Title -}}">{{- $post.Title -}}</a>
+</div>
 {{- printf "</h%s>" $headerlevel | safeHTML -}}
