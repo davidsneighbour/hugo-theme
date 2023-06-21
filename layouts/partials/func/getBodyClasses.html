@@ -9,7 +9,7 @@
   {{- $classes = $classes | append "page" -}}
 {{- end -}}
 {{- if eq true .IsSection -}}
-  {{- $classes = $classes | append (printf "section sections/%s" .Section ) -}}
+  {{- $classes = $classes | append (printf "section sections-%s" .Section ) -}}
 {{- end -}}
 {{- $classes = $classes | append (printf "kind-%s" .Kind) -}}
 {{- $classes = $classes | append (printf "type-%s" .Type) -}}
