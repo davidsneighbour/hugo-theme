@@ -1,5 +1,13 @@
 <section class="section--content">
   <div class="container">
+
+    {{- $paginator := .Scratch.Get "paginator" -}}
+    {{- with $paginator -}}
+      {{- $currentPageNumber := .PageNumber -}}
+      {{ if ne $currentPageNumber 1 }}
+        {{ partial "components/pagination/pagination-simple.html" page }}
+      {{ end }}
+    {{- end -}}
     <div class="row">
       {{- $paginator := .Scratch.Get "paginator" -}}
       <h1 class="visually-hidden h2">Recent Posts (Page {{ $paginator.PageNumber -}})</h1>
@@ -24,6 +32,6 @@
       {{- end -}}
 
     </div>
-    {{ partial "components/pagination/pagination-simple.html" . . }}
+    {{ partial "components/pagination/pagination-simple.html" . }}
   </div>
 </section>
