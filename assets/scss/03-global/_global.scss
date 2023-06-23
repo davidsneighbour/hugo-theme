@@ -18,9 +18,3 @@ main {
   @extend .min-vh-100;
   @extend .mb-0;
 }
-
-/* some fun */
-body {
-  border-top: solid 1px;
-  border-image: repeating-linear-gradient(-75deg, #ffff00, #ffff00 10px, #000000 10px, #000000 20px) 20;
-}
