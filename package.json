@@ -8,7 +8,7 @@
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
-  "devDependencies": {
+  "dependencies": {
     "@davidsneighbour/babel-config": "^5.2.2",
     "@davidsneighbour/bootstrap-config": "5.1.39",
     "@davidsneighbour/browserslist-config": "^5.2.4",
@@ -26,7 +26,8 @@
     "@davidsneighbour/textlint-config": "5.0.16",
     "@davidsneighbour/tools": "^5.2.9",
     "@davidsneighbour/webpack-config": "^5.2.7",
-    "all-contributors-cli": "6.26.0"
+    "all-contributors-cli": "6.26.0",
+    "cssnano": "6.0.1"
   },
   "scripts": {
     "clean": "run-p clean:**",
@@ -34,8 +35,5 @@
     "clean:node": "rimraf node_modules package-lock.json",
     "release": "standard-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "standard-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-  },
-  "dependencies": {
-    "cssnano": "^6.0.1"
   }
 }
