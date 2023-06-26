@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-theme",
   "description": "@davidsneighbour's GoHugo theme.",
-  "version": "0.0.75",
+  "version": "0.0.76",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-theme",
@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "devDependencies": {
-    "@davidsneighbour/configurations": "5.2.9",
+    "@davidsneighbour/configurations": "5.2.10",
     "all-contributors-cli": "6.26.0"
   },
   "scripts": {
