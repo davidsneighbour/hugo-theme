@@ -1,8 +1,10 @@
-{{- $component := page.Params.component -}}
+{{- $component := .Page.Params.component -}}
+
 {{- $slug := $component.slug -}}
 {{- $host := $component.host -}}
 {{- $user := $component.user -}}
-{{- $datafile := page.Resources.Get "data.json" -}}
+{{- $datafile := .Page.Resources.Get "data.json" -}}
+
 {{- $data := dict -}}
 {{- with $datafile -}}
   {{- $data = . | unmarshal -}}
@@ -31,14 +33,20 @@ ignoreImports = false</pre
           <th>Latest Version</th>
         </tr>
         <tr>
-          <td><a href="{{ $data.html_url }}">{{ $data.tag_name }} ({{ $publishedAt }})</a></td>
+          <td>
+            <a href="{{ $data.html_url }}"
+              >{{ $data.tag_name }} ({{ $publishedAt }})</a
+            >
+          </td>
         </tr>
         <tr>
           <th>Fix to this version</th>
         </tr>
         <tr>
           <td>
-            <pre>hugo mod get {{ $host }}/{{ $user }}/{{ $slug }}@{{ $data.tag_name }}</pre>
+            <pre>
+hugo mod get {{ $host }}/{{ $user }}/{{ $slug }}@{{ $data.tag_name }}</pre
+            >
           </td>
         </tr>
       </tbody>
