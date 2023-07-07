@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/babel-config": "^5.2.2",
+    "@davidsneighbour/babel-config": "^5.2.14",
     "@davidsneighbour/bootstrap-config": "5.1.39",
     "@davidsneighbour/browserslist-config": "^5.2.4",
     "@davidsneighbour/commitlint-config": "^5.2.8",
