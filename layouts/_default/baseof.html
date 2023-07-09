@@ -7,7 +7,9 @@
   </head>
 
   {{- $classes := partialCached "func/getBodyClasses.html" . . -}}
-  <body class="dark {{ $classes -}}">
+
+
+  <body class="{{ $classes -}} dark">
     <a class="visually-hidden-focusable skip-to-main-link" href="#maincontent"
       >{{- i18n "theme.skip_to_content" -}}</a
     >
