@@ -3,3 +3,18 @@
 ################################################################################
 [dnb.theme]
 slug = "dark-skies"
+
+# default color scheme (dark/light)
+# this is ignored if `dnb.theme.switcher.enabled` is true. In that case the
+# value of `dnb.theme.switcher.default` is used.
+theme = "dark"
+
+# selected icon theme.
+# can be one of the identifiers of the icons module OR
+# `specific` to indicate use values of `icon` values as individual classes OR
+# `partial` to indicate the inclusion of the value as cached partial
+icontheme = "bootstrap"
+
+[dnb.theme.switcher]
+enabled = true   # boolean
+default = "dark" # `dark`, `light` or whatever `dnb.theme.switcher.themes` offers
