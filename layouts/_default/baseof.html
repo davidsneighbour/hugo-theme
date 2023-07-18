@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 {{- partial "init.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "setup" "context" . ) -}}
-<html lang="{{- site.LanguageCode | default "en-US" -}}" data-bs-theme="dark">
+{{- $sitelang := site.LanguageCode | default "en-US" -}}
+<html lang="{{- $sitelang -}}" data-bs-theme="dark">
   <head>
     {{- partial "head.html" . -}}
   </head>
