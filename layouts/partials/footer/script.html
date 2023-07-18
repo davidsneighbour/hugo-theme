@@ -7,8 +7,6 @@
 ></script>
 
 {{- with resources.Get "js/main.js" -}}
-  {{ . }}
-
   {{- $script := . | resources.ExecuteAsTemplate "plugins.js" . -}}
   {{- $script = $script | js.Build  | minify | fingerprint "sha512" -}}
   <script
