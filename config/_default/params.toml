@@ -7,7 +7,7 @@ slug = "dark-skies"
 # default color scheme (dark/light)
 # this is ignored if `dnb.theme.switcher.enabled` is true. In that case the
 # value of `dnb.theme.switcher.default` is used.
-theme = "dark"
+colorscheme = "dark"
 
 # selected icon theme.
 # can be one of the identifiers of the icons module OR

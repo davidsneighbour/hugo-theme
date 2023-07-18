@@ -2,12 +2,12 @@
 {{- partial "init.html" . -}}
 {{- partial "func/hook.html" ( dict "hook" "setup" "context" . ) -}}
 {{- $sitelang := site.LanguageCode | default "en-US" -}}
-<html lang="{{- $sitelang -}}" data-bs-theme="dark">
+<html lang="{{- $sitelang -}}" data-bs-theme="{{- site.Params.dnb.theme.colorscheme -}}">
   <head>
     {{- partial "head.html" . -}}
   </head>
   {{- $classes := partialCached "func/getBodyClasses.html" . . -}}
-  <body class="{{ $classes }} dark">
+  <body class="{{- $classes }} {{ site.Params.dnb.theme.colorscheme -}}">
     <a class="visually-hidden-focusable skip-to-main-link" href="#maincontent"
       >{{- i18n "theme.skip_to_content" -}}</a
     >
