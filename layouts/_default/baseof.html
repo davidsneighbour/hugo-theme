@@ -6,10 +6,7 @@
   <head>
     {{- partial "head.html" . -}}
   </head>
-
   {{- $classes := partialCached "func/getBodyClasses.html" . . -}}
-
-
   <body class="{{ $classes }} dark">
     <a class="visually-hidden-focusable skip-to-main-link" href="#maincontent"
       >{{- i18n "theme.skip_to_content" -}}</a
@@ -17,13 +14,10 @@
     {{- partial "func/hook.html" ( dict "hook" "body-start" "context" . ) -}}
     {{- partial "header.html" . -}}
     {{- partial "func/hook.html" ( dict "hook" "body-pre-main" "context" . ) -}}
-
     {{- $pagefindMarker := "" -}}
     {{- if in (slice "page") page.Kind }}
       {{- $pagefindMarker = "data-pagefind-body" -}}
     {{- end -}}
-
-
     <main class="maincontent" {{ $pagefindMarker | safeHTMLAttr }}>
       {{- partial "func/hook.html" ( dict "hook" "body-main-start" "context" . ) -}}
       {{- block "main" . -}}{{- end -}}
