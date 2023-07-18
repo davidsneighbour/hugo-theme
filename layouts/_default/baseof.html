@@ -18,7 +18,7 @@
     {{- partial "func/hook.html" ( dict "hook" "body-pre-main" "context" . ) -}}
 
     {{- $pagefindMarker := "" -}}
-    {{- if in (slice "page" "term") page.Kind }}
+    {{- if in (slice "page") page.Kind }}
       {{- $pagefindMarker = "data-pagefind-body" -}}
     {{- end -}}
 
