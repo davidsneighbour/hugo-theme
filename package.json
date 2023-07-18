@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-theme",
   "description": "@davidsneighbour's GoHugo theme.",
-  "version": "2.0.0",
+  "version": "1.2023.0",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-theme",
@@ -16,7 +16,6 @@
     "clean:hugo": "rimraf public resources .hugo_build.lock hugo.log",
     "clean:node": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:major": "commit-and-tag-version --release-as major -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+    "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   }
 }
