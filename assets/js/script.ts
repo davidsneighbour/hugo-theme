@@ -7,6 +7,7 @@ import './scripts/logger.js';
 import './scripts/menu.js';
 import './scripts/version.js';
 import 'web-vitals-element';
+// import './lite-yt-embed.js';
 
 // import bootstrap scripts
 import './scripts/bs-collapsibles.js';
@@ -19,3 +20,4 @@ import './scripts/bs-tooltips.js';
 // const domNode = document.getElementById('themeswitcher');
 // const root = createRoot(domNode);
 // root.render("<ThemeSwitcher />");
+

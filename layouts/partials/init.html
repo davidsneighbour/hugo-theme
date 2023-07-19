@@ -1,7 +1,9 @@
 {{- partial "func/hook.html" ( dict "hook" "init" "context" . ) -}}
 {{- $paginator := dict -}}
 {{- if eq "home" .Kind -}}
-  {{- /* see https://discourse.gohugo.io/t/possible-first-list-page-showing-9-items-following-showing-10-items/36186/ */ -}}
+  {{- /*
+  - see https://discourse.gohugo.io/t/possible-first-list-page-showing-9-items-following-showing-10-items/36186/
+  */ -}}
   {{- $p := where site.RegularPages "Type" "in" site.Params.mainSections -}}
   {{- $p = slice site.Home | append $p -}}
   {{- $paginator = $.Paginate $p -}}
