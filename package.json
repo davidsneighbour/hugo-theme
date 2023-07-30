@@ -17,5 +17,8 @@
     "clean:node": "rimraf node_modules package-lock.json",
     "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+  },
+  "stylelint": {
+    "extends": "@davidsneighbour/stylelint-config"
   }
 }
