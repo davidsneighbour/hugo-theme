@@ -7,6 +7,8 @@ a {
 
   @extend .link-underline-secondary;
   @extend .link-offset-2;
+
+  @include word-wrap;
 }
 
 h1,
@@ -27,6 +29,7 @@ p {
   text-align: justify;
 
   @extend .hyphenate;
+  @include word-wrap;
 }
 
 >p code {
