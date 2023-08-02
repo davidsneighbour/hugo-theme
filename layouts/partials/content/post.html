@@ -2,9 +2,11 @@
 {{- $posttype := "default" -}}
 
 {{- with $context.Params.posttype -}}
-  {{- $posttype = . -}}
+  {{- if templates.Exists ( printf "partials/content/type/%s.html" . ) -}}
+    {{- $posttype = . -}}
+  {{- end -}}
 {{- end -}}
-{{ if eq $context.Type "tags" -}}
+{{- if eq $context.Type "tags" -}}
   {{- $posttype = "tag" -}}
 {{- end -}}
 
