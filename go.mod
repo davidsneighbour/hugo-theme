@@ -20,7 +20,7 @@ require (
 	github.com/davidsneighbour/hugo-modules/modules/publisher v0.0.3 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/pwa v1.2023.2 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/renderhooks v1.2023.2 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/robots v1.2023.2 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/robots v1.2023.4 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/schema v0.0.5 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/security v1.2023.2 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/seo v0.0.3 // indirect
