@@ -3,7 +3,7 @@ module github.com/davidsneighbour/hugo-theme
 go 1.20
 
 require (
-	github.com/davidsneighbour/hugo-modules v1.2023.12 // indirect
+	github.com/davidsneighbour/hugo-modules v1.2023.14 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.11 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.6 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/feeds v1.2023.5 // indirect
