@@ -4,6 +4,8 @@
   }
 
   .is--content {
+    @extend .flex-grow-1;
+
     p {
       @extend .mb-0;
     }
