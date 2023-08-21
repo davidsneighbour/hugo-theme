@@ -88,7 +88,11 @@ table {
   @extend .pt-3;
 
   a {
-    @extend .text-secondary;
+    @extend .text-primary;
+
+    &:hover {
+      @extend .text-secondary;
+    }
   }
 }
 
