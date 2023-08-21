@@ -2,6 +2,10 @@
   <div class="ribbon status--draft">DRAFT</div>
 {{- end -}}
 
+{{- with .Params.config.band -}}
+  <div class="ribbon status--{{ . }}">{{ . | upper }}</div>
+{{- end -}}
+
 {{- /*
   .ExpiryDate
   .PublishDate
