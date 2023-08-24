@@ -1,40 +1,51 @@
 figure {
-	font-variant: small-caps;
-	/* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
-	transition: border 8000ms ease-out;
+  font-variant: small-caps;
+  /* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
+  transition: border 8000ms ease-out;
 
-	.inline-icons {
-		div {
-			@extend .p-2;
-		}
+  .inline-icons {
+    div {
+      @extend .p-2;
+    }
 
-		@extend .text-primary;
-		@extend .top-0;
-		@extend .end-0;
-		@extend .m-3;
-		@extend .position-absolute;
-		@extend .lh-1;
-	}
+    @extend .text-primary;
+    @extend .top-0;
+    @extend .end-0;
+    @extend .m-3;
+    @extend .position-absolute;
+    @extend .lh-1;
+  }
 
-	picture,
-	img,
-	.iframe-border,
-	video {
-		object-fit: cover;
-		overflow: hidden;
-		aspect-ratio: 2/1;
+  picture,
+  img,
+  .iframe-border,
+  video {
+    object-fit: cover;
+    overflow: hidden;
+    // aspect-ratio: 2/1;
 
-		@extend .rounded-1;
-		@extend .w-100;
-	}
+    @extend .rounded-1;
+    @extend .w-100;
+  }
 
-	&:hover {
-		@extend .border-secondary;
-	}
+  .post-slider & {
 
-	@extend .border;
-	@extend .border-1;
-	@extend .rounded-1;
-	@extend .border-primary;
-	@extend .position-relative;
+    picture,
+    img,
+    .iframe-border,
+    video {
+      aspect-ratio: 2/1;
+
+    }
+  }
+
+  &:hover {
+    @extend .border-secondary;
+  }
+
+  @extend .border;
+  @extend .border-1;
+  @extend .rounded-1;
+  @extend .border-primary;
+  @extend .position-relative;
 }
