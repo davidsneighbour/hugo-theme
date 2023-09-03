@@ -21,11 +21,19 @@ h6 {
     text-decoration: none;
   }
 
+}
+
+h1,
+h2,
+h3 {
   @extend .border-bottom;
   @extend .border-light-subtle;
 }
 
-p {
+p,
+li,
+dd,
+td {
   text-align: justify;
 
   @extend .hyphenate;
@@ -70,6 +78,24 @@ table {
   @extend .table;
   @extend .table-bordered;
   @extend .table-sm;
+
+
+  td {
+    @extend .px-2;
+    @extend .py-1;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      white-space: nowrap;
+    }
+  }
+
+  th {
+
+    @extend .px-2;
+    @extend .py-1;
+  }
+
 }
 
 .highlight {
@@ -117,8 +143,7 @@ kbd {
 
 
 .component--highlight {
-
   .nav.nav-tabs {
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #444444;
   }
 }

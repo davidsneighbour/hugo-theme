@@ -32,9 +32,8 @@
   {{- end -}}
 {{- end -}}
 
-
 <div class="widget social-media">
-  <strong class="mb-0 mt-3">{{- i18n "connect-on-social" -}}</strong>
+  <h3 class="my-3">{{- i18n "connect-on-social" -}}</h3>
   <div class="d-flex justify-content-around align-items-center flex-row flex-wrap gap-3">
     {{- range $order -}}
       {{- $network := index $networks . -}}
@@ -51,11 +50,13 @@
               </span>
             {{- end -}}
           {{- end -}}
+          <span class="visually-hidden">
           {{- with (site.Params.dnb.social.sharebuttons.sharetext | default false) -}}
             {{- if eq . true -}}
               {{- $network.label -}}
             {{- end -}}
           {{- end -}}
+          </span>
         </a>
       </div>
     {{- end -}}
