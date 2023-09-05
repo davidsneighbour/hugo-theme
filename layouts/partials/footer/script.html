@@ -1,4 +1,7 @@
-{{- $scripts := resources.Get "js/script.ts" | js.Build | minify | fingerprint "sha512" -}}
+{{- $scripts := resources.Get "js/script.ts" |
+      js.Build (dict "targetPath" "assets/js/script.js") |
+      minify |
+      fingerprint "sha512" -}}
 <script
   src="{{- $scripts.Permalink -}}"
   async
@@ -8,7 +11,10 @@
 
 {{- with resources.Get "js/main.js" -}}
   {{- $script := . | resources.ExecuteAsTemplate "plugins.js" . -}}
-  {{- $script = $script | js.Build  | minify | fingerprint "sha512" -}}
+  {{- $script = $script |
+        js.Build (dict "targetPath" "assets/js/main.js") |
+        minify |
+        fingerprint "sha512" -}}
   <script
     src="{{- $script.Permalink -}}"
     async
@@ -16,12 +22,10 @@
     integrity="{{- $script.Data.Integrity -}}"
   ></script>
 {{- else -}}
-  {{- partial "debug.html"
-    (dict
-    "message" "hugo-blockify - js/main.js missing"
-    "context" .
-    "severity" "warn"
-    "level" 8
-    )
-  -}}
+  {{- partial "debug.html" (dict
+        "message" "[modder] js/main.js missing, module modder is probably not configured properly"
+        "context" .
+        "severity" "warn"
+        "level" 8
+  ) -}}
 {{- end -}}
