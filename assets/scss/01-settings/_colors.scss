@@ -1,8 +1,10 @@
+$primary: #ef5d60;
+
 :root {
   color-scheme: dark light;
 
   /* CSS HEX */
-  --indian-red: #ef5d60;
+  --indian-red: $primary;
   --russian-violet: #311847;
   --barn-red: #720e07;
   --misty-rose: #f1dedc;
@@ -27,5 +29,3 @@
     background-color var(--duration) var(--timing);
 
 }
-
-$primary: #ef5d60;
