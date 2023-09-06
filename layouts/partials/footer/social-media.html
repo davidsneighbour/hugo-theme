@@ -23,7 +23,6 @@
 {{- $order := slice -}}
 {{- $networks := .network | default dict -}}
 {{- $sharebuttons := .sharebuttons | default slice -}}
-
 {{- with $sharebuttons -}}
   {{- $order = .networks -}}
 {{- else -}}
@@ -31,9 +30,8 @@
     {{- $order = $order | append $key -}}
   {{- end -}}
 {{- end -}}
-
 <div class="widget social-media">
-  <h3 class="my-3">{{- i18n "connect-on-social" -}}</h3>
+  <h3 class="my-3">{{- i18n "theme.connect-on-social" -}}</h3>
   <div class="d-flex justify-content-around align-items-center flex-row flex-wrap gap-3">
     {{- range $order -}}
       {{- $network := index $networks . -}}

@@ -1,8 +1,7 @@
 {{- $post := .context -}}
 {{- $fullcontent := .fullcontent | default true -}}
-
-				{{- $articleclasses := partialCached "func/getArticleClasses.html" $post $post -}}
-        <article class="{{- $articleclasses -}}">
+{{- $articleclasses := partialCached "func/getArticleClasses.html" $post $post -}}
+<article class="{{- $articleclasses -}}">
   {{- partialCached "components/content/status.html" $post $post -}}
   {{- partial "components/images/banner.html" . -}}
     {{- partial "components/content/headline.html" . -}}
@@ -11,7 +10,7 @@
   </div>
   <div class="text-end">
     <a href="{{- $post.Permalink -}}" class="btn btn-link">
-      Read posts about <strong>{{ $post.Title -}}</strong>
+      {{ i18n "theme.read_posts_about" }} <strong>{{ $post.Title -}}</strong>
       <span class="ps-2">
         {{- partialCached "bsicon.html" "body-text" "body-text" -}}
       </span>

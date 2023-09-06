@@ -1,15 +1,15 @@
 {{- $classes := slice -}}
 {{- if eq true .IsHome -}}
-  {{- $classes = $classes | append "home" -}}
+  {{- $classes = $classes | append "is-home" -}}
 {{- end -}}
 {{- if eq true .IsNode -}}
-  {{- $classes = $classes | append "node" -}}
+  {{- $classes = $classes | append "is-node" -}}
 {{- end -}}
 {{- if eq true .IsPage -}}
-  {{- $classes = $classes | append "page" -}}
+  {{- $classes = $classes | append "is-page" -}}
 {{- end -}}
 {{- if eq true .IsSection -}}
-  {{- $classes = $classes | append (printf "section sections/%s" .Section ) -}}
+  {{- $classes = $classes | append (printf "section section/%s" .Section ) -}}
 {{- end -}}
 {{- $classes = $classes | append (printf "kind-%s" .Kind) -}}
 {{- $classes = $classes | append (printf "type-%s" .Type) -}}

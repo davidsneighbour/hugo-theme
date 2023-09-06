@@ -3,19 +3,16 @@
   <div class="icon">
     {{- partialCached "bsicon.html" "shield-check" "shield-check" -}}
   </div>
-
   {{/* optimum 50 to 60 characters */}}
   {{- $titleLength := len $page.Title -}}
   {{- $optimumLengthTitle := 60 -}}
   {{- $titleDiff :=  sub $titleLength $optimumLengthTitle -}}
   {{- $titleDiff = int (math.Pow $titleDiff 2 | math.Sqrt) -}}
-
   {{/* optimum 110 to 160 characters */}}
   {{- $descriptionLength := len $page.Description -}}
   {{- $optimumLengthDescription := 160 -}}
   {{- $descriptionDiff := sub $descriptionLength $optimumLengthDescription -}}
   {{- $descriptionDiff = int (math.Pow $descriptionDiff 2 | math.Sqrt) -}}
-
   {{- $titleClass := "" -}}
   {{- if gt 30 $titleDiff -}}
     {{- $titleClass = "danger" -}}
@@ -24,7 +21,6 @@
   {{- else -}}
     {{- $titleClass = "success" -}}
   {{- end -}}
-
   {{- $descriptionClass := "" -}}
   {{- if gt 30 $descriptionDiff -}}
     {{- $descriptionClass = "danger" -}}
@@ -33,18 +29,16 @@
   {{- else -}}
     {{- $descriptionClass = "success" -}}
   {{- end -}}
-
-
   <div class="d-flex flex-row gap-2">
     <span>
-      Title:
-      <span class="text-{{- $titleClass -}}">{{- $titleLength }} chars</span>
+      {{ i18n "theme.title" }}:
+      <span class="text-{{- $titleClass -}}">{{- $titleLength }} {{ i18n "theme.characters" }}</span>
     </span>
     <span> / </span>
     <span>
-      Description:
+      {{ i18n "theme.description" }}:
       <span class="text-{{ $descriptionClass }}"
-        >{{ $descriptionLength }} chars
+        >{{ $descriptionLength }} {{ i18n "theme.characters" }}
       </span>
     </span>
   </div>
