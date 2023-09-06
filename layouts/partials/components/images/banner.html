@@ -13,22 +13,18 @@
 {{- range $imageSizes -}}
   {{- $imageSizes2 = $imageSizes2 | append (math.Ceil (div (mul (float .) (float (index $aspectRatio 1))) (float (index $aspectRatio 0)))) -}}
 {{- end -}}
-
 {{- with first 1 $articleimages -}}
   <div class="post-slider">
     {{- range $counter, $image := . -}}
-
       {{- $title := "" -}}
       {{- if ne $image.Title $image.Name -}}
         {{- $title = $image.Title | markdownify -}}
       {{- end -}}
-
       {{- $images := slice -}}
       {{- range $index, $value := $imageSizes -}}
         {{- $imagesize := printf "%sx%s" (string $value) (string (index $imageSizes2 $index)) -}}
         {{- $images = $images | append ($image.Fit $imagesize) -}}
       {{- end -}}
-
       <figure>
         <a href="{{- $link -}}">
           <picture>
@@ -65,7 +61,7 @@
                 data-bs-title="{{- . -}}">
               {{- partial "bsicon.html" "camera2" "camera2" -}}
             </div>
-            {{/* <figcaption class="text-center"></figcaption> */}}
+            {{/* @todo <figcaption class="text-center"></figcaption> */}}
           {{- end -}}
           {{- if eq true ($context.Params.theme.showdate | default true) -}}
             {{- $publishingdate := printf

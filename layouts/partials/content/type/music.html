@@ -6,9 +6,8 @@
             $post.Params.video.artist
 ) -}}
 {{- $artist = index $artist 0 -}}
-
-				{{- $articleclasses := partialCached "func/getArticleClasses.html" $post $post -}}
-        <article class="{{- $articleclasses -}} music2program2 {{ $artist.slug }}">
+{{- $articleclasses := partialCached "func/getArticleClasses.html" $post $post -}}
+<article class="{{- $articleclasses -}} music2program2 {{ $artist.slug }}">
   {{- partialCached "components/content/status.html" $post $post -}}
   {{- $settings := dict "id" $post.Params.video.youtube -}}
   <div class="post-slider">
@@ -47,7 +46,7 @@
       {{- $name = . -}}
     {{- end -}}
     <p>
-      This is "{{ $post.Params.video.title }}" by
+      {{ i18n "theme.this_is" }} "{{ $post.Params.video.title }}" {{ i18n "theme.by" }}
       <a href="{{ $artist.link }}">
         {{ $artist.name }}
       </a>.
@@ -59,8 +58,8 @@
   {{ else }}
   </div>
 	<div class="text-end">
-		<a href="{{- $post.Permalink -}}" class="btn btn-link" aria-label="{{- i18n "read_article" -}}: {{ $post.Title -}}">
-			{{- i18n "read_article" -}}
+		<a href="{{- $post.Permalink -}}" class="btn btn-link" aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
+			{{- i18n "theme.read_article" -}}
 			<span class="ps-2">
 				{{- partialCached "bsicon.html" "body-text" "body-text" -}}
 			</span>

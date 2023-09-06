@@ -1,6 +1,6 @@
 {{ $related := site.RegularPages.Related . }}
 {{ with $related }}
-<h3>See Also</h3>
+<h3>{{ i18n "theme.related" }}</h3>
 <section class="section--related">
   <ul>
     {{ range . }}

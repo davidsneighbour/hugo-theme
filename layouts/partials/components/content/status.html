@@ -1,11 +1,9 @@
 {{- if .Draft -}}
-  <div class="ribbon status--draft">DRAFT</div>
+  <div class="ribbon status--draft">{{- i18n "theme.draft" | upper -}}</div>
 {{- end -}}
-
 {{- with .Params.config.band -}}
   <div class="ribbon status--{{ . }}">{{ . | upper }}</div>
 {{- end -}}
-
 {{- /*
   .ExpiryDate
   .PublishDate

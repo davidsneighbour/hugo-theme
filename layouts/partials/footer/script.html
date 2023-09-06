@@ -8,7 +8,6 @@
   defer
   integrity="{{- $scripts.Data.Integrity -}}"
 ></script>
-
 {{- with resources.Get "js/main.js" -}}
   {{- $script := . | resources.ExecuteAsTemplate "plugins.js" . -}}
   {{- $script = $script |
