@@ -5,6 +5,10 @@
 {{- $aspectRatio := (split site.Params.dnb.pictures.aspect_ratio ":") -}}
 {{- $breakPoints := site.Params.dnb.pictures.responsive.halfwidth.break_points -}}
 {{- $imageSizes := site.Params.dnb.pictures.responsive.halfwidth.image_sizes -}}
+
+{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $default_format := $config.default_format | default "webp" -}}
+
 {{- if (eq $responsive "fullwidth") -}}
   {{- $breakPoints = site.Params.dnb.pictures.responsive.fullwidth.break_points -}}
   {{- $imageSizes = site.Params.dnb.pictures.responsive.fullwidth.image_sizes -}}
@@ -22,7 +26,7 @@
       {{- end -}}
       {{- $images := slice -}}
       {{- range $index, $value := $imageSizes -}}
-        {{- $imagesize := printf "%sx%s" (string $value) (string (index $imageSizes2 $index)) -}}
+        {{- $imagesize := printf "%sx%s %s" (string $value) (string (index $imageSizes2 $index)) $default_format -}}
         {{- $images = $images | append ($image.Fit $imagesize) -}}
       {{- end -}}
       <figure>
