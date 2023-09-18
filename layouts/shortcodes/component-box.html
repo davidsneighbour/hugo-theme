@@ -25,8 +25,7 @@
 path = "{{ $host }}/{{ $user }}/{{ $slug }}"
 disable = false
 ignoreConfig = false
-ignoreImports = false</pre
-            >
+ignoreImports = false</pre>
           </td>
         </tr>
         <tr>
@@ -36,16 +35,6 @@ ignoreImports = false</pre
           <td>
             <a href="{{ $data.html_url }}"
               >{{ $data.tag_name }} ({{ $publishedAt }})</a
-            >
-          </td>
-        </tr>
-        <tr>
-          <th>Fix to this version</th>
-        </tr>
-        <tr>
-          <td>
-            <pre>
-hugo mod get {{ $host }}/{{ $user }}/{{ $slug }}@{{ $data.tag_name }}</pre
             >
           </td>
         </tr>
