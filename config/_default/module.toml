@@ -1,4 +1,8 @@
 [[mounts]]
+source = "archetypes"
+target = "archetypes"
+
+[[mounts]]
 source = "assets"
 target = "assets"
 
