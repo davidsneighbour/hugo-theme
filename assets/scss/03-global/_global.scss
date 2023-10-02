@@ -1,51 +1,10 @@
 /*******************************************************************************
- * full bleed grid layout
- * @see https://ryanmulligan.dev/blog/layout-breakouts/
- * @see https://css-tricks.com/full-bleed/
- * @see https://css-tricks.com/almanac/properties/g/grid-template-columns/
- * @todo properly implement inside of a bootstrap container (fluid)
- ******************************************************************************/
-
-/*******************************************************************************
  * content area
  ******************************************************************************/
 main {
   padding-top: $heading-height + 30px;
-  padding-bottom: 0;
-  margin-bottom: 0;
   background-color: var(--bs-body-bg);
 
   @extend .min-vh-100;
   @extend .mb-0;
 }
-
-body {
-  //font-size: #{clamp(1.5rem, 2vw + 1rem, 2.25rem)};
-}
-
-.background-gradient1 {
-  // background-image: linear-gradient(25deg,
-  //     hsl(240deg 100% 20%) 0%,
-  //     hsl(277deg 100% 21%) 28%,
-  //     hsl(298deg 100% 21%) 41%,
-  //     hsl(314deg 100% 27%) 50%,
-  //     hsl(324deg 100% 32%) 57%,
-  //     hsl(331deg 100% 38%) 63%,
-  //     hsl(336deg 100% 42%) 68%,
-  //     hsl(346deg 83% 51%) 72%,
-  //     hsl(0deg 93% 61%) 76%,
-  //     hsl(13deg 100% 60%) 79%,
-  //     hsl(24deg 100% 57%) 83%,
-  //     hsl(35deg 100% 52%) 86%,
-  //     hsl(42deg 100% 50%) 90%,
-  //     hsl(49deg 100% 50%) 94%,
-  //     hsl(55deg 100% 50%) 100%);
-  //https://www.joshwcomeau.com/gradient-generator?colors=000066|ffea00&angle=25&colorMode=hcl&precision=13&easingCurve=0.7470418504490128|0.9087218640609042|0.75|0.25
-}
-
-mark {
-  border-radius: 0.25rem;
-}
-
-
-// border-radius: 86% 14% 7% 93% / 54% 88% 12% 46%

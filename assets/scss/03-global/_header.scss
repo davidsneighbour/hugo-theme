@@ -1,39 +1,28 @@
 .site-title {
-	font-family: BahnPro, sans-serif;
-	/* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
-	font-size: 17vw;
+  font-family: BahnPro, sans-serif;
+  /* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
+  font-size: 17vw;
 
-	// @todo clamp it
-	// @see https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
-	@include media-breakpoint-up(sm) {
-		/* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
-		font-size: 12vw;
-	}
+  // @todo clamp it
+  // @see https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+  @include media-breakpoint-up(sm) {
+    /* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
+    font-size: 12vw;
+  }
 
-	@include media-breakpoint-up(xl) {
-		font-size: 125px;
-	}
+  @include media-breakpoint-up(xl) {
+    font-size: 125px;
+  }
 
-	font-weight: 700;
-	line-height: 0.5;
-	margin-bottom: 0;
-	margin-top: 2rem;
+  @extend .fw-semibold;
+  @extend .lh-1;
 
-	@extend .text-center;
-	@extend .text-primary;
+  margin-bottom: -1.9rem;
 
-	a {
-		text-decoration: none;
+  @extend .text-center;
+  @extend .text-primary;
 
-		&:hover {
-			text-decoration: none;
-		}
-	}
-}
-
-#htt img {
-	width: 300px;
-	position: absolute;
-	left: 0;
-	opacity: 0.3;
+  a {
+    @extend .text-decoration-none;
+  }
 }

@@ -2,11 +2,10 @@
 
   a:link,
   a:hover {
-    text-decoration: none;
 
     svg {
-      width: 36px;
-      height: 36px;
+      @extend .cx-36;
+      @extend .cy-36;
 
       @extend .p-0;
       @extend .m-0;
@@ -55,21 +54,19 @@
   min-height: 100vw;
 
   a {
-    text-decoration: none;
+    @extend .text-decoration-none;
 
     &:hover {
-      color: $primary;
-      text-decoration: none;
+      color: var(--bs-primary-color);
+      @extend .text-decoration-none;
     }
   }
 
   .site-title {
-    font-size: 2.5rem;
+    @extend .fs-1;
   }
 
   h3 {
     @extend .fs-6;
   }
-
-  @extend .mb-0;
 }
