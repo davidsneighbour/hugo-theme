@@ -9,12 +9,17 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.40"
+    "@davidsneighbour/configurations": "^5.2.43"
   },
   "scripts": {
     "clean": "run-p clean:**",
     "clean:hugo": "rimraf public resources .hugo_build.lock hugo.log",
     "clean:node": "rimraf node_modules package-lock.json",
+    "lint:scripts": "eslint assets/js --ext .ts",
+    "lint:scripts:fix": "eslint assets/js --ext .ts --fix",
+    "lint:styles": "stylelint --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/**/*.scss",
+    "lint:styles:fix": "stylelint --fix --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables themes/hugo-theme/assets/scss",
+    "lint:templates": "bin/audit/lint-template-style",
     "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
     "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
   },
