@@ -9,7 +9,9 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.2.44",
+    "@davidsneighbour/configurations": "^5.5.2",
+    "@davidsneighbour/stylelint-config": "^5.5.2",
+    "@davidsneighbour/tools": "^5.5.2",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "postcss": "^8.4.31"
   },

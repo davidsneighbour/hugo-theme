@@ -97,6 +97,8 @@
 // DNB: prose - article content formatting
 @include dnb-scrollbars('.prose', 3px);
 
+/* stylelint-disable plugin/no-unsupported-browser-features -- stylelint doesn't
+              get, that this is a SCSS syntax and not css-nesting */
 .prose {
   @import '05-prose/prose';
   @import '05-prose/footnotes';
