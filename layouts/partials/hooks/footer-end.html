@@ -1,1 +1,4 @@
 {{- partialCached "footer/back-to-top.html" . -}}
+{{- if site.IsServer -}}
+  {{- partialCached "debugpage.html" page page -}}
+{{- end -}}

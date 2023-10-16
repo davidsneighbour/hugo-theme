@@ -107,7 +107,6 @@
 }
 
 // DNB: plugins
-// @import '06-plugins/debugprint';
 // @import '06-plugins/devaudit';
 @import '06-plugins/syntax';
 @import '06-plugins/theme-toggle';
@@ -120,3 +119,4 @@
 @import 'animate.css/animate';
 // @import 'auditor';
 // @import 'plugins';
+@import 'debugprint';
