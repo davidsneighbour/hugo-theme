@@ -5,5 +5,24 @@
     "**/layouts/**.json": "gojson",
     "**/layouts/**.txt": "gotemplate",
   },
-  "editor.linkedEditing": true
+  "editor.linkedEditing": true,
+  "stylelint.configFile": ".stylelintrc.json",
+  "stylelint.packageManager": "npm",
+  "stylelint.reportDescriptionlessDisables": true,
+  "stylelint.reportInvalidScopeDisables": true,
+  "stylelint.reportNeedlessDisables": true,
+  "stylelint.snippet": [
+    "css",
+    "less",
+    "postcss",
+    "scss",
+    "sass"
+  ],
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "sass",
+    "scss"
+  ]
 }
