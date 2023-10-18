@@ -53,6 +53,10 @@
   background-color: var(--bs-tertiary-bg);
   min-height: 100vw;
 
+  .container {
+    max-width: 1140px;
+  }
+
   a {
     @extend .text-decoration-none;
 
