@@ -48,7 +48,8 @@
 }
 
 #footer {
-  padding: 250px 0 1rem;
+  @extend .pb-9;
+  @extend .pt-7;
   color: var(--bs-tertiary-color);
   background-color: var(--bs-tertiary-bg);
   min-height: 100vw;

@@ -14,7 +14,7 @@
           {{- if .HasChildren -}}
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle d-inline-block {{- if $active -}}
+                class="nav-link dropdown-toggle d-inline-block {{ if $active -}}
                   active
                 {{- end -}}"
                 href="#"
@@ -39,7 +39,7 @@
               </ul>
             </li>
           {{- else -}}
-            <li class="nav-item {{- if $active -}}active{{- end -}}">
+            <li class="nav-item {{ if $active -}}active{{- end -}}">
               <a class="nav-link" href="{{- .URL | absLangURL -}}">
                 {{- with .Params.bsicon -}}
                   {{- partialCached "bsicon.html" . . -}}

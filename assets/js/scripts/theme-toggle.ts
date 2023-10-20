@@ -14,7 +14,7 @@ const defaultTheme = 'light';
 const giscusDarkTheme = 'dark';
 const giscusLightTheme = 'light';
 
-const onClickHandler = () => {
+const onClickHandler = (element) => {
   theme.value = theme.value === 'light' ? 'dark' : 'light';
   setPreference();
   changeGiscusTheme();

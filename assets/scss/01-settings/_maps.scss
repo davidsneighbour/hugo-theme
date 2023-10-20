@@ -16,3 +16,19 @@ $zindex-levels: (
   2: 2,
   3: 3
 );
+
+// @see https://getbootstrap.com/docs/5.3/utilities/spacing/#sass-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 12,
+  8: $spacer * 24,
+  9: $spacer * 48,
+  10: $spacer * 96,
+);

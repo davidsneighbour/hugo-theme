@@ -1,19 +1,15 @@
-<li class="nav-item dropdown">
-  <button
-    class="btn btn-secondary rounded-pill"
+<li class="nav-item" id="themeswitcher">
+  <div
     id="theme-toggle"
-    title="Toggles light & dark"
+    title="Toggles between light and dark mode"
     aria-label="auto"
     aria-live="polite"
   >
-    <span class="d-none" id="toggle-button-light">
+    <span class="d-none" id="toggle-button-light" aria-label="Switch to light mode">
       {{- partialCached "bsicon.html" "sun-fill" "sun-fill" -}}
     </span>
-    <span class="d-none" id="toggle-button-dark">
+    <span class="d-none" id="toggle-button-dark" aria-label="Switch to dark mode">
       {{- partialCached "bsicon.html" "moon-stars-fill" "moon-stars-fill" -}}
     </span>
-  </button>
-</li>
-<li class="d-none">
-  <span id="themeswitcher"></span>
+  </div>
 </li>
