@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-theme",
   "description": "@davidsneighbour's GoHugo theme.",
-  "version": "1.2023.43",
+  "version": "1.2023.44",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-theme",
@@ -9,25 +9,53 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "^5.5.2",
-    "@davidsneighbour/stylelint-config": "^5.5.2",
-    "@davidsneighbour/tools": "^5.5.2",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
-    "postcss": "^8.4.31"
+    "@davidsneighbour/configurations": "5.5.3",
+    "@davidsneighbour/stylelint-config": "5.5.3",
+    "@davidsneighbour/tools": "5.5.3",
+    "@fullhuman/postcss-purgecss": "5.0.0",
+    "postcss": "8.4.31"
   },
   "scripts": {
-    "clean": "run-p clean:**",
-    "clean:hugo": "rimraf public resources .hugo_build.lock hugo.log",
-    "clean:node": "rimraf node_modules package-lock.json",
+    "clean": "wireit",
     "lint:scripts": "eslint assets/js --ext .ts",
     "lint:scripts:fix": "eslint assets/js --ext .ts --fix",
-    "lint:styles": "stylelint --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/**/*.scss",
-    "lint:styles:fix": "stylelint --fix --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables themes/hugo-theme/assets/scss",
-    "lint:templates": "bin/audit/lint-template-style",
-    "release": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
-    "release:minor": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+    "lint:styles": "wireit",
+    "lint:styles:fix": "wireit",
+    "lint:templates": "wireit",
+    "release": "wireit",
+    "release:minor": "wireit"
   },
-  "stylelint": {
-    "extends": "@davidsneighbour/stylelint-config"
+  "wireit": {
+    "lint:templates": {
+      "command": "bin/hugo/lint-templates"
+    },
+    "release": {
+      "command": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+    },
+    "release:minor": {
+      "command": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+    },
+    "clean": {
+      "dependencies": [
+        "clean:wireit",
+        "clean:hugo",
+        "clean:node"
+      ]
+    },
+    "clean:hugo": {
+      "command": "rimraf public resources .hugo_build.lock hugo.log"
+    },
+    "clean:node": {
+      "command": "rimraf node_modules package-lock.json"
+    },
+    "clean:wireit": {
+      "command": "rimraf .wireit"
+    },
+    "lint:styles": {
+      "command": "stylelint -f verbose --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/**/*.scss"
+    },
+    "lint:styles:fix": {
+      "command": "stylelint --fix --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/**/*.scss"
+    }
   }
 }
