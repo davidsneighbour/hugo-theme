@@ -52,7 +52,10 @@
 
         .pagefind-ui__result-excerpt {
 
-          mark {}
+          mark {
+            background-color: var(--bs-primary);
+            color: var(--bs-gray-dark);
+          }
         }
       }
     }
