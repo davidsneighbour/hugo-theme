@@ -36,27 +36,35 @@
       color: $white;
     }
 
+    @extend .mb-3;
+
     span {
       width: 75px;
 
       @extend .text-center;
 
-      display: block;
+      display: inline-block;
+
+      @include media-breakpoint-up(sm) {
+
+        display: block;
+
+        &:nth-child(1) {
+          font-size: 25px;
+
+          text-transform: uppercase;
+        }
+
+        &:nth-child(2) {
+          font-size: 50px;
+          margin-bottom: 0.3rem;
+        }
+
+        &:nth-child(3) {
+          font-size: 22px;
+        }
+      }
     }
 
-    :nth-child(1) {
-      font-size: 25px;
-
-      @extend .text-uppercase;
-    }
-
-    :nth-child(2) {
-      font-size: 50px;
-      margin-bottom: 0.3rem;
-    }
-
-    :nth-child(3) {
-      font-size: 22px;
-    }
   }
 }
