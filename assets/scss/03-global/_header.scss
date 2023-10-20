@@ -2,24 +2,24 @@
   font-family: BahnPro, sans-serif;
   /* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
   font-size: 17vw;
+  margin-bottom: -1.2rem;
 
   // @todo clamp it
   // @see https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
   @include media-breakpoint-up(sm) {
     /* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
     font-size: 12vw;
+    margin-bottom: -2.3rem;
   }
 
   @include media-breakpoint-up(xl) {
     font-size: 180px;
-    margin-bottom: -45px;
+    margin-bottom: -3rem;
     padding-left: 60px;
   }
 
   @extend .fw-semibold;
   @extend .lh-1;
-
-  margin-bottom: -1.9rem;
 
   @extend .text-center;
   @extend .text-primary;
@@ -27,4 +27,36 @@
   a {
     @extend .text-decoration-none;
   }
+}
+
+#themeswitcher {
+
+  & #theme-toggle {
+    @extend .btn;
+    @extend .rounded-pill;
+
+    [data-bs-theme="light"] & {
+      @extend .btn-outline-dark;
+
+      .icon--bs {
+        @extend .text-dark;
+      }
+    }
+
+    [data-bs-theme="dark"] & {
+      @extend .btn-outline-light;
+
+      .icon--bs {
+        @extend .text-light;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 5rem;
+  }
+
 }
