@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary shadow-lg">
-  <div class="container-fluid">
+  <div class="container">
     {{- partial "func/hook.html" ( dict "hook" "header-topnav-start" "context" . ) -}}
     {{- partialCached "header/navbar/brand.html" . -}}
     {{- partial "func/hook.html" ( dict "hook" "header-topnav-post-logo" "context" . ) -}}
