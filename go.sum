@@ -2,8 +2,8 @@ github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 h1:K8ukOfj0MOBEW
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff h1:nV9EWy0+/rvtipXqDQMVeFfgyXgP9yY40bbx0h2qS+8=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff/go.mod h1:OG5Jqzdk8/OaniOKZRA9w8agzQBskTkDYFCfDjwuz1A=
-github.com/davidsneighbour/hugo-modules v0.0.0-20231021094941-e3beba030aee h1:6MRQbxet0CAzUomjTgxgj+9SxkDftmLzL1fyO+PiIrM=
-github.com/davidsneighbour/hugo-modules v0.0.0-20231021094941-e3beba030aee/go.mod h1:BoCreEOs9gAQQ8O44MJiEA4pYpDnkMDx8kF8IdjF5+E=
+github.com/davidsneighbour/hugo-modules v0.0.0-20231021170152-6f4dc82c62d7 h1:FYw6ieg8+1cKL/mkgb3iZX2Tq2WSoYc0B/L8Y7GhTjM=
+github.com/davidsneighbour/hugo-modules v0.0.0-20231021170152-6f4dc82c62d7/go.mod h1:BoCreEOs9gAQQ8O44MJiEA4pYpDnkMDx8kF8IdjF5+E=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 h1:TNjqpiXkwVflELokzo+UTXdRT2b7M3Qtb2YnKbKI8A8=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13/go.mod h1:SPSKhU4HI79zYM91EpgFvJD3uC4hZjx0bwkXTyfSIhc=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.11 h1:7Ofcz4qga0QN5+8fXhU8Mf85T3H4mvpsFC5p1s1NJz0=
@@ -44,8 +44,8 @@ github.com/davidsneighbour/hugo-modules/modules/security v1.2023.3 h1:rr8jfFgKyA
 github.com/davidsneighbour/hugo-modules/modules/security v1.2023.3/go.mod h1:5jfP6U9kC9UifhRZmhiW1uQb+a34Y3koCPH9OgKrDJk=
 github.com/davidsneighbour/hugo-modules/modules/seo v0.0.4 h1:v95vBRjhqdaSGWmHUq9Xj3kzkoAcR+NdnfoMwss1q24=
 github.com/davidsneighbour/hugo-modules/modules/seo v0.0.4/go.mod h1:OJdjqism6xy7/eK4/UYTdDpYj385vEu64reOjuiBxeE=
-github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.6 h1:5EtXm2nviQ355lH44J3JyS7EHDkbdA1Hznydfqfzz0Y=
-github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.6/go.mod h1:nN5mR2N69Tnv7I21j52wGpEQe5qxAmsJAMZiYsQjoCI=
+github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.7 h1:7kWguLJGAOCo5PKOXzo+1xvXHew4TkdbelqjvPMy6Xs=
+github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.7/go.mod h1:nN5mR2N69Tnv7I21j52wGpEQe5qxAmsJAMZiYsQjoCI=
 github.com/davidsneighbour/hugo-modules/modules/sitemap v1.2023.5 h1:C/Tx3SGOSKEU7VBlVZ5tjfDZKXj4YHFWRWm1YmDit8E=
 github.com/davidsneighbour/hugo-modules/modules/sitemap v1.2023.5/go.mod h1:wUEXIa5iihN/L/81O4jaDnRA5hBYrtjvmVFZLIZAMJo=
 github.com/davidsneighbour/hugo-modules/modules/social v0.1.30 h1:wwwcZdY1SmiyA8Rz35wX+tAKJuca8ecsCw82rjSr0NY=
