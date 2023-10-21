@@ -11,9 +11,7 @@
   "dependencies": {
     "@davidsneighbour/configurations": "5.5.3",
     "@davidsneighbour/stylelint-config": "5.5.3",
-    "@davidsneighbour/tools": "5.5.3",
-    "@fullhuman/postcss-purgecss": "5.0.0",
-    "postcss": "8.4.31"
+    "@davidsneighbour/tools": "5.5.3"
   },
   "scripts": {
     "clean": "wireit",
@@ -26,27 +24,15 @@
     "release:minor": "wireit"
   },
   "wireit": {
-    "lint:templates": {
-      "command": "bin/hugo/lint-templates"
-    },
-    "release": {
-      "command": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-    },
-    "release:minor": {
-      "command": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
-    },
     "clean": {
+      "command": "rimraf node_modules package-lock.json",
       "dependencies": [
         "clean:wireit",
-        "clean:hugo",
-        "clean:node"
+        "clean:hugo"
       ]
     },
     "clean:hugo": {
       "command": "rimraf public resources .hugo_build.lock hugo.log"
-    },
-    "clean:node": {
-      "command": "rimraf node_modules package-lock.json"
     },
     "clean:wireit": {
       "command": "rimraf .wireit"
@@ -56,6 +42,15 @@
     },
     "lint:styles:fix": {
       "command": "stylelint --fix --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/**/*.scss"
+    },
+    "lint:templates": {
+      "command": "bin/hugo/lint-templates"
+    },
+    "release": {
+      "command": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+    },
+    "release:minor": {
+      "command": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
     }
   }
 }
