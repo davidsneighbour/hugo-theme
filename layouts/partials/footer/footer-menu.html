@@ -1,13 +1,15 @@
-<ul class="mb-0 list-inline">
+<div class="widget footer-navigation">
   <h3 class="my-3">{{ i18n "theme.footer_menu_header" }}</h3>
-  {{- range . -}}
-    <li class="px-2 list-inline-item">
-      <a href="{{- .URL | absLangURL -}}">
-        {{- with .Params.bsicon }}
-          {{ partialCached "bsicon.html" . . }}
-        {{ end -}}
-        {{- .Name -}}
-      </a>
-    </li>
-  {{- end -}}
-</ul>
+  <ul class="mb-0 list-inline">
+    {{- range . -}}
+      <li class="px-2 list-inline-item">
+        <a href="{{- .URL | absLangURL -}}">
+          {{- with .Params.bsicon }}
+            {{ partialCached "bsicon.html" . . }}
+          {{ end -}}
+          {{- .Name -}}
+        </a>
+      </li>
+    {{- end -}}
+  </ul>
+</div>

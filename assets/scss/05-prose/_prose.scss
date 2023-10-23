@@ -5,7 +5,7 @@
 a {
   box-decoration-break: clone;
 
-  @extend .link-underline-secondary;
+  @extend .link-underline-primary;
   @extend .link-offset-2;
 
   @include word-wrap;

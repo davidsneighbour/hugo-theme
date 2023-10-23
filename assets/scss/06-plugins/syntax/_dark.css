@@ -62,7 +62,7 @@
   user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em;
-  color: #7f7f7f;
+  color: #919191;
 }
 
 /* LineNumbers */
@@ -72,7 +72,7 @@
   user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em;
-  color: #7f7f7f;
+  color: #919191;
 }
 
 /* Line */
@@ -97,7 +97,7 @@
 
 /* KeywordNamespace */
 .chroma .kn {
-  color: #f92672;
+  color: #ff36ab;
 }
 
 /* KeywordPseudo */
@@ -184,7 +184,7 @@
 
 /* NameTag */
 .chroma .nt {
-  color: #f92672;
+  color: #ff36ab;
 }
 
 /* NameVariable */
@@ -324,12 +324,12 @@
 
 /* Operator */
 .chroma .o {
-  color: #f92672;
+  color: #ff36ab;
 }
 
 /* OperatorWord */
 .chroma .ow {
-  color: #f92672;
+  color: #ff36ab;
 }
 
 /* Punctuation */
@@ -338,37 +338,37 @@
 
 /* Comment */
 .chroma .c {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* CommentHashbang */
 .chroma .ch {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* CommentMultiline */
 .chroma .cm {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* CommentSingle */
 .chroma .c1 {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* CommentSpecial */
 .chroma .cs {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* CommentPreproc */
 .chroma .cp {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* CommentPreprocFile */
 .chroma .cpf {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* Generic */
@@ -377,7 +377,7 @@
 
 /* GenericDeleted */
 .chroma .gd {
-  color: #f92672;
+  color: #ff36ab;
 }
 
 /* GenericEmph */
@@ -413,7 +413,7 @@
 
 /* GenericSubheading */
 .chroma .gu {
-  color: #75715e;
+  color: #9a947a;
 }
 
 /* GenericTraceback */

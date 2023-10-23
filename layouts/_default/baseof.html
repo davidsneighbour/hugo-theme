@@ -3,6 +3,9 @@
 {{- partial "func/hook.html" ( dict "hook" "setup" "context" . ) -}}
 {{- $sitelang := site.LanguageCode | default "en-US" -}}
 <html lang="{{- $sitelang -}}" data-bs-theme="{{- site.Params.dnb.theme.colorscheme -}}">
+  <a class="visually-hidden-focusable" href="#maincontent">
+    {{- i18n "skip-to-content" | default "Skip to content" -}}
+  </a>
   <head>
     {{- partial "head.html" . -}}
   </head>
@@ -18,7 +21,7 @@
     {{- if in (slice "page") page.Kind }}
       {{- $pagefindMarker = "data-pagefind-body" -}}
     {{- end -}}
-    <main id="maincontent" {{ $pagefindMarker | safeHTMLAttr }}>
+    <main id="maincontent" {{ $pagefindMarker | safeHTMLAttr }} tabindex="-1">
       {{- partial "func/hook.html" ( dict "hook" "body-main-start" "context" . ) -}}
       {{- block "main" . -}}{{- end -}}
       {{- partial "func/hook.html" ( dict "hook" "body-main-end" "context" . ) -}}
