@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 // indirect
 	github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff // indirect
-	github.com/davidsneighbour/hugo-modules v0.0.0-20231022150602-664a2f2ecc1f // indirect
+	github.com/davidsneighbour/hugo-modules v0.0.0-20231023105734-7d9051562a6a // indirect
 	github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.11 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/feeds v1.2023.6 // indirect
@@ -28,7 +28,7 @@ require (
 	github.com/davidsneighbour/hugo-modules/modules/seo v0.0.4 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.9 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/sitemap v1.2023.5 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/social v0.1.30 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/social v0.1.32 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/youtube v1.2023.15 // indirect
 	github.com/paulirish/lite-youtube-embed v0.2.0 // indirect
 	github.com/tabler/tabler-icons v2.32.0+incompatible // indirect
