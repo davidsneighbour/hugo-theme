@@ -22,7 +22,7 @@
   }
 
   .is-good {
-    @extend .text-success;
+    color: #1fb26e;
   }
 
   .is-bad {
@@ -50,7 +50,7 @@
 #footer {
   @extend .pb-9;
   @extend .pt-7;
-  color: var(--bs-tertiary-color);
+  color: #989da3; //var(--bs-tertiary-color);
   background-color: var(--bs-tertiary-bg);
   min-height: 100vw;
 
@@ -59,6 +59,7 @@
   }
 
   a {
+    color: #ff5e7f;
     @extend .text-decoration-none;
 
     &:hover {
@@ -73,5 +74,10 @@
 
   h3 {
     @extend .fs-6;
+  }
+
+  .hstack a {
+    text-decoration: underline !important;
+    @extend .mb-5;
   }
 }

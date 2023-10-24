@@ -1,9 +1,10 @@
 #back-to-top {
 
   @extend .btn;
-  @extend .btn-secondary;
+  @extend .btn-dark;
 
   cursor: pointer;
+  color: #ffffff;
 
   position: fixed;
   right: 0;
