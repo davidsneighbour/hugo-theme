@@ -1,8 +1,8 @@
 <nav class="row">
-  <div class="d-flex justify-content-center">
+  <div class="d-flex flex-column">
     {{- $paginator := .Scratch.Get "paginator" -}}
     {{- if gt $paginator.TotalPages 1 -}}
-      <ul class="pagination">
+      <ul class="pagination align-self-center mb-0">
         {{- with $paginator -}}
           {{- $currentPageNumber := .PageNumber -}}
           {{- partial "components/pagination/item-first.html" . . -}}
@@ -13,5 +13,11 @@
         {{- end -}}
       </ul>
     {{- end -}}
+    <p class="pagination-note align-self-center text-body-tertiary fs-7">
+      {{- $paginator.TotalNumberOfElements }}
+      posts on
+      {{ $paginator.TotalPages }}
+      pages
+    </p>
   </div>
 </nav>
