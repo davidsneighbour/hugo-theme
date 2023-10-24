@@ -14,10 +14,9 @@
       </ul>
     {{- end -}}
     <p class="pagination-note align-self-center text-body-tertiary fs-7">
-      {{- $paginator.TotalNumberOfElements }}
-      posts on
-      {{ $paginator.TotalPages }}
-      pages
+      {{- i18n "theme.pagination.information" (dict
+            "posts" $paginator.TotalNumberOfElements
+            "pages" $paginator.TotalPages) -}}
     </p>
   </div>
 </nav>
