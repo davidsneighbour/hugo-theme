@@ -1,4 +1,10 @@
 {
+  "files.associations": {
+    "**/layouts/**.html": "gohtml",
+    "**/layouts/**.xml": "goxml",
+    "**/layouts/**.json": "gojson",
+    "**/layouts/**.txt": "gotemplate",
+  },
   "editor.linkedEditing": true,
   "stylelint.configFile": ".stylelintrc.json",
   "stylelint.packageManager": "npm",
