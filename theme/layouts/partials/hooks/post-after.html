@@ -6,10 +6,21 @@
     <p class="alert-heading">
       This post is part of <a href="/blog/2022/100-days-to-offload/" class="alert-link">#100DaysToOffload</a> (total posts: {{- $amount -}})
     </p>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-label="Status"
-            style="width: {{- $amount -}}%" aria-valuenow="{{- $amount -}}"
-            aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-stacked">
+      <div class="progress" role="progressbar" aria-label="Posts done"
+            aria-valuenow="{{- $amount -}}"
+            aria-valuemin="0" aria-valuemax="100"
+            style="width: {{- $amount -}}%">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-light text-dark">
+          {{- $amount -}}
+        </div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Posts to fulfill pledge"
+            aria-valuenow="{{- sub 100 $amount -}}"
+            aria-valuemin="0" aria-valuemax="100"
+            style="width: 22%">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"></div>
+      </div>
     </div>
   </div>
 {{ end }}
