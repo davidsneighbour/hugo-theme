@@ -28,35 +28,3 @@
     @extend .text-decoration-none;
   }
 }
-
-#themeswitcher {
-
-  & #theme-toggle {
-    @extend .btn;
-    @extend .rounded-pill;
-
-    [data-bs-theme="light"] & {
-      @extend .btn-outline-dark;
-
-      .icon--bs {
-        @extend .text-dark;
-      }
-    }
-
-    [data-bs-theme="dark"] & {
-      @extend .btn-outline-light;
-
-      .icon--bs {
-        @extend .text-light;
-      }
-    }
-  }
-
-  @include media-breakpoint-down(sm) {
-    display: inline-block;
-    position: absolute;
-    right: 1rem;
-    top: 5rem;
-  }
-
-}

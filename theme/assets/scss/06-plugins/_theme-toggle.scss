@@ -1,3 +1,30 @@
-#theme-toggle {
-	// @todo: add theme toggle styles
+#themeswitcher {
+
+  & #theme-toggle {
+    @extend .btn;
+    @extend .btn-link;
+    @extend .rounded-pill;
+
+    [data-bs-theme="light"] & {
+
+      .icon--bs {
+        @extend .text-dark;
+      }
+    }
+
+    [data-bs-theme="dark"] & {
+
+      .icon--bs {
+        @extend .text-light;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 5rem;
+  }
+
 }
