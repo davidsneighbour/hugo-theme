@@ -2,6 +2,7 @@
   {{- $tag100 := (index site.Taxonomies.tags "100daystooffload") -}}
   {{- $allPosts := $tag100.Pages -}}
   {{- $amount := len $allPosts -}}
+  {{- $rest := sub 100 $amount -}}
   <div class="alert alert-dark mb-3" role="alert">
     <p class="alert-heading">
       This post is part of <a href="/blog/2022/100-days-to-offload/" class="alert-link">#100DaysToOffload</a> (total posts: {{- $amount -}})
@@ -11,12 +12,12 @@
             aria-valuenow="{{- $amount -}}"
             aria-valuemin="0" aria-valuemax="100"
             style="width: {{- $amount -}}%">
-        <div class="progress-bar progress-bar-striped progress-bar-animated bg-light text-dark">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary text-dark">
           {{- $amount -}}
         </div>
       </div>
       <div class="progress" role="progressbar" aria-label="Posts to fulfill pledge"
-            aria-valuenow="{{- sub 100 $amount -}}"
+            aria-valuenow="{{- $rest -}}"
             aria-valuemin="0" aria-valuemax="100"
             style="width: 22%">
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"></div>
