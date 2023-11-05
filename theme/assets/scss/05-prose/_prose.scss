@@ -34,7 +34,7 @@ p,
 li,
 dd,
 td {
-  text-align: justify;
+  text-wrap: pretty;
 
   @extend .hyphenate;
   @include word-wrap;
