@@ -1,8 +1,4 @@
 {{- partialCached "footer/back-to-top.html" . -}}
 {{- if site.IsServer -}}
-  <div class="mt-5 d-flex flex-row justify-content-center">
-    {{- partialCached "debugpage.html" page page -}}
-    {{- partialCached "dependencies.html" site -}}
-    {{- partialCached "versioninfo.html" site -}}
-  </div>
+  {{- partialCached "infotabs.html" page page -}}
 {{- end -}}
