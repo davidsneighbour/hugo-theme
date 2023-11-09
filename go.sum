@@ -2,8 +2,8 @@ github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 h1:K8ukOfj0MOBEW
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff h1:nV9EWy0+/rvtipXqDQMVeFfgyXgP9yY40bbx0h2qS+8=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff/go.mod h1:OG5Jqzdk8/OaniOKZRA9w8agzQBskTkDYFCfDjwuz1A=
-github.com/davidsneighbour/hugo-modules v0.0.0-20231106140317-3e5c17673388 h1:pjnH25lWQfPcqVJoTSChNtKZwi0Ppawk1Jcbp6JWq2c=
-github.com/davidsneighbour/hugo-modules v0.0.0-20231106140317-3e5c17673388/go.mod h1:BoCreEOs9gAQQ8O44MJiEA4pYpDnkMDx8kF8IdjF5+E=
+github.com/davidsneighbour/hugo-modules v0.0.0-20231109122303-06029a100b7e h1:0TtDhBILOG7TBZM0rSw+H7raiOe/4q62i+l53vSmWRw=
+github.com/davidsneighbour/hugo-modules v0.0.0-20231109122303-06029a100b7e/go.mod h1:BoCreEOs9gAQQ8O44MJiEA4pYpDnkMDx8kF8IdjF5+E=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 h1:TNjqpiXkwVflELokzo+UTXdRT2b7M3Qtb2YnKbKI8A8=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13/go.mod h1:SPSKhU4HI79zYM91EpgFvJD3uC4hZjx0bwkXTyfSIhc=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.13 h1:BSUO8V7/p8eL3NPXpUT0d7PO6hSPFFkmOm+57/eHFgI=
@@ -24,8 +24,8 @@ github.com/davidsneighbour/hugo-modules/modules/internals v1.2023.5 h1:Exk2HqvPc
 github.com/davidsneighbour/hugo-modules/modules/internals v1.2023.5/go.mod h1:LlVxdfUHzkAedbv6yvt3ATcV+1zPfk9ZveuoiLW6VFY=
 github.com/davidsneighbour/hugo-modules/modules/modder v1.2023.4 h1:RCS7ibIsn3q1EQvRHLCkZOqkS9TaPnodBSje20NAXeo=
 github.com/davidsneighbour/hugo-modules/modules/modder v1.2023.4/go.mod h1:bQv1ENXGHqr/0hnupRz/gWz0UYOrUTDS2Dtvvz3rBko=
-github.com/davidsneighbour/hugo-modules/modules/netlification v1.2023.15 h1:7spjtRLuzoYb4bk8L08N9VpVKMiDAoO8BdUH+PyWpro=
-github.com/davidsneighbour/hugo-modules/modules/netlification v1.2023.15/go.mod h1:o20LJDM6hdmvtdDsylKFevX6l+ToTyMnoo5xN7qzL9w=
+github.com/davidsneighbour/hugo-modules/modules/netlification v1.2023.16 h1:4AIK/3se3HQFGwEtVBJz/mKR6njhC96bwy88R7j16Mo=
+github.com/davidsneighbour/hugo-modules/modules/netlification v1.2023.16/go.mod h1:o20LJDM6hdmvtdDsylKFevX6l+ToTyMnoo5xN7qzL9w=
 github.com/davidsneighbour/hugo-modules/modules/opensearch v1.2023.3 h1:sm7vIa0z6Badp1vExHPm1vnOptpNEbZePXpTlsHPSzg=
 github.com/davidsneighbour/hugo-modules/modules/opensearch v1.2023.3/go.mod h1:4aE+xBCKwjCn77SxWwi24jVZmvYb2eYOQvCV1HsaaIY=
 github.com/davidsneighbour/hugo-modules/modules/pictures v1.2023.18 h1:fss2B6YOD3On4mezhz5DBbtz1T/4GI8kOKtjuIz0ZP4=
@@ -34,8 +34,8 @@ github.com/davidsneighbour/hugo-modules/modules/publisher v0.0.4 h1:I002hg/R23oP
 github.com/davidsneighbour/hugo-modules/modules/publisher v0.0.4/go.mod h1:YpZUhvwb7jAnh6qSZPZWKZ/xaWaTZK7xo6sUGQWCyt8=
 github.com/davidsneighbour/hugo-modules/modules/pwa v1.2023.3 h1:qG6Oo1YWwRBcoleNcGkA1Tft7eyaQOGrtWmAkCiDOfg=
 github.com/davidsneighbour/hugo-modules/modules/pwa v1.2023.3/go.mod h1:a4kRtRCPDa2xRkSmm7zD3ZLREZRp4S4HP4sUCDu0i9Q=
-github.com/davidsneighbour/hugo-modules/modules/renderhooks v1.2023.4 h1:ViZddESnXt4ADTbsK6/XDQWCevUEN9mTyhUgB8ZbJeQ=
-github.com/davidsneighbour/hugo-modules/modules/renderhooks v1.2023.4/go.mod h1:k0hJQwux2spr63XZ7mxL9kCTSfGXxJ3sTCy9kSSRfnY=
+github.com/davidsneighbour/hugo-modules/modules/renderhooks v1.2023.6 h1:K6YhX/wiqUSB4XB1GSsFnteZNZA2S2XC+B25EU5Nlpc=
+github.com/davidsneighbour/hugo-modules/modules/renderhooks v1.2023.6/go.mod h1:TehDVW7LXnrui4g1T4hNc9CqMNNp1YpNDg3S8sO77tA=
 github.com/davidsneighbour/hugo-modules/modules/robots v1.2023.6 h1:eysfvV3kjN+kHfXMAmG9WDh9SxPnw/J8xPyWrapVW0o=
 github.com/davidsneighbour/hugo-modules/modules/robots v1.2023.6/go.mod h1:b9sTyM727ZlKujiXbppysnFycDtuwanV70lh0Tuo56Y=
 github.com/davidsneighbour/hugo-modules/modules/schema v0.0.6 h1:g6HVeeTEkYW2WT750r/P0xAxh3sHuAKJEi5UAyMUr34=
