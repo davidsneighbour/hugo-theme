@@ -12,7 +12,7 @@
       <p class="text-truncate text-truncate-5">{{- $post.Summary -}}</p>
   </div>
 	<div class="text-end">
-		<a href="{{- $post.Permalink -}}" class="btn btn-link" aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
+		<a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link" aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
 			{{- i18n "theme.read_article" -}}
 			<span class="ps-2">
 				{{- partialCached "bsicon.html" "body-text" "body-text" -}}

@@ -9,7 +9,7 @@
     <p>{{- $post.Summary -}}</p>
   </div>
   <div class="text-end">
-    <a href="{{- $post.Permalink -}}" class="btn btn-link">
+    <a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link">
       {{ i18n "theme.read_posts_about" }} <strong>{{ $post.Title -}}</strong>
       <span class="ps-2">
         {{- partialCached "bsicon.html" "body-text" "body-text" -}}
