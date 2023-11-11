@@ -1,100 +1,48 @@
-// @see https://web.dev/building-a-theme-switch-component/
-// @see https://drafts.csswg.org/css-color-adjust/#propdef-color-scheme
-// @see https://web.dev/color-scheme/
-// @see https://blog.jim-nielsen.com/2020/color-scheme-property/
-// @see https://web.dev/prefers-color-scheme/
-// @see https://www.joshwcomeau.com/react/dark-mode/
-// @see https://github.com/GoogleChromeLabs/dark-mode-toggle
+import Alpine from 'alpinejs';
+window.Alpine = Alpine
+function themeSwitcher() {
+  return {
+    theme: 'dark',
+    init() {
+      this.theme = this.getColorPreference();
+      this.reflectPreference();
+      this.changeGiscusTheme();
+      setTimeout(() => this.changeGiscusTheme(), 5000);
 
-// @todo create a react component for this
-const storageKey = 'dnb-theme'
-const defaultTheme = 'light';
-
-// set giscus theme urls
-const giscusDarkTheme = 'dark';
-const giscusLightTheme = 'light';
-
-const onClickHandler = (element) => {
-  theme.value = theme.value === 'light' ? 'dark' : 'light';
-  setPreference();
-  changeGiscusTheme();
-  setTimeout(changeGiscusTheme, 2000);
-}
-
-// get color scheme preference (default dark)
-const getColorPreference = () => {
-  if (localStorage.getItem(storageKey))
-    return localStorage.getItem(storageKey)
-  else
-    return window.matchMedia('(prefers-color-scheme: light)').matches
-      ? 'light'
-      : 'dark'
-}
-
-// save selected preference into local storage
-const setPreference = () => {
-  localStorage.setItem(storageKey, theme.value ? theme.value : 'light');
-  reflectPreference();
-}
-
-// apply theme preference
-const reflectPreference = () => {
-  // @todo get embarrassed about the following 17 lines of code and refactor
-  document.firstElementChild?.setAttribute('data-bs-theme', theme.value ? theme.value : 'light');
-  document.querySelector('body')?.classList.add(theme.value ? theme.value : 'light');
-  document.querySelector('body')?.classList.remove(theme.value === 'dark' ? 'light' : 'dark');
-
-  if (theme.value === 'dark') {
-    document.querySelector('#toggle-button-dark')?.classList.add('d-inline-block');
-    document.querySelector('#toggle-button-dark')?.classList.remove('d-none');
-    document.querySelector('#toggle-button-light')?.classList.add('d-none');
-    document.querySelector('#toggle-button-light')?.classList.remove('d-inline-block');
-  } else {
-    document.querySelector('#toggle-button-light')?.classList.add('d-inline-block');
-    document.querySelector('#toggle-button-light')?.classList.remove('d-none');
-    document.querySelector('#toggle-button-dark')?.classList.add('d-none');
-    document.querySelector('#toggle-button-dark')?.classList.remove('d-inline-block');
-  }
-  document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value ? theme.value : 'light');
-}
-
-// @todo move into hugo-giscus component
-const changeGiscusTheme = () => {
-  const theme = document.firstElementChild?.getAttribute('data-bs-theme') === 'dark' ? giscusDarkTheme : giscusLightTheme;
-
-  function sendMessage(message: object) {
-    const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
-    if (!iframe) {
-      return;
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        this.theme = e.matches ? 'dark' : 'light';
+        this.setPreference();
+      });
+    },
+    toggleTheme() {
+      this.theme = this.theme === 'light' ? 'dark' : 'light';
+      this.setPreference();
+      this.changeGiscusTheme();
+      setTimeout(() => this.changeGiscusTheme(), 2000);
+    },
+    getColorPreference() {
+      return localStorage.getItem('dnb-theme') ||
+        (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    },
+    setPreference() {
+      localStorage.setItem('dnb-theme', this.theme);
+      this.reflectPreference();
+    },
+    reflectPreference() {
+      document.firstElementChild.setAttribute('data-bs-theme', this.theme);
+      document.body.className = '';
+      document.body.classList.add(this.theme);
+    },
+    changeGiscusTheme() {
+      const giscusTheme = this.theme === 'dark' ? 'dark' : 'light';
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: giscusTheme } } }, 'https://giscus.app');
+      }
     }
-    iframe.contentWindow?.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-
-  sendMessage({
-    setConfig: {
-      theme: theme
-    }
-  });
-
+  };
 }
-
-const theme = {
-  value: getColorPreference(),
-}
-reflectPreference()
-window.onload = () => {
-  reflectPreference();
-  document.querySelector('#theme-toggle')?.addEventListener('click', onClickHandler);
-}
-
-window
-  .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', ({ matches: isDark }) => {
-    theme.value = isDark ? 'dark' : 'light'
-    setPreference()
-  });
-
-changeGiscusTheme();
-setTimeout(changeGiscusTheme, 5000);
-
-document.querySelector('#theme-toggle')?.dispatchEvent(new CustomEvent('click'));
+window.themeSwitcher = themeSwitcher;
+document.addEventListener('DOMContentLoaded', () => {
+  Alpine.start();
+});
