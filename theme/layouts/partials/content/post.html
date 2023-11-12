@@ -1,7 +1,7 @@
 {{- $context := .context }}
 {{- $posttype := "default" -}}
 
-{{- with $context.Params.posttype -}}
+{{- with $context.Params.type -}}
   {{- if templates.Exists ( printf "partials/content/type/%s.html" . ) -}}
     {{- $posttype = . -}}
   {{- end -}}
@@ -9,5 +9,6 @@
 {{- if eq $context.Type "tags" -}}
   {{- $posttype = "tag" -}}
 {{- end -}}
+
 {{- /* FIXME: this should be cached, maybe with cachekey ID+posttype */ -}}
 {{- partial (printf "content/type/%s.html" $posttype) . -}}
