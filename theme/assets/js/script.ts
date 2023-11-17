@@ -1,7 +1,4 @@
 import './scripts/theme-toggle';
-// import './scripts/logger.js';
-// import './scripts/menu.js';
-import './scripts/version.js';
 import 'web-vitals-element';
 
 // import bootstrap scripts

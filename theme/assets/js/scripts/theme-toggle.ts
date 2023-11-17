@@ -47,6 +47,13 @@ function themeSwitcher() {
   };
 }
 window.themeSwitcher = themeSwitcher;
+
+const data = require("./assets/data/build.json");
+Alpine.data('versionData', () => ({
+  'version': data.tag_name,
+  'url': data.html_url,
+}));
+
 document.addEventListener('DOMContentLoaded', () => {
   Alpine.start();
 });

@@ -4,7 +4,8 @@
     {{- printf (i18n "theme.copyright-text") (string $year) | .RenderString | safeHTML -}}
   </div>
   <div class="vr"></div>
-  <div class="p-2">
-    <span class="d-none is--site-version">{{ i18n "theme.version" }} <a href="#" class="version"></a></span>
+  <div class="p-2" x-data="versionData">
+    {{ i18n "theme.version" }}
+    <a :href="url" class="version" x-text="version" target="_blank"></a>
   </div>
 </div>
