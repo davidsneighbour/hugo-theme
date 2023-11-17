@@ -1,4 +1,7 @@
-<a href="#" id="back-to-top" class="is--back-to-top d-none">
+<a href="#"
+    x-data="{ isShowing: false }" x-show="isShowing"
+    @scroll.window = "isShowing = (window.pageYOffset > 150) ? true : false"
+    class="btn-back-to-top">
   {{ partialCached "bsicon.html" "chevron-up" "chevron-up" }}
   {{ i18n "theme.back_to_top" }}
 </a>

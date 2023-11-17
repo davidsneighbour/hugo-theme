@@ -1,5 +1,4 @@
 import './scripts/theme-toggle';
-import './scripts/back-to-top.js';
 // import './scripts/logger.js';
 // import './scripts/menu.js';
 import './scripts/version.js';
