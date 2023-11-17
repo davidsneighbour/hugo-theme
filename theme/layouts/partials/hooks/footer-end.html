@@ -3,4 +3,6 @@
   {{- partialCached "infotabs.html" page page -}}
 {{- end -}}
 
-{{- partial "schema.html" . . -}}
+{{- if templates.Exists "partials/schema.html" -}}
+  {{- partial "schema.html" . . -}}
+{{- end -}}
