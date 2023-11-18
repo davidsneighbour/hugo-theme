@@ -5,7 +5,7 @@
     {{- $commentform = "false" -}}
   {{- end -}}
 {{- end -}}
-{{- with (and site.DisqusShortname $commentform) -}}
+{{- with (and site.Config.Services.Disqus.Shortname $commentform) -}}
   {{- if (eq "true" $commentform) -}}
     <div class="col-12">
       {{- template "_internal/disqus.html" . -}}
