@@ -5,7 +5,7 @@
 <div class="section--meta">
   {{- partialCached "content/meta/meta-publisher.html" $page $page -}}
   {{- partialCached "content/meta/meta-links.html" $page $page -}}
-  {{- if site.IsServer -}}
+  {{- if hugo.IsServer -}}
     {{- partialCached "content/meta/meta-seo.html" $page $page -}}
   {{- end -}}
 </div>

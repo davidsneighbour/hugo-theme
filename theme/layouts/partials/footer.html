@@ -13,7 +13,7 @@
       {{- partialCached "footer/social-media.html" . . -}}
     {{- end -}}
     {{- partialCached "footer/copyright.html" . -}}
-    {{- if site.IsServer -}}
+    {{- if hugo.IsServer -}}
       {{- partial "footer/debugging.html" . -}}
     {{- end -}}
     {{- partial "func/hook.html" ( dict "hook" "footer-widgets-end" "context" . ) -}}

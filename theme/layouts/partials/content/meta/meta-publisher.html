@@ -32,7 +32,7 @@
     <span class="align-self-end text-body-secondary text-small">
       (Last Modified: {{ $last_modified -}})
     </span>
-    {{- if site.IsServer -}}
+    {{- if hugo.IsServer -}}
       <a
         href="vscode://file/{{- .File.Filename -}}"
         aria-label="Edit in VSCode"

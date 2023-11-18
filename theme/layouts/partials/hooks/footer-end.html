@@ -1,5 +1,5 @@
 {{- partialCached "footer/back-to-top.html" . -}}
-{{- if site.IsServer -}}
+{{- if hugo.IsServer -}}
   {{- partialCached "infotabs.html" page page -}}
 {{- end -}}
 
