@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 // indirect
 	github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff // indirect
-	github.com/davidsneighbour/hugo-modules v0.0.0-20231117162300-e4fc11d44326 // indirect
+	github.com/davidsneighbour/hugo-modules v0.0.0-20231118082258-1f9aafef1fd6 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.16 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/feeds v1.2023.9 // indirect
@@ -26,12 +26,12 @@ require (
 	github.com/davidsneighbour/hugo-modules/modules/schema v0.0.6 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/security v1.2023.3 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/seo v0.0.4 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.9 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.10 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/sitemap v1.2023.5 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/social v0.1.33 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/social v0.1.36 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/youtube v1.2023.15 // indirect
 	github.com/paulirish/lite-youtube-embed v0.3.0 // indirect
-	github.com/tabler/tabler-icons v2.40.0+incompatible // indirect
+	github.com/tabler/tabler-icons v2.41.0+incompatible // indirect
 	github.com/tailwindlabs/heroicons v2.0.18+incompatible // indirect
 	github.com/twbs/icons v1.11.1 // indirect
 	github.com/zenorocha/clipboard.js v2.0.11+incompatible // indirect
