@@ -1,18 +1,20 @@
 module github.com/davidsneighbour/hugo-theme
 
-go 1.20
+go 1.21
+
+toolchain go1.21.4
 
 require (
 	github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 // indirect
 	github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff // indirect
-	github.com/davidsneighbour/hugo-modules v0.0.0-20231119213726-d588e9c15efe // indirect
+	github.com/davidsneighbour/hugo-modules v0.0.0-20231126100750-ba114afc843e // indirect
 	github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.16 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/feeds v1.2023.9 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/functions v1.2023.13 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/giscus v1.2023.3 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/head v1.2023.12 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/hooks v1.2023.5 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/hooks v1.2023.6 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/icons v1.2023.3 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/internals v1.2023.5 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/modder v1.2023.4 // indirect
@@ -29,10 +31,10 @@ require (
 	github.com/davidsneighbour/hugo-modules/modules/shortcodes v1.2023.10 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/sitemap v1.2023.5 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/social v0.1.36 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/youtube v1.2023.15 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/youtube v1.2023.16 // indirect
 	github.com/paulirish/lite-youtube-embed v0.3.0 // indirect
-	github.com/tabler/tabler-icons v2.41.0+incompatible // indirect
+	github.com/tabler/tabler-icons v2.42.0+incompatible // indirect
 	github.com/tailwindlabs/heroicons v2.0.18+incompatible // indirect
-	github.com/twbs/icons v1.11.1 // indirect
+	github.com/twbs/icons v1.11.2 // indirect
 	github.com/zenorocha/clipboard.js v2.0.11+incompatible // indirect
 )
