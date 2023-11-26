@@ -1,16 +1,13 @@
 {{ if in .context.Params.tags "100DaysToOffload" }}
-
   {{- $year := math.Sub now.Year 1 }}
   {{- $month := now.Month -}}
   {{- $day := now.Day -}}
   {{- $startOfYear := time.AsTime (printf "%d-%d-%dT00:00:00" $year $month $day) -}}
-
   {{- $tag100 := (index site.Taxonomies.tags "100daystooffload") -}}
   {{- $allPosts := $tag100.Pages -}}
   {{- $pages := where $allPosts "Date" "gt" $startOfYear -}}
   {{- $amount := $pages | len -}}
   {{- $rest := sub 100 $amount -}}
-
   <div class="alert alert-dark mb-3" role="alert">
     <p class="alert-heading d-flex justify-content-between">
       <span>
@@ -33,7 +30,9 @@
             aria-valuenow="{{- $rest -}}"
             aria-valuemin="0" aria-valuemax="100"
             style="width: {{- $rest -}}%">
-        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+          {{- $rest -}}
+        </div>
       </div>
     </div>
   </div>
