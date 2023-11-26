@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/hugo-theme",
   "description": "@davidsneighbour's GoHugo theme.",
-  "version": "1.2023.83",
+  "version": "1.2023.84",
   "license": "MIT",
   "private": true,
   "repository": "davidsneighbour/hugo-theme",
