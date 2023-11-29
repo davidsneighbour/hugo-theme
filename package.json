@@ -11,7 +11,7 @@
   "dependencies": {
     "@davidsneighbour/configurations": "5.5.18",
     "@davidsneighbour/stylelint-config": "5.5.18",
-    "@davidsneighbour/tools": "5.5.17"
+    "@davidsneighbour/tools": "5.5.18"
   },
   "scripts": {
     "clean": "wireit",
