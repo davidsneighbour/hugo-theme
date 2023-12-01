@@ -1,6 +1,12 @@
 {{- partialCached "footer/back-to-top.html" . -}}
 {{- if hugo.IsServer -}}
-  {{- partialCached "infotabs.html" page page -}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      {{- partialCached "infotabs.html" page page -}}
+    </div>
+  </div>
+</div>
 {{- end -}}
 
 {{- if templates.Exists "partials/schema.html" -}}

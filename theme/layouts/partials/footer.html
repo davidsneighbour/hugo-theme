@@ -1,3 +1,4 @@
+{{- partial "func/hook.html" ( dict "hook" "footer-pre" "context" . ) -}}
 <footer id="footer">
   {{- partial "func/hook.html" ( dict "hook" "footer-start" "context" . ) -}}
   <div class="widgets container text-center">
@@ -20,3 +21,4 @@
   </div>
   {{- partial "func/hook.html" ( dict "hook" "footer-end" "context" . ) -}}
 </footer>
+{{- partial "func/hook.html" ( dict "hook" "footer-post" "context" . ) -}}
