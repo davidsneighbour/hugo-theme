@@ -2,7 +2,7 @@
   {{- $year := math.Sub now.Year 1 }}
   {{- $month := now.Month -}}
   {{- $day := now.Day -}}
-  {{- $startOfYear := time.AsTime (printf "%d-%d-%dT00:00:00" $year $month $day) -}}
+  {{- $startOfYear := time.AsTime (printf "%04d-%02d-%02dT00:00:00" $year $month $day) -}}
   {{- $tag100 := (index site.Taxonomies.tags "100daystooffload") -}}
   {{- $allPosts := $tag100.Pages -}}
   {{- $pages := where $allPosts "Date" "gt" $startOfYear -}}
