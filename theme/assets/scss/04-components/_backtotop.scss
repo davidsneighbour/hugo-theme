@@ -3,15 +3,14 @@
   @extend .btn;
   @extend .btn-dark;
 
-  cursor: pointer;
+  @extend .d-flex;
+  @extend .flex-row-reverse;
+  @extend .justify-content-end;
 
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin-bottom: 0.75rem;
-  margin-right: 0.5rem;
-  z-index: 9999;
-  animation: fadeIn;
-  animation-duration: 2s;
+  margin-top: 105vh;
+  position: sticky;
+  bottom: 1rem;
+  right: 1rem;
+  float: right;
 
 }
