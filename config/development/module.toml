@@ -1,0 +1,101 @@
+[[mounts]]
+source = "theme/archetypes"
+target = "archetypes"
+
+[[mounts]]
+source = "theme/assets"
+target = "assets"
+
+[[mounts]]
+source = "theme/content"
+target = "content"
+
+[[mounts]]
+source = "theme/i18n"
+target = "i18n"
+
+[[mounts]]
+source = "theme/layouts"
+target = "layouts"
+
+[[mounts]]
+source = "theme/static"
+target = "static"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/debug"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/hooks"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/functions"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/internals"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/modder"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/auditor"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/feeds"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/giscus"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/head"
+
+# [[imports]]
+# path = "github.com/davidsneighbour/hugo-modules/modules/humans"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/icons"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/netlification"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/opensearch"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/pictures"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/publisher"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/pwa"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/renderhooks"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/robots"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/schema"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/security"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/seo"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/shortcodes"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/sitemap"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/social"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/youtube"
+
+[[imports]]
+path = "github.com/davidsneighbour/hugo-modules"

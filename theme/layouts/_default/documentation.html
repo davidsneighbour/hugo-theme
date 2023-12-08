@@ -1,0 +1,26 @@
+{{- define "main" -}}
+  <section class="section--content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-5">
+          <header>
+            <h1>{{ .Title }}</h1>
+            <hr/>
+          </header>
+          {{ .Content }}
+          <hr/>
+          <h2>Documentation Overview</h2>
+          <ul>
+            <li><a href="/theme-documentation/">Overview</a></li>
+            {{ range .Pages.ByWeight }}
+            <li>
+              <a href="{{ .Permalink }}">{{ .Title }}</a><br/>
+              <p>{{ .Summary | markdownify }}</p>
+            </li>
+            {{ end}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{{- end -}}
