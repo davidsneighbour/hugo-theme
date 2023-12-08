@@ -3,8 +3,26 @@
  ******************************************************************************/
 main {
   padding-top: $heading-height + 30px;
-  background-color: var(--bs-body-bg);
 
   @extend .min-vh-100;
   @extend .mb-0;
+
+  background-color: var(--bs-body-bg);
+  background: linear-gradient(82deg, #282828, #363636, #121212, #484848);
+  background-size: 800% 800%;
+  animation: AnimationName 60s ease infinite;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 57%
+  }
+
+  50% {
+    background-position: 100% 44%
+  }
+
+  100% {
+    background-position: 0% 57%
+  }
 }
