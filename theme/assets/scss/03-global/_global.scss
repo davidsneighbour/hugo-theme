@@ -8,7 +8,7 @@ main {
   @extend .mb-0;
 
   background-color: var(--bs-body-bg);
-  background: linear-gradient(82deg, #282828, #363636, #121212, #484848);
+  background: linear-gradient(82deg, #282828, #363636, #121212);
   background-size: 800% 800%;
   animation: AnimationName 60s ease infinite;
 }
