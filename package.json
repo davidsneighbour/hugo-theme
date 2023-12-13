@@ -10,7 +10,7 @@
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
     "@davidsneighbour/configurations": "5.5.22",
-    "@davidsneighbour/stylelint-config": "5.5.21",
+    "@davidsneighbour/stylelint-config": "5.5.22",
     "@davidsneighbour/tools": "5.5.21"
   },
   "scripts": {
