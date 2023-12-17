@@ -9,9 +9,10 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "5.5.23",
-    "@davidsneighbour/stylelint-config": "5.5.23",
-    "@davidsneighbour/tools": "5.5.23"
+    "@davidsneighbour/configurations": "5.5.22",
+    "@davidsneighbour/stylelint-config": "5.5.22",
+    "@davidsneighbour/tools": "5.5.22",
+    "@types/alpinejs": "^3.13.5"
   },
   "scripts": {
     "clean": "wireit",
