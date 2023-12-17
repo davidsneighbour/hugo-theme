@@ -1,8 +1,13 @@
 import Alpine from 'alpinejs';
-import collapse from '@alpinejs/collapse'
-window.Alpine = Alpine
+// @ts-ignore: No type declarations available for this package
+import collapse from '@alpinejs/collapse';
 
-Alpine.plugin(collapse)
+declare global {
+  interface Window {
+    Alpine: any;
+    themeSwitcher: any;
+  }
+}
 
 function themeSwitcher() {
   return {
@@ -33,27 +38,35 @@ function themeSwitcher() {
       this.reflectPreference();
     },
     reflectPreference() {
-      document.firstElementChild.setAttribute('data-bs-theme', this.theme);
+      if (document.firstElementChild) {
+        document.firstElementChild.setAttribute('data-bs-theme', this.theme);
+      }
       document.body.className = '';
       document.body.classList.add(this.theme);
     },
     changeGiscusTheme() {
       const giscusTheme = this.theme === 'dark' ? 'dark' : 'light';
-      const iframe = document.querySelector('iframe.giscus-frame');
+      const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: giscusTheme } } }, 'https://giscus.app');
       }
     }
   };
 }
-window.themeSwitcher = themeSwitcher;
-
-const data = require("./assets/data/build.json");
-Alpine.data('versionData', () => ({
-  'version': data.tag_name,
-  'url': data.html_url,
-}));
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  window.Alpine = Alpine;
+  window.themeSwitcher = themeSwitcher;
+
+  Alpine.plugin(collapse);
+
+  const data = require("./assets/data/build.json");
+  Alpine.data('versionData', () => ({
+    'version': data.tag_name,
+    'url': data.html_url,
+  }));
+
   Alpine.start();
+
 });

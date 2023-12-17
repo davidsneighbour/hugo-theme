@@ -1,4 +1,4 @@
-import './scripts/theme-toggle';
+// import './scripts/theme-toggle';
 import 'web-vitals-element';
 
 // import bootstrap scripts
