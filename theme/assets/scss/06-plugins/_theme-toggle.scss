@@ -1,5 +1,9 @@
 #themeswitcher {
 
+  border-left: 1px solid var(--bs-gray-700);
+  padding-left: $spacer * .75;
+  margin-left: $spacer;
+
   & #theme-toggle {
     @extend .btn;
     @extend .btn-link;

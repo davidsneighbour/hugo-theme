@@ -7,6 +7,9 @@
  ******************************************************************************/
 .navbar {
 
+  animation-name: box;
+  animation-direction: alternate;
+
   .container {
     max-width: 1200px;
   }
