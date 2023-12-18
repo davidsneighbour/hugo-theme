@@ -29,6 +29,8 @@
     {{- partial "footer/script.html" . -}}
     {{- partial "func/hook.html" ( dict "hook" "body-end" "context" . ) -}}
     {{- partial "footer/service-worker.html" . -}}
+    <a href="javascript:history.back();" data-hotkey="k+ArrowLeft" class="d-none">Back</a>
+    <a href="javascript:history.forward();" data-hotkey="k+ArrowRight" class="d-none">Forward</a>
   </body>
 </html>
 {{- partial "func/hook.html" ( dict "hook" "teardown" "context" . ) -}}

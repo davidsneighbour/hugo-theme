@@ -4,8 +4,7 @@
     title="Toggles between light and dark mode"
     aria-live="polite"
     x-on:click="toggleTheme"
-    data-hotkey="k+t"
-  >
+    data-hotkey="k+t">
     <span :class="{ 'd-none': theme !== 'light', 'd-inline-block': theme === 'light' }" id="toggle-button-light" title="Switch to light mode">
       {{- partialCached "bsicon.html" "sun-fill" "sun-fill" -}}
     </span>
