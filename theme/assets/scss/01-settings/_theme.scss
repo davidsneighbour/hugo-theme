@@ -57,6 +57,9 @@ $navbar-brand-padding-y: 0;
  ******************************************************************************/
 $enable-shadows: true;
 $enable-negative-margins: true;
+$enable-rounded: false;
+// $enable-dark-mode	true (default) or false	Enables built-in dark mode support across the project and its components.
+$enable-important-utilities: false;
 
 /*******************************************************************************
  * theme relevant settings
