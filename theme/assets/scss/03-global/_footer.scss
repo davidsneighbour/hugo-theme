@@ -69,11 +69,8 @@
   }
 
   .site-title {
-    font-size: 5rem;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 17vw;
-    }
+    font-size: 12vw;
+    margin-top: 40vh;
   }
 
   h3 {
