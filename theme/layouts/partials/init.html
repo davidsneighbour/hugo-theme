@@ -7,6 +7,11 @@
   {{- $p := where site.RegularPages "Type" "in" site.Params.mainSections -}}
   {{- $p = slice site.Home | append $p -}}
   {{- $paginator = $.Paginate $p -}}
+{{- else if eq .Section "components" -}}
+  {{- $p := where site.RegularPages "Section" "eq" "components" -}}
+  {{- $p = where $p "Params.subcollection" "!=" "true" -}}
+  {{- $p = sort $p "Date" "desc" -}}
+  {{- $paginator = $.Paginate $p -}}
 {{- else if eq .Section "archive" -}}
   {{- $p := where site.RegularPages "Type" "in" site.Params.mainSections -}}
   {{- $p = sort $p "Date" "desc" -}}
