@@ -1,3 +1,14 @@
 {
-  "extends": "@davidsneighbour/stylelint-config"
+  "extends": "@davidsneighbour/stylelint-config",
+  "rules": {
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "browsers": "extends @davidsneighbour/browserslist-config",
+        "severity": "warning",
+        "ignore": ["rem", "css-nesting"],
+        "ignorePartialSupport": true
+      }
+    ]
+  }
 }

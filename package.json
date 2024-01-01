@@ -13,7 +13,8 @@
     "@davidsneighbour/stylelint-config": "5.5.24",
     "@davidsneighbour/tools": "5.5.24",
     "@github/hotkey": "^3.1.0",
-    "@types/alpinejs": "^3.13.5"
+    "@types/alpinejs": "^3.13.5",
+    "stylelint-config-standard-scss": "^12.0.0"
   },
   "scripts": {
     "clean": "wireit",
@@ -40,10 +41,10 @@
       "command": "rimraf .wireit"
     },
     "lint:styles": {
-      "command": "stylelint -f verbose --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/**/*.scss"
+      "command": "stylelint -f verbose --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables theme/assets/**/*.scss"
     },
     "lint:styles:fix": {
-      "command": "stylelint --fix --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables assets/**/*.scss"
+      "command": "stylelint --fix --color --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables theme/assets/**/*.scss"
     },
     "lint:templates": {
       "command": "bin/hugo/lint-templates"
