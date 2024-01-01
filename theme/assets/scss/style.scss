@@ -34,27 +34,33 @@
 @import 'bootstrap/scss/forms';
 @import 'bootstrap/scss/buttons';
 @import 'bootstrap/scss/transitions';
-//@import 'bootstrap/scss/dropdown';
-//@import 'bootstrap/scss/button-group';
+
+// @import 'bootstrap/scss/dropdown';
+// @import 'bootstrap/scss/button-group';
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/navbar';
 @import 'bootstrap/scss/card';
-//@import 'bootstrap/scss/accordion';
-//@import 'bootstrap/scss/breadcrumb';
+
+// @import 'bootstrap/scss/accordion';
+// @import 'bootstrap/scss/breadcrumb';
 @import 'bootstrap/scss/pagination';
 @import 'bootstrap/scss/badge';
 @import 'bootstrap/scss/alert';
 @import 'bootstrap/scss/progress';
-//@import 'bootstrap/scss/list-group';
+
+// @import 'bootstrap/scss/list-group';
 @import 'bootstrap/scss/close';
-//@import 'bootstrap/scss/toasts';
-//@import 'bootstrap/scss/modal';
+
+// @import 'bootstrap/scss/toasts';
+// @import 'bootstrap/scss/modal';
 @import 'bootstrap/scss/tooltip';
-//@import 'bootstrap/scss/popover';
+
+// @import 'bootstrap/scss/popover';
 @import 'bootstrap/scss/carousel';
-//@import 'bootstrap/scss/spinners';
-//@import 'bootstrap/scss/offcanvas';
-//@import 'bootstrap/scss/placeholders';
+
+// @import 'bootstrap/scss/spinners';
+// @import 'bootstrap/scss/offcanvas';
+// @import 'bootstrap/scss/placeholders';
 
 // BS: helpers
 @import 'bootstrap/scss/helpers';
@@ -63,7 +69,6 @@
 @import 'bootstrap/scss/utilities/api';
 
 // DNB: mixins
-@import '02-mixins/gridpile';
 @import '02-mixins/scrollbars';
 @import '02-mixins/scrollsnap';
 @import '02-mixins/shadows';
@@ -77,7 +82,7 @@
 @import '03-global/transitions';
 
 // DNB: Components
-@include dnb-scrollbars();
+@include dnb-scrollbars;
 
 @import '04-components/archive';
 @import '04-components/backtotop';
@@ -89,6 +94,7 @@
 @import '04-components/highlight';
 @import '04-components/search';
 @import '04-components/text';
+
 // @import '04-components/forms';
 // @import '04-components/widgets';
 // @import '04-components/features';
@@ -103,6 +109,7 @@
   @import '05-prose/prose';
   @import '05-prose/footnotes';
   @import '05-prose/components';
+
   // @import '05-prose/tables';
 }
 
@@ -117,6 +124,7 @@
 
 // DNB: external plugins (imported from node_modules)
 @import 'animate.css/animate';
+
 // @import 'auditor';
 // @import 'plugins';
 @import 'debugprint';
