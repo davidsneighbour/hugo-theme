@@ -39,35 +39,52 @@
     {{/* {{- partials.IncludeCached "components/content/publishing-date.html" $post $post -}} */}}
     {{- partials.Include "components/content/headline.html" . -}}
   <div class="prose">
-   {{- with $post.Content -}}
-      {{- . -}}
-    {{- end -}}
-    {{- $name := $artist.name -}}
-    {{- with $post.Params.video.name -}}
-      {{- $name = . -}}
-    {{- end -}}
-    <p>
-      {{ i18n "theme.this_is" }} "{{ $post.Params.video.title }}" {{ i18n "theme.by" }}
-      <a href="{{ $artist.link }}">
-        {{ $artist.name }}
-      </a>.
-    </p>
-    <p>
-      {{$artist.description | markdownify }}
+
+    {{- with $fullcontent -}}
+
+      {{- with $post.Content -}}
+        {{- . -}}
+      {{- end -}}
+      {{- $name := $artist.name -}}
+      {{- with $post.Params.video.name -}}
+        {{- $name = . -}}
+      {{- end -}}
+      <p>
+        {{ i18n "theme.this_is" }} "{{ $post.Params.video.title }}" {{ i18n "theme.by" }}
+        <a href="{{ $artist.link }}">
+          {{ $artist.name }}
+        </a>.
       </p>
-  {{- with $fullcontent -}}
-      {{- partials.Include "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
-      {{- partials.IncludeCached "content/meta/footer.html" $post $post -}}
-  {{ else }}
-  </div>
-	<div class="text-end">
-		<a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link"
-        aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
-			{{- i18n "theme.read_article" -}}
-			<span class="ps-2">
-				{{- partials.IncludeCached "bsicon.html" "body-text" "body-text" -}}
-			</span>
-		</a>
-  {{- end -}}
+      <p>
+        {{$artist.description | markdownify }}
+      </p>
+
+      {{- else -}}
+        <p class="text-truncate text-truncate-5">
+          {{- with $post.Summary -}}
+            {{- . | markdownify -}}
+          {{- else -}}
+            {{- with $post.Description -}}
+              {{- . | markdownify -}}
+            {{- else -}}
+              {{- $post.Content | plainify | truncate 200 -}}
+            {{- end -}}
+          {{- end -}}
+        </p>
+      {{ end }}
+      {{- with $fullcontent -}}
+          {{- partials.Include "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
+          {{- partials.IncludeCached "content/meta/footer.html" $post $post -}}
+      {{ else }}
+    </div>
+    <div class="text-end">
+      <a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link"
+          aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
+        {{- i18n "theme.read_article" -}}
+        <span class="ps-2">
+          {{- partials.IncludeCached "bsicon.html" "body-text" "body-text" -}}
+        </span>
+      </a>
+    {{- end -}}
   </div>
 </article>
