@@ -9,7 +9,7 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "5.5.27",
+    "@davidsneighbour/configurations": "5.6.0",
     "@davidsneighbour/stylelint-config": "5.5.27",
     "@davidsneighbour/tools": "5.5.27",
     "@github/hotkey": "^3.1.0",
