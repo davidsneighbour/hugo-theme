@@ -1,11 +1,11 @@
 {{- $post := .context -}}
 {{- $fullcontent := .fullcontent | default true -}}
-				{{- $articleclasses := partialCached "func/getArticleClasses.html" $post $post -}}
+				{{- $articleclasses := partials.IncludeCached "func/getArticleClasses.html" $post $post -}}
         <article class="{{- $articleclasses -}}">
-  {{- partialCached "components/content/status.html" $post $post -}}
-  {{- partial "components/images/banner.html" . -}}
-    {{/* {{- partialCached "components/content/publishing-date.html" $post $post -}} */}}
-    {{- partial "components/content/headline.html" . -}}
+  {{- partials.IncludeCached "components/content/status.html" $post $post -}}
+  {{- partials.Include "components/images/banner.html" . -}}
+    {{/* {{- partials.IncludeCached "components/content/publishing-date.html" $post $post -}} */}}
+    {{- partials.Include "components/content/headline.html" . -}}
   <div class="prose">
     {{- with $fullcontent -}}
       {{- $post.Content -}}
@@ -26,13 +26,13 @@
 		<a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link" aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
 			{{- i18n "theme.read_article" -}}
 			<span class="ps-2">
-				{{- partialCached "bsicon.html" "body-text" "body-text" -}}
+				{{- partials.IncludeCached "bsicon.html" "body-text" "body-text" -}}
 			</span>
 		</a>
     {{- end -}}
     {{- with $fullcontent -}}
-      {{- partial "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
-      {{- partialCached "content/meta/footer.html" $post $post -}}
+      {{- partials.Include "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
+      {{- partials.IncludeCached "content/meta/footer.html" $post $post -}}
     {{- end -}}
   </div>
 </article>

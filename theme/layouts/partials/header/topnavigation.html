@@ -1,10 +1,10 @@
 <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary shadow-lg">
   <div class="container">
-    {{- partial "func/hook.html" ( dict "hook" "header-topnav-start" "context" . ) -}}
-    {{- partialCached "header/navbar/brand.html" . -}}
-    {{- partial "func/hook.html" ( dict "hook" "header-topnav-post-logo" "context" . ) -}}
-    {{- partialCached "header/navbar/toggle-button.html" . -}}
-    {{- partial "func/hook.html" ( dict "hook" "header-topnav-pre-mainnav" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-start" "context" . ) -}}
+    {{- partials.IncludeCached "header/navbar/brand.html" . -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-post-logo" "context" . ) -}}
+    {{- partials.IncludeCached "header/navbar/toggle-button.html" . -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-pre-mainnav" "context" . ) -}}
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
       <menu class="navbar-nav me-md-0 me-auto ms-auto">
         {{- $current := . -}}
@@ -21,7 +21,7 @@
                 data-toggle="dropdown"
                 aria-expanded="false">
                 {{- with .Params.bsicon -}}
-                  {{- partialCached "bsicon.html" . . -}}
+                  {{- partials.IncludeCached "bsicon.html" . . -}}
                 {{- end -}}
                 {{- .Name -}}
               </a>
@@ -31,7 +31,7 @@
                     <a class="dropdown-item" href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                       {{- with .Params.bsicon -}}
-                        {{- partialCached "bsicon.html" . . -}}
+                        {{- partials.IncludeCached "bsicon.html" . . -}}
                       {{- end -}}
                       {{- .Name -}}
                     </a>
@@ -44,17 +44,17 @@
               <a class="nav-link" href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                 {{- with .Params.bsicon -}}
-                  {{- partialCached "bsicon.html" . . -}}
+                  {{- partials.IncludeCached "bsicon.html" . . -}}
                 {{- end -}}
                 {{- .Name -}}
               </a>
             </li>
           {{- end -}}
         {{- end -}}
-        {{- partialCached "header/navbar/theme-selector.html" . -}}
+        {{- partials.IncludeCached "header/navbar/theme-selector.html" . -}}
       </menu>
     </div>
-    {{- partial "func/hook.html" ( dict "hook" "header-topnav-post-mainnav" "context" . ) -}}
-    {{- partial "func/hook.html" ( dict "hook" "header-topnav-end" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-post-mainnav" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-end" "context" . ) -}}
   </div>
 </nav>

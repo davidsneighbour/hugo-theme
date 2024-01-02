@@ -1,24 +1,24 @@
-{{- partial "func/hook.html" ( dict "hook" "footer-pre" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( dict "hook" "footer-pre" "context" . ) -}}
 <footer id="footer">
-  {{- partial "func/hook.html" ( dict "hook" "footer-start" "context" . ) -}}
+  {{- partials.Include "func/hook.html" ( dict "hook" "footer-start" "context" . ) -}}
   <div class="widgets container text-center">
     <h2 class="d-none invisible">Footer Items</h2>
-    {{- partial "func/hook.html" ( dict "hook" "footer-widgets-start" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" "footer-widgets-start" "context" . ) -}}
     {{- with site.Params.subscription -}}
-      {{- partialCached "footer/newsletter.html" site.Params.subscription site.Params.subscription -}}
+      {{- partials.IncludeCached "footer/newsletter.html" site.Params.subscription site.Params.subscription -}}
     {{- end -}}
     {{- with site.Menus.footer -}}
-      {{- partialCached "footer/footer-menu.html" . -}}
+      {{- partials.IncludeCached "footer/footer-menu.html" . -}}
     {{- end -}}
     {{- with site.Params.dnb.social -}}
-      {{- partialCached "footer/social-media.html" . . -}}
+      {{- partials.IncludeCached "footer/social-media.html" . . -}}
     {{- end -}}
-    {{- partialCached "footer/copyright.html" . -}}
+    {{- partials.IncludeCached "footer/copyright.html" . -}}
     {{- if hugo.IsServer -}}
-      {{- partial "footer/debugging.html" . -}}
+      {{- partials.Include "footer/debugging.html" . -}}
     {{- end -}}
-    {{- partial "func/hook.html" ( dict "hook" "footer-widgets-end" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( dict "hook" "footer-widgets-end" "context" . ) -}}
   </div>
-  {{- partial "func/hook.html" ( dict "hook" "footer-end" "context" . ) -}}
+  {{- partials.Include "func/hook.html" ( dict "hook" "footer-end" "context" . ) -}}
 </footer>
-{{- partial "func/hook.html" ( dict "hook" "footer-post" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( dict "hook" "footer-post" "context" . ) -}}

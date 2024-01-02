@@ -1,6 +1,6 @@
 <div class="hstack justify-content-center mt-5 gap-3">
   <div class="p-2">
-    {{- $year := partialCached "func/getYear.html" . -}}
+    {{- $year := partials.IncludeCached "func/getYear.html" . -}}
     {{- printf (i18n "theme.copyright-text") (string $year) | .RenderString | safeHTML -}}
   </div>
   <div class="vr"></div>

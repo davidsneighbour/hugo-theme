@@ -4,7 +4,7 @@
     {{- with $paginator -}}
       {{- $currentPageNumber := .PageNumber -}}
       {{ if ne $currentPageNumber 1 }}
-        {{ partial "components/pagination/pagination-simple.html" page }}
+        {{ partials.Include "components/pagination/pagination-simple.html" page }}
       {{ end }}
     {{- end -}}
     <div class="row">
@@ -25,11 +25,11 @@
           {{- end -}}
           <div class="col-12 col-md-{{ $col }} snap-align-start mb-5 snap-y is--hotkey-post"
                 data-hotkey="k+{{- $index -}}" data-link="{{ $post.context.Permalink -}}">
-            {{- partial "content/post.html" $post $post -}}
+            {{- partials.Include "content/post.html" $post $post -}}
           </div>
         {{ end }}
       {{- end -}}
     </div>
-    {{ partial "components/pagination/pagination-simple.html" . }}
+    {{ partials.Include "components/pagination/pagination-simple.html" . }}
   </div>
 </section>

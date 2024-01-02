@@ -1,7 +1,7 @@
 <div class="alert alert-light
             d-flex align-items-center"
     role="alert">
-    {{ partialCached "bsicon.html" "note" "note" }}
+    {{ partials.IncludeCached "bsicon.html" "note" "note" }}
   <div>
     {{ .Inner | markdownify }}
   </div>

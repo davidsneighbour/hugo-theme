@@ -1,9 +1,9 @@
 {{- $post := . -}}
 <div class="d-flex flex-row gap-2">
   <div class="icon">
-    {{- partialCached "bsicon.html" "share-fill" "share-fill" -}}
+    {{- partials.IncludeCached "bsicon.html" "share-fill" "share-fill" -}}
   </div>
   <div class="d-flex flex-row gap-2">
-    {{- partialCached "widgets/share-links.html" $post $post -}}
+    {{- partials.IncludeCached "widgets/share-links.html" $post $post -}}
   </div>
 </div>

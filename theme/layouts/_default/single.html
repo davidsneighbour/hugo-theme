@@ -7,12 +7,12 @@
   <section class="section--content">
     <div class="container">
       <div class="row">
-        {{- partial "func/hook.html" ( dict "hook" "single-pre-article" "context" . ) -}}
+        {{- partials.Include "func/hook.html" ( dict "hook" "single-pre-article" "context" . ) -}}
         <div class="col-12 mb-5">
-          {{ partial "content/post.html" $post $post }}
+          {{ partials.Include "content/post.html" $post $post }}
         </div>
       </div>
     </div>
   </section>
-  {{- partial "content/sections/related.html" . -}}
+  {{- partials.Include "content/sections/related.html" . -}}
 {{- end -}}

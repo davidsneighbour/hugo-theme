@@ -15,7 +15,7 @@
 {{- with (and site.Params.dnb.giscus $commentform) -}}
   {{- if (eq "true" $commentform) -}}
     <div class="col-12">
-      {{- partialCached "content/giscus.html" $context $context -}}
+      {{- partials.IncludeCached "content/giscus.html" $context $context -}}
     </div>
   {{- end -}}
 {{- end -}}

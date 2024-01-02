@@ -1,4 +1,4 @@
-{{- partial "func/hook.html" ( dict "hook" "init" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( dict "hook" "init" "context" . ) -}}
 {{- $paginator := dict -}}
 {{- if eq "home" .Kind -}}
   {{- /*
@@ -20,4 +20,4 @@
   {{- $paginator = $.Paginator -}}
 {{- end -}}
 {{- .Scratch.Set "paginator" $paginator -}}
-{{- partial "func/hook.html" ( dict "hook" "init-end" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( dict "hook" "init-end" "context" . ) -}}

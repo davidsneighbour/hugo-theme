@@ -1,14 +1,14 @@
-{{- partialCached "footer/back-to-top.html" . -}}
+{{- partials.IncludeCached "footer/back-to-top.html" . -}}
 {{- if hugo.IsServer -}}
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      {{- partialCached "infotabs.html" page page -}}
+      {{- partials.IncludeCached "infotabs.html" page page -}}
     </div>
   </div>
 </div>
 {{- end -}}
 
 {{- if templates.Exists "partials/schema.html" -}}
-  {{- partial "schema.html" . . -}}
+  {{- partials.Include "schema.html" . . -}}
 {{- end -}}

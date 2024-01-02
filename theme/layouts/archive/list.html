@@ -2,7 +2,7 @@
   <section class="section--content">
     <div class="container">
       <div class="row">
-        {{- $postClasses := partialCached "func/getArticleClasses.html" . . -}}
+        {{- $postClasses := partials.IncludeCached "func/getArticleClasses.html" . . -}}
         <article class="{{- $postClasses -}}">
           <h1 class="h2 post-title"><a href="{{ .Permalink }}">Archive</a></h1>
           <div class="prose component--archive-card">
@@ -21,14 +21,14 @@
                     </a>
                   </h2>
                   <p class="text-truncate text-truncate-5">{{- $item.Summary -}}</p>
-                  {{- partialCached "components/tags/tags.html" . . -}}
+                  {{- partials.IncludeCached "components/tags/tags.html" . . -}}
                 </div>
               </div>
             {{- end -}}
           </div>
         </article>
       </div>
-      {{ partial "components/pagination/pagination-simple.html" . }}
+      {{ partials.Include "components/pagination/pagination-simple.html" . }}
     </div>
   </section>
 {{- end -}}

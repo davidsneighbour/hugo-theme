@@ -6,7 +6,7 @@
 {{- $breakPoints := site.Params.dnb.pictures.responsive.halfwidth.break_points -}}
 {{- $imageSizes := site.Params.dnb.pictures.responsive.halfwidth.image_sizes -}}
 
-{{- $config := partialCached "func/pictures/getConfiguration.html" . -}}
+{{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
 {{- $default_format := $config.default_format | default "webp" -}}
 
 {{- if (eq $responsive "fullwidth") -}}
@@ -64,7 +64,7 @@
                 title="{{- . -}}"
                 data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-title="{{- . -}}">
-              {{- partial "bsicon.html" "camera2" "camera2" -}}
+              {{- partials.Include "bsicon.html" "camera2" "camera2" -}}
             </div>
             {{/* @todo <figcaption class="text-center"></figcaption> */}}
           {{- end -}}
@@ -77,7 +77,7 @@
                 title="{{- $publishingdate -}}"
                 data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-title="{{- $publishingdate -}}">
-              {{- partialCached "bsicon.html" "calendar3" "calendar3" -}}
+              {{- partials.IncludeCached "bsicon.html" "calendar3" "calendar3" -}}
             </div>
           {{- end -}}
         </div>

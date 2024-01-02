@@ -3,7 +3,7 @@
 
 {{- $published := $page.Date.Format "Mon, Jan 2, 2006 at 3:04pm" -}}
 {{- $last_modified := $page.Lastmod.Format "Mon, Jan 2, 2006 at 3:04pm" -}}
-{{- $githash := partialCached "func/getGitHash.html" $page $page -}}
+{{- $githash := partials.IncludeCached "func/getGitHash.html" $page $page -}}
 {{- $hashlink := "" -}}
 {{- with $githash }}
   {{- $hash1 := printf "<a href=\"%s/commit/%s\">%s</a>"
@@ -25,7 +25,7 @@
 {{- end -}}
 <div class="d-flex flex-row gap-2">
   <div class="icon">
-    {{- partialCached "bsicon.html" "calendar3" "calendar3" }}
+    {{- partials.IncludeCached "bsicon.html" "calendar3" "calendar3" }}
   </div>
   <div class="d-flex flex-row gap-0 column-gap-2 flex-wrap">
     <span>Published: {{ $published }}</span>
@@ -37,7 +37,7 @@
         href="vscode://file/{{- .File.Filename -}}"
         aria-label="Edit in VSCode"
       >
-        {{- partialCached "bsicon.html" "vector-pen" "vector-pen" -}}
+        {{- partials.IncludeCached "bsicon.html" "vector-pen" "vector-pen" -}}
       </a>
     {{- end -}}
   </div>
@@ -45,7 +45,7 @@
 {{ with $hashlink }}
   <div class="d-flex flex-row gap-2">
     <div class="icon">
-      {{- partialCached "bsicon.html" "github" "github" }}
+      {{- partials.IncludeCached "bsicon.html" "github" "github" }}
     </div>
     <div class="d-flex flex-row gap-2">
       <span>Git: {{ . | safeHTML }}</span>
@@ -54,7 +54,7 @@
         target="_blank"
         rel="nofollow,noreferrer"
       >
-        {{- partialCached "bsicon.html" "vector-pen" "vector-pen" }}
+        {{- partials.IncludeCached "bsicon.html" "vector-pen" "vector-pen" }}
         {{ i18n "theme.suggest_edit" }}
       </a>
     </div>
@@ -63,7 +63,7 @@
 {{- with (.GetTerms "tags") -}}
   <div class="d-flex flex-row gap-2">
     <div class="icon">
-      {{- partialCached "bsicon.html" "tags" "tags" }}
+      {{- partials.IncludeCached "bsicon.html" "tags" "tags" }}
     </div>
     <div class="d-flex flex-row gap-2">
       <span>{{ i18n "theme.tags" }}: </span>
