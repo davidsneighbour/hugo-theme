@@ -11,7 +11,7 @@ tags:
   - artist tag
   - another artist tag
   - 100DaysToOffload
-posttype: music
+type: music
 
 draft: true
 

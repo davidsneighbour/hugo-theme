@@ -7,7 +7,7 @@ summary: ''
 
 draft: true
 
-posttype: video
+type: video
 
 date: { { .Date } }
 publishDate: { { .Date } }
