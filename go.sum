@@ -2,8 +2,8 @@ github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 h1:K8ukOfj0MOBEW
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff h1:nV9EWy0+/rvtipXqDQMVeFfgyXgP9yY40bbx0h2qS+8=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff/go.mod h1:OG5Jqzdk8/OaniOKZRA9w8agzQBskTkDYFCfDjwuz1A=
-github.com/davidsneighbour/hugo-modules v0.0.0-20240101113009-19e815dfe0bb h1:INkJXZqPLn7MQb4gt2XUAKxGaeYMlzGeW0bZV0BcNCk=
-github.com/davidsneighbour/hugo-modules v0.0.0-20240101113009-19e815dfe0bb/go.mod h1:BoCreEOs9gAQQ8O44MJiEA4pYpDnkMDx8kF8IdjF5+E=
+github.com/davidsneighbour/hugo-modules v0.0.0-20240101193708-8b224083a53a h1:fep9CWJMCjn306RPSTRklNFtbXEJiesVGZYumrSo3u8=
+github.com/davidsneighbour/hugo-modules v0.0.0-20240101193708-8b224083a53a/go.mod h1:BoCreEOs9gAQQ8O44MJiEA4pYpDnkMDx8kF8IdjF5+E=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 h1:TNjqpiXkwVflELokzo+UTXdRT2b7M3Qtb2YnKbKI8A8=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13/go.mod h1:SPSKhU4HI79zYM91EpgFvJD3uC4hZjx0bwkXTyfSIhc=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.31 h1:z9TDfRoZEyDy1R0OhgIU3jlLhxk6z1DIzFCGdz79Sio=
@@ -54,8 +54,8 @@ github.com/davidsneighbour/hugo-modules/modules/youtube v1.2023.16 h1:wRpglyhxPh
 github.com/davidsneighbour/hugo-modules/modules/youtube v1.2023.16/go.mod h1:/bWhtvmL38s7cgV+YRCXdgpe+iJ8elIRXiNB9TRCh+g=
 github.com/paulirish/lite-youtube-embed v0.3.0 h1:y00yCitI7lBPFcfTtN/RuU9FjEL2ZQfxsJqwYRCghao=
 github.com/paulirish/lite-youtube-embed v0.3.0/go.mod h1:9nuUWCzbFF/vvl3ClpZ1KsYFi/hlKjVOkmG8E+nsGDY=
-github.com/tabler/tabler-icons v2.44.0+incompatible h1:9RzapyknyKr1iPd95Pq8lnFrFhd6zyzPicGga/WaX/k=
-github.com/tabler/tabler-icons v2.44.0+incompatible/go.mod h1:Ap75CRdhXxprnUnPlUCRLvJ2pIFNqwxIipj3GfD6XHE=
+github.com/tabler/tabler-icons v2.45.0+incompatible h1:UEwHc8rMln8KK8Ioe6D47150plYSojbcgUKI/jdmEAw=
+github.com/tabler/tabler-icons v2.45.0+incompatible/go.mod h1:Ap75CRdhXxprnUnPlUCRLvJ2pIFNqwxIipj3GfD6XHE=
 github.com/tailwindlabs/heroicons v2.1.1+incompatible h1:lcZBlvCi4dkso6plabtqxXSZ55mULxnsmA/52tib7q8=
 github.com/tailwindlabs/heroicons v2.1.1+incompatible/go.mod h1:2SHGOdw86jviBkoeQINcTfkzAAao9dciip4RsMS9xIg=
 github.com/twbs/icons v1.11.2 h1:I0zuO+pk4F1jKGautLPFUQyU2uQyir0GBGb4ArpXZLg=
