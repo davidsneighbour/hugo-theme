@@ -6,6 +6,8 @@
 {{- $breakPoints := site.Params.dnb.pictures.responsive.halfwidth.break_points -}}
 {{- $imageSizes := site.Params.dnb.pictures.responsive.halfwidth.image_sizes -}}
 
+{{- $showControls := .showcontrols | default "true" -}}
+
 {{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
 {{- $default_format := $config.default_format | default "webp" -}}
 
@@ -57,6 +59,7 @@
             {{- end -}}
           </picture>
         </a>
+        {{ with $showControls -}}
         <div class="inline-icons">
           {{- with $title -}}
             <div class="is--copyright"
@@ -81,6 +84,7 @@
             </div>
           {{- end -}}
         </div>
+        {{- end -}}
       </figure>
     {{- end -}}
   </div>

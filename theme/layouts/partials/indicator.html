@@ -1,0 +1,19 @@
+{{- if hugo.IsServer -}}
+  <div class="container responsive-ruler">
+    {{- $breakpoints := slice "xs" "sm" "md" "lg" "xl" "xxl" -}}
+    {{- range $index, $value := $breakpoints -}}
+      {{- $classes := printf "col d-%s-block" $value -}}
+      {{- if eq $index 0 -}}
+        {{- $classes = printf "d-block %s" $classes -}}
+      {{- else -}}
+        {{- $classes = printf "d-none %s %s" $classes (printf "d-%s-none" (index $breakpoints (sub $index 1))) -}}
+      {{- end -}}
+      {{- if lt $index (sub ($breakpoints | len) 1) -}}
+        {{- $classes = printf "%s %s" $classes (printf "d-%s-none" (index $breakpoints (add $index 1))) -}}
+      {{- end -}}
+      <div class="{{- $classes -}}">
+        <div class="identifier">{{- . -}}</div>
+      </div>
+    {{- end -}}
+  </div>
+{{- end -}}

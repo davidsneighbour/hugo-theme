@@ -1,0 +1,27 @@
+{{- $keyword := . -}}
+
+<h3>More <em>{{ $keyword }}</em> posts</h3>
+
+{{ $items := collections.Slice }}
+{{- range site.RegularPages -}}
+  {{- if in .Params.tags $keyword -}}
+    {{ $items = collections.Append $items (slice .) }}
+  {{- end -}}
+{{- end -}}
+
+{{ partialCached "indicator.html" . . }}
+
+<div class="container">
+  <div class="row">
+    {{- range $index, $item := collections.First 8 (collections.Shuffle $items) -}}
+      <div class="col-xxl-3 col-md-4 col-sm-6 col-12
+          {{ if (lt $index 2) }}{{ else }}d-none {{ end }}
+          {{ if (lt $index 4) }}d-sm-block {{ else }}{{ end }}
+          {{ if (lt $index 6) }}d-md-block d-lg-block d-xl-block {{ else }}d-sm-none {{ end }}
+          {{ if (lt $index 8) }}d-xxl-block {{ else }}d-md-none d-lg-none d-xl-none {{ end }}
+      ">
+        {{- partialCached "content/views/small-image-with-title" $item $item -}}
+      </div>
+    {{- end -}}
+  </div>
+</div>
