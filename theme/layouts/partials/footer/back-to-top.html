@@ -1,6 +1,10 @@
-<div class="btn-back-to-top">
+<div class="sticky-bottom
+  btn btn-dark d-flex justify-content-end
+  bottom-0 mb-4 end-0 me-4 vh-120 w-100">
   <a href="#top">
-    {{ partials.IncludeCached "bsicon.html" "chevron-up" "chevron-up" }}
-    {{ i18n "theme.back_to_top" }}
+    <span class="me-2">
+      {{- partials.IncludeCached "bsicon.html" "chevron-up" "chevron-up" -}}
+    </span>
+    {{- lang.Translate "theme.back_to_top" -}}
   </a>
 </div>
