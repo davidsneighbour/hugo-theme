@@ -9,12 +9,12 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "5.6.1",
-    "@davidsneighbour/stylelint-config": "5.6.1",
-    "@davidsneighbour/tools": "5.6.1",
+    "@davidsneighbour/configurations": "5.8.0",
+    "@davidsneighbour/stylelint-config": "5.8.0",
+    "@davidsneighbour/tools": "5.8.0",
     "@github/hotkey": "^3.1.0",
-    "@types/alpinejs": "^3.13.5",
-    "stylelint-config-standard-scss": "^12.0.0"
+    "@types/alpinejs": "^3.13.6",
+    "stylelint-config-standard-scss": "^13.0.0"
   },
   "scripts": {
     "clean": "wireit",
@@ -24,7 +24,8 @@
     "lint:styles:fix": "wireit",
     "lint:templates": "wireit",
     "release": "wireit",
-    "release:minor": "wireit"
+    "release:minor": "wireit",
+    "sassdoc": "sassdoc theme/assets/scss/ --dest theme/static/theme-documentation/styles --strict"
   },
   "wireit": {
     "clean": {
