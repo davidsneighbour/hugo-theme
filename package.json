@@ -49,10 +49,10 @@
       "command": "bin/hugo/lint-templates"
     },
     "release": {
-      "command": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+      "command": "commit-and-tag-version --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease && npm publish"
     },
     "release:minor": {
-      "command": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+      "command": "commit-and-tag-version --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease && npm publish"
     }
   }
 }
