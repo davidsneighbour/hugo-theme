@@ -1,30 +1,42 @@
-@mixin dnb-scrollbars($outertag: '*', $width: 8px, $radius: $border-radius, $color: $primary, $track: #000) {
-	#{$outertag} {
-		/***************************************************************************
-     * firefox
-     **************************************************************************/
-		scrollbar-width: $width;
-		scrollbar-color: $color $track;
+/// Creates scrollbar styles for Firefox, Chrome, Edge, and Safari.
+///
+/// @param {string} $outertag [*]
+///   The tag to apply the scrollbar styles to.
+/// @param {integer (px)} $width [8px]
+///  The width of the scrollbar.
+/// @param {integer (px)} $radius [$border-radius]
+/// The radius of the scrollbar.
+/// @param {color} $color [var(--bs-primary)]
+/// The color of the scrollbar.
+/// @param {color} $track [var(--bs-body-bg)]
+/// The color of the scrollbar track.
+@mixin dnb-scrollbars($outertag: '*',
+  $width: 8px,
+  $radius: $border-radius,
+  $color: var(--bs-primary),
+  $track: var(--bs-body-bg)) {
+  #{$outertag} {
+    // firefox/
+    scrollbar-width: $width;
+    scrollbar-color: $color $track;
 
-		/***************************************************************************
-     * chrome, edge, and safari
-     **************************************************************************/
-		::-webkit-scrollbar {
-			width: $width;
-			height: $width;
-		}
+    // chrome, edge, and safari/
+    ::-webkit-scrollbar {
+      width: $width;
+      height: $width;
+    }
 
-		::-webkit-scrollbar-track {
-			background: $track;
-		}
+    ::-webkit-scrollbar-track {
+      background: $track;
+    }
 
-		::-webkit-scrollbar-thumb {
-			border: 0;
-			/* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
-			border-radius: $radius;
-			background-color: $color;
-		}
-	}
+    ::-webkit-scrollbar-thumb {
+      border: 0;
+      /* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
+      border-radius: $radius;
+      background-color: $color;
+    }
+  }
 }
 
 // ::-webkit-scrollbar — the entire scrollbar.

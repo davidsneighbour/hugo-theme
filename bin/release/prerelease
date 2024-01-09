@@ -65,3 +65,7 @@ if test -f "$FILE"; then
   sed -i "s/date-released: .*/date-released: ${DATE}/" $FILE
   git add $FILE
 fi
+
+# update scss theme documentation
+npm run sassdoc
+git add theme/static
