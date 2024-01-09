@@ -3,18 +3,16 @@
   "description": "@davidsneighbour's GoHugo theme.",
   "version": "1.2024.7",
   "license": "MIT",
-  "private": true,
   "repository": "davidsneighbour/hugo-theme",
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
-    "@davidsneighbour/configurations": "5.8.0",
-    "@davidsneighbour/stylelint-config": "5.8.0",
-    "@davidsneighbour/tools": "5.8.0",
-    "@github/hotkey": "^3.1.0",
-    "@types/alpinejs": "^3.13.6",
-    "stylelint-config-standard-scss": "^13.0.0"
+    "@davidsneighbour/standard-version-config": "^5.8.1",
+    "@davidsneighbour/stylelint-config": "5.8.1",
+    "@davidsneighbour/tools": "5.8.1",
+    "@github/hotkey": "3.1.0",
+    "@types/alpinejs": "3.13.6"
   },
   "scripts": {
     "clean": "wireit",
