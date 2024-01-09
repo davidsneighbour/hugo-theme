@@ -8,6 +8,8 @@
   "bugs": "https://github.com/davidsneighbour/hugo-theme/issues",
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
+    "@alpinejs/collapse": "3.13.3",
+    "alpinejs": "3.13.3",
     "@davidsneighbour/standard-version-config": "^5.8.1",
     "@davidsneighbour/stylelint-config": "5.8.1",
     "@davidsneighbour/tools": "5.8.1",
