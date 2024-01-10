@@ -12,7 +12,7 @@
     "alpinejs": "3.13.3",
     "@davidsneighbour/standard-version-config": "^5.8.1",
     "@davidsneighbour/stylelint-config": "5.8.2",
-    "@davidsneighbour/tools": "5.8.1",
+    "@davidsneighbour/tools": "5.8.2",
     "@github/hotkey": "3.1.0",
     "@types/alpinejs": "3.13.6"
   },
