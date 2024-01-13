@@ -11,6 +11,7 @@
     <a class="visually-hidden-focusable skip-to-main-link" href="#maincontent">
       {{- i18n "theme.skip_to_content" -}}
     </a>
+    <span id="top" class="d-none" aria-hidden="true"></span>
     {{- partials.Include "func/hook.html" ( dict "hook" "body-start" "context" . ) -}}
     {{- partials.Include "header.html" . -}}
     {{- partials.Include "func/hook.html" ( dict "hook" "body-pre-main" "context" . ) -}}
