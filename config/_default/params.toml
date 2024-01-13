@@ -18,3 +18,9 @@ icontheme = "bootstrap"
 [dnb.theme.switcher]
 enabled = true   # boolean
 default = "dark" # `dark`, `light` or whatever `dnb.theme.switcher.themes` offers
+
+[dnb.theme.backtotop]
+enabled = true
+icon = "chevron-double-up"
+class = ""
+top_id = "top"

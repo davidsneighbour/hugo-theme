@@ -1,15 +1,17 @@
-{{- $config := site.Params.theme -}}
-{{- $icon := $config.backtotop.icon | default "chevron-double-up" -}}
-{{- $class := $config.backtotop.class | default "" -}}
-{{- $top_id := $config.backtotop.top_id | default "top" -}}
-<div class="{{- $class }}
-            d-flex justify-content-end sticky-bottom
-            btn btn-dark
-            bottom-0 mb-4 end-0 me-4 vh-120 w-100">
-  <a href="#{{- $top_id -}}" class="text-decoration-none">
-    <span class="me-2">
-      {{- partials.IncludeCached "bsicon.html" $icon $icon -}}
-    </span>
-    {{- lang.Translate "theme.back_to_top" -}}
-  </a>
-</div>
+{{- $config := site.Params.dnb.theme -}}
+{{- if eq true $config.backtotop.enabled -}}
+  {{- $icon := $config.backtotop.icon -}}
+  {{- $class := $config.backtotop.class -}}
+  {{- $top_id := $config.backtotop.top_id -}}
+  <div class="{{- $class }}
+              d-flex justify-content-end sticky-bottom
+              btn btn-dark
+              bottom-0 mb-4 end-0 me-4 vh-120 w-100">
+    <a href="#{{- $top_id -}}" class="text-decoration-none">
+      <span class="me-2">
+        {{- partials.IncludeCached "bsicon.html" $icon $icon -}}
+      </span>
+      {{- lang.Translate "theme.back_to_top" -}}
+    </a>
+  </div>
+{{- end -}}

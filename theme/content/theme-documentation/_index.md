@@ -12,6 +12,7 @@ weight: 100
 <!--lint ignore-->
 
 - [General notes](#general-notes)
+- [Icons](#icons)
 - [License](#license)
 
 <!-- markdownlint-enable MD010 MD007 -->
@@ -23,17 +24,10 @@ weight: 100
 - The keywords MUST, MUST NOT, REQUIRED, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL in this document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
 - I am working on Ubuntu, meaning all code samples in this document are working on Ubuntu and any comparable (Debian-based) Linux system. If you use another operating system, you are on your own. I assume most tools, scripts, and procedures should work on other systems with the appropriate changes because I mainly use open-source programs and scripts.
 
+## Icons
 
-
-
-
+The icons in this theme are from [Bootstrap Icons](https://icons.getbootstrap.com/). Whenever a configuration option asks for an icon or icon slug then you can use any of the icons from that library. For example, if you want to use the [chevron-double-up](https://icons.getbootstrap.com/icons/chevron-double-up/) icon, you can use either `chevron-double-up`  as the value for the configuration option.
 
 ## License
 
-This website's written `content` is licensed under the [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). In addition, the underlying `source code` used to format and display that content is licensed under the [MIT License](LICENSE-MIT.md).
-
-While this repository is available publicly, all `content` is subject to copyright and may not be re-used or copied into other website projects. The `content` is everything in this site's `content` folder or documentation and code. Other parts of this project, like `assets` and `layouts`, are available for educational use and can be copied to your projects. You **MUST NOT** re-use the full (complete) theme, but you **MAY** use parts and principles of it.
-
-TBD: note about fonts that might be licensed
-
-Long story short: go and create something by yourself, and if you want to know how a feature on this website was realized, feel free to have a look or [ask](https://github.com/davidsneighbour/kollitsch.dev/discussions/new?category=questions).
+This themes source code is licensed under the [MIT License](LICENSE-MIT.md). The theme documenation in `theme/content` is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](LICENSE-CC-BY-NC-4.0.md).
