@@ -30,4 +30,4 @@ The icons in this theme are from [Bootstrap Icons](https://icons.getbootstrap.co
 
 ## License
 
-This themes source code is licensed under the [MIT License](LICENSE-MIT.md). The theme documenation in `theme/content` is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](LICENSE-CC-BY-NC-4.0.md).
+This theme's source code is licensed under the [MIT License](LICENSE-MIT.md). The theme documenation in `theme/content` is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](LICENSE-CC-BY-NC-4.0.md).
