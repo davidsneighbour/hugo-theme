@@ -4,6 +4,8 @@ github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff h1:nV9EWy0+/rvtipXq
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff/go.mod h1:OG5Jqzdk8/OaniOKZRA9w8agzQBskTkDYFCfDjwuz1A=
 github.com/davidsneighbour/hugo-modules v0.0.0-20240114140357-46a53ad4ad55 h1:wIjoBk/lLgfrS/mo+LGOn8T9C4V+HOBNQ6IW7nPTjwo=
 github.com/davidsneighbour/hugo-modules v0.0.0-20240114140357-46a53ad4ad55/go.mod h1:8uLGnOljtEG4ADvpgPTCQc1EztPd7AsS4optwohezr0=
+github.com/davidsneighbour/hugo-modules v0.0.0-20240114141811-9d036ce4c4cb h1:R/a5F9/GK0rGhOdegmlzNLCxcNFbF7zIH2CywbWTo/w=
+github.com/davidsneighbour/hugo-modules v0.0.0-20240114141811-9d036ce4c4cb/go.mod h1:8uLGnOljtEG4ADvpgPTCQc1EztPd7AsS4optwohezr0=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 h1:TNjqpiXkwVflELokzo+UTXdRT2b7M3Qtb2YnKbKI8A8=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13/go.mod h1:SPSKhU4HI79zYM91EpgFvJD3uC4hZjx0bwkXTyfSIhc=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.31 h1:z9TDfRoZEyDy1R0OhgIU3jlLhxk6z1DIzFCGdz79Sio=
