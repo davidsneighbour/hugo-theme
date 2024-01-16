@@ -10,9 +10,9 @@
             {{- range $index, $item := $paginator.Pages -}}
               <div class="is--item d-flex align-items-start flex-column flex-sm-row">
                 <div class="is--date">
-                  <span>{{- $item.PublishDate.Format "Jan" -}}</span>
-                  <span>{{- $item.PublishDate.Format "2" -}}</span>
-                  <span>{{- $item.PublishDate.Format "2006" -}}</span>
+                  <span>{{- $item.Date.Format "Jan" -}}</span>
+                  <span>{{- $item.Date.Format "2" -}}</span>
+                  <span>{{- $item.Date.Format "2006" -}}</span>
                 </div>
                 <div class="is--content">
                   <h2 class="post-title">
