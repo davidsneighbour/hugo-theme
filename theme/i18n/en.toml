@@ -15,7 +15,7 @@ other = "Showing posts from"
 
 [theme.recent_posts]
 description = ""
-other = "Recent Posts (Page %s)"
+other = "Recent Posts (Page %d)"
 
 [theme.home]
 description = ""
