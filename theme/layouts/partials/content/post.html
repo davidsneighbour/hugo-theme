@@ -2,7 +2,7 @@
 {{- $posttype := "default" -}}
 
 {{- with $context.Params.type -}}
-  {{- if templates.Exists ( printf "partials/content/type/%s.html" . ) -}}
+  {{- if templates.Exists ( fmt.Printf "partials/content/type/%s.html" . ) -}}
     {{- $posttype = . -}}
   {{- end -}}
 {{- end -}}
@@ -11,4 +11,4 @@
 {{- end -}}
 
 {{- /* FIXME: this should be cached, maybe with cachekey ID+posttype */ -}}
-{{- partials.Include (printf "content/type/%s.html" $posttype) . -}}
+{{- partials.Include (fmt.Printf "content/type/%s.html" $posttype) . -}}

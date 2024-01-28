@@ -6,16 +6,16 @@
 {{- $breakPoints := site.Params.dnb.pictures.responsive.halfwidth.break_points -}}
 {{- $imageSizes := site.Params.dnb.pictures.responsive.halfwidth.image_sizes -}}
 
-{{- $showControls := .showcontrols | default "true" -}}
+{{- $showControls := .showcontrols | compare.Default "true" -}}
 
 {{- $config := partials.IncludeCached "func/pictures/getConfiguration.html" . -}}
-{{- $default_format := $config.default_format | default "webp" -}}
+{{- $default_format := $config.default_format | compare.Default "webp" -}}
 
 {{- if (eq $responsive "fullwidth") -}}
   {{- $breakPoints = site.Params.dnb.pictures.responsive.fullwidth.break_points -}}
   {{- $imageSizes = site.Params.dnb.pictures.responsive.fullwidth.image_sizes -}}
 {{- end -}}
-{{- $imageSizes2 := slice -}}
+{{- $imageSizes2 := collections.Slice -}}
 {{- range $imageSizes -}}
   {{- $imageSizes2 = $imageSizes2 | append (math.Ceil (div (mul (float .) (float (index $aspectRatio 1))) (float (index $aspectRatio 0)))) -}}
 {{- end -}}
@@ -24,11 +24,11 @@
     {{- range $counter, $image := . -}}
       {{- $title := "" -}}
       {{- if ne $image.Title $image.Name -}}
-        {{- $title = $image.Title | markdownify -}}
+        {{- $title = $image.Title | transform.Markdownify -}}
       {{- end -}}
-      {{- $images := slice -}}
+      {{- $images := collections.Slice -}}
       {{- range $index, $value := $imageSizes -}}
-        {{- $imagesize := printf "%sx%s %s" (string $value) (string (index $imageSizes2 $index)) $default_format -}}
+        {{- $imagesize := fmt.Printf "%sx%s %s" (string $value) (string (index $imageSizes2 $index)) $default_format -}}
         {{- $images = $images | append ($image.Fit $imagesize) -}}
       {{- end -}}
       <figure>
@@ -71,10 +71,10 @@
             </div>
             {{/* @todo <figcaption class="text-center"></figcaption> */}}
           {{- end -}}
-          {{- if eq true ($context.Params.theme.showdate | default true) -}}
+          {{- if eq true ($context.Params.theme.showdate | compare.Default true) -}}
             {{- $publishingdate := printf
                   "🤖 %s"
-                  ($context.PublishDate | time.Format (site.Params.dnb.theme.dateformat.timestamp | default ":date_long")) -}}
+                  ($context.PublishDate | time.Format (site.Params.dnb.theme.dateformat.timestamp | compare.Default ":date_long")) -}}
             <div class="is--publishdate"
                 role="button"
                 title="{{- $publishingdate -}}"

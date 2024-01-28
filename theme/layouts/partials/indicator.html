@@ -1,15 +1,15 @@
 {{- if hugo.IsServer -}}
   <div class="container responsive-ruler">
-    {{- $breakpoints := slice "xs" "sm" "md" "lg" "xl" "xxl" -}}
+    {{- $breakpoints := collections.Slice "xs" "sm" "md" "lg" "xl" "xxl" -}}
     {{- range $index, $value := $breakpoints -}}
-      {{- $classes := printf "col d-%s-block" $value -}}
+      {{- $classes := fmt.Printf "col d-%s-block" $value -}}
       {{- if eq $index 0 -}}
-        {{- $classes = printf "d-block %s" $classes -}}
+        {{- $classes = fmt.Printf "d-block %s" $classes -}}
       {{- else -}}
-        {{- $classes = printf "d-none %s %s" $classes (printf "d-%s-none" (index $breakpoints (sub $index 1))) -}}
+        {{- $classes = fmt.Printf "d-none %s %s" $classes (fmt.Printf "d-%s-none" (index $breakpoints (sub $index 1))) -}}
       {{- end -}}
       {{- if lt $index (sub ($breakpoints | len) 1) -}}
-        {{- $classes = printf "%s %s" $classes (printf "d-%s-none" (index $breakpoints (add $index 1))) -}}
+        {{- $classes = fmt.Printf "%s %s" $classes (fmt.Printf "d-%s-none" (index $breakpoints (math.Add $index 1))) -}}
       {{- end -}}
       <div class="{{- $classes -}}">
         <div class="identifier">{{- . -}}</div>

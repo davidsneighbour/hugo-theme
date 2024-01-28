@@ -4,7 +4,7 @@
   or the default author in config/_default/author.toml is used
   */
 -}}
-{{- $author := slice -}}
+{{- $author := collections.Slice -}}
 {{- with .Params.Author -}}
   {{- $author = . -}}
 {{- else -}}
@@ -18,12 +18,12 @@
   </span>
 {{- else -}}
   {{- $imagePath:= $author.image -}}
-  {{- if (fileExists (add "assets/" $imagePath)) -}}
+  {{- if (fileExists (fmt.Printf "assets/%s" $imagePath)) -}}
     {{- $image:= resources.Get $imagePath -}}
     {{- $imageXS:= $image.Fill "26x26" -}}
     {{- .Scratch.Set "image" $imageXS.RelPermalink -}}
   {{- else -}}
-    {{- .Scratch.Set "image" ($imagePath | absURL) -}}
+    {{- .Scratch.Set "image" ($imagePath | urls.AbsURL ) -}}
   {{- end -}}
   <a href="{{ .Permalink }}">
     <img

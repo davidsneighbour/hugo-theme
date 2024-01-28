@@ -4,17 +4,17 @@
     <div class="container">
       <div class="row">
         <div class="col-12 mb-5">
-          <h1 class="post-title">{{ i18n "theme.tags" }}</h1>
+          <h1 class="post-title">{{ lang.Translate "theme.tags" }}</h1>
         </div>
         {{- range $key, $taxonomy := .Site.Taxonomies.tags.ByCount -}}
           {{- if lt $counter 4 -}}
-            {{- with site.GetPage (printf "/tags/%s/" .Name) -}}
+            {{- with site.GetPage (fmt.Printf "/tags/%s/" .Name) -}}
               {{- if ne .Content "" -}}
-                {{- $post := dict "context" . "fullcontent" false "responsive" "halfwidth" -}}
+                {{- $post := collections.Dictionary "context" . "fullcontent" false "responsive" "halfwidth" -}}
                 <div class="col-md-6 mb-3">
                   {{- partials.Include "content/post.html" $post -}}
                 </div>
-                {{- $counter = add $counter 1 -}}
+                {{- $counter = math.Add $counter 1 -}}
               {{- end -}}
             {{- end -}}
           {{- end -}}

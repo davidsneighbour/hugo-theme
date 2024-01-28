@@ -1,16 +1,16 @@
 {{- define "main" }}
-	{{- partials.Include "func/hook.html" ( dict "hook" "container-start" "context" . ) -}}
+	{{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "container-start" "context" . ) -}}
 	<section class="section--404">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 mb-5">
 					<article class="404">
 						<h1>
-							{{ i18n "theme.404_header" }}
+							{{ lang.Translate "theme.404_header" }}
 						</h1>
 						<div class="prose">
 							<p>
-              {{ i18n "theme.404_description" }}
+              {{ lang.Translate "theme.404_description" }}
               </p>
 						</div>
 					</article>
@@ -18,5 +18,5 @@
 			</div>
 		</div>
 	</section>
-	{{- partials.Include "func/hook.html" ( dict "hook" "container-end" "context" . ) -}}
+	{{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "container-end" "context" . ) -}}
 {{- end -}}

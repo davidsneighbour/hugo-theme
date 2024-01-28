@@ -1,5 +1,5 @@
 {{- $post := .context -}}
-{{- $fullcontent := .fullcontent | default true -}}
+{{- $fullcontent := .fullcontent | compare.Default true -}}
 {{- $articleclasses := partials.IncludeCached "func/getArticleClasses.html" $post $post -}}
 <article class="{{- $articleclasses -}}">
   {{- partials.IncludeCached "components/content/status.html" $post $post -}}
@@ -12,8 +12,8 @@
       <p class="text-truncate text-truncate-5">{{- $post.Summary -}}</p>
   </div>
 	<div class="text-end">
-		<a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link" aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
-			{{- i18n "theme.read_article" -}}
+		<a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link" aria-label="{{- lang.Translate "theme.read_article" -}}: {{ $post.Title -}}">
+			{{- lang.Translate "theme.read_article" -}}
 			<span class="ps-2">
 				{{- partials.IncludeCached "bsicon.html" "body-text" "body-text" -}}
 			</span>

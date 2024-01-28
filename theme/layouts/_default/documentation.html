@@ -17,7 +17,7 @@
               <a href="{{- .Permalink -}}">{{- .Title }}</a>
               {{- with .Summary }}
                 &mdash;
-                {{ . | markdownify -}}
+                {{ . | transform.Markdownify -}}
               {{- end -}}
             </li>
             {{- end -}}

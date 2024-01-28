@@ -3,6 +3,6 @@
     role="alert">
     {{ partials.IncludeCached "bsicon.html" "note" "note" }}
   <div>
-    {{ .Inner | markdownify }}
+    {{ .Inner | transform.Markdownify }}
   </div>
 </div>

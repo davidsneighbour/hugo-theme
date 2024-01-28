@@ -2,9 +2,9 @@
 {{- $currentPageNumber := .PageNumber }}
 {{- $slots := 5 }}
 {{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
-{{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
-{{- if lt (add (sub $end $start) 1) $slots }}
-  {{- $start = math.Max 1 (add (sub $end $slots) 1) }}
+{{- $end := math.Min .TotalPages (sub (math.Add $start $slots) 1) }}
+{{- if lt (math.Add (sub $end $start) 1) $slots }}
+  {{- $start = math.Max 1 (math.Add (sub $end $slots) 1) }}
 {{- end }}
 {{- range $k := seq $start $end }}
   {{- if eq $paginator.PageNumber $k }}

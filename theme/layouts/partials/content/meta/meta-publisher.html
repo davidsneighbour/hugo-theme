@@ -6,22 +6,22 @@
 {{- $githash := partials.IncludeCached "func/getGitHash.html" $page $page -}}
 {{- $hashlink := "" -}}
 {{- with $githash }}
-  {{- $hash1 := printf "<a href=\"%s/commit/%s\">%s</a>"
+  {{- $hash1 := fmt.Printf "<a href=\"%s/commit/%s\">%s</a>"
     $config.repository
     $page.GitInfo.Hash
     $githash
   -}}
-  {{- $hash2 := printf "<a href=\"%s/commits/main/content%sindex.md\">%s</a>"
+  {{- $hash2 := fmt.Printf "<a href=\"%s/commits/main/content%sindex.md\">%s</a>"
     $config.repository
     $page.RelPermalink
     "History"
   -}}
-  {{- $hash3 := printf "<a href=\"%s/blame/main/content/%s\">%s</a>"
+  {{- $hash3 := fmt.Printf "<a href=\"%s/blame/main/content/%s\">%s</a>"
     $config.repository
     $page.File.Path
     "Blame"
   -}}
-  {{- $hashlink = printf "%s / %s / %s" $hash1 $hash2 $hash3 -}}
+  {{- $hashlink = fmt.Printf "%s / %s / %s" $hash1 $hash2 $hash3 -}}
 {{- end -}}
 <div class="d-flex flex-row gap-2">
   <div class="icon">
@@ -55,7 +55,7 @@
         rel="nofollow,noreferrer"
       >
         {{- partials.IncludeCached "bsicon.html" "vector-pen" "vector-pen" }}
-        {{ i18n "theme.suggest_edit" }}
+        {{ lang.Translate "theme.suggest_edit" }}
       </a>
     </div>
   </div>
@@ -66,7 +66,7 @@
       {{- partials.IncludeCached "bsicon.html" "tags" "tags" }}
     </div>
     <div class="d-flex flex-row gap-2">
-      <span>{{ i18n "theme.tags" }}: </span>
+      <span>{{ lang.Translate "theme.tags" }}: </span>
       {{- range . -}}
         <a rel="tag" href="{{- .Permalink -}}"
           >#{{- .Title | urlize | lower -}}</a

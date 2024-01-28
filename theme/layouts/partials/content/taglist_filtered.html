@@ -5,7 +5,7 @@
 {{ $items := collections.Slice }}
 {{- range site.RegularPages -}}
   {{- if in .Params.tags $keyword -}}
-    {{ $items = collections.Append $items (slice .) }}
+    {{ $items = collections.Append $items (collections.Slice .) }}
   {{- end -}}
 {{- end -}}
 

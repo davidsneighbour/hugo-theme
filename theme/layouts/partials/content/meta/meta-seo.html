@@ -31,14 +31,14 @@
   {{- end -}}
   <div class="d-flex flex-row gap-2">
     <span>
-      {{ i18n "theme.title" }}:
-      <span class="text-{{- $titleClass -}}">{{- $titleLength }} {{ i18n "theme.characters" }}</span>
+      {{ lang.Translate "theme.title" }}:
+      <span class="text-{{- $titleClass -}}">{{- $titleLength }} {{ lang.Translate "theme.characters" }}</span>
     </span>
     <span> / </span>
     <span>
-      {{ i18n "theme.description" }}:
+      {{ lang.Translate "theme.description" }}:
       <span class="text-{{ $descriptionClass }}"
-        >{{ $descriptionLength }} {{ i18n "theme.characters" }}
+        >{{ $descriptionLength }} {{ lang.Translate "theme.characters" }}
       </span>
     </span>
   </div>

@@ -1,7 +1,7 @@
 <div class="navbar-brand">
   {{- if site.Params.dnb.theme.logo -}}
   <a href="{{- site.BaseURL | relLangURL -}}">
-    <img class="rounded-circle" src="{{- site.Params.dnb.theme.logo | absURL -}}" alt="Logo of {{ site.Title -}}"
+    <img class="rounded-circle" src="{{- site.Params.dnb.theme.logo | urls.AbsURL  -}}" alt="Logo of {{ site.Title -}}"
          height="{{- site.Params.dnb.theme.logo_height -}}" width="{{- site.Params.dnb.theme.logo_width -}}">
   </a>
   {{- else -}}

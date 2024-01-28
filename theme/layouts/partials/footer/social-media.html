@@ -20,9 +20,9 @@
   */
 -}}
 
-{{- $order := slice -}}
-{{- $networks := .network | default dict -}}
-{{- $sharebuttons := .sharebuttons | default slice -}}
+{{- $order := collections.Slice -}}
+{{- $networks := .network | compare.Default collections.Dictionary -}}
+{{- $sharebuttons := .sharebuttons | compare.Default collections.Slice -}}
 {{- with $sharebuttons -}}
   {{- $order = .networks -}}
 {{- else -}}
@@ -31,7 +31,7 @@
   {{- end -}}
 {{- end -}}
 <div class="widget social-media">
-  <h3 class="my-3">{{- i18n "theme.connect-on-social" -}}</h3>
+  <h3 class="my-3">{{- lang.Translate "theme.connect-on-social" -}}</h3>
   <div class="d-flex justify-content-around align-items-center flex-row flex-wrap gap-3">
     {{- range $order -}}
       {{- $network := index $networks . -}}
@@ -41,7 +41,7 @@
           aria-label="{{- $network.label -}}"
           class="icon-{{ $network.icon }}"
           title="{{- $network.label -}}">
-          {{- with (site.Params.dnb.social.sharebuttons.icons | default true) -}}
+          {{- with (site.Params.dnb.social.sharebuttons.icons | compare.Default true) -}}
             {{- if eq . true -}}
               <span aria-hidden="true" class="icon">
                 {{- partials.IncludeCached "bsicon.html" $network.icon $network.icon -}}
@@ -49,7 +49,7 @@
             {{- end -}}
           {{- end -}}
           <span class="visually-hidden">
-          {{- with (site.Params.dnb.social.sharebuttons.sharetext | default false) -}}
+          {{- with (site.Params.dnb.social.sharebuttons.sharetext | compare.Default false) -}}
             {{- if eq . true -}}
               {{- $network.label -}}
             {{- end -}}

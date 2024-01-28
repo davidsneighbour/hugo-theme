@@ -1,11 +1,11 @@
 <div class="hstack justify-content-center mt-5 gap-3">
   <div class="p-2">
     {{- $year := partials.IncludeCached "func/getYear.html" . -}}
-    {{- printf (i18n "theme.copyright-text") (string $year) | .RenderString | safeHTML -}}
+    {{- fmt.Printf (lang.Translate "theme.copyright-text") (string $year) | .RenderString | safeHTML -}}
   </div>
   <div class="vr"></div>
   <div class="p-2" x-data="versionData">
-    {{ i18n "theme.version" }}
+    {{ lang.Translate "theme.version" }}
     <a :href="url" class="version" x-text="version" target="_blank"></a>
   </div>
 </div>

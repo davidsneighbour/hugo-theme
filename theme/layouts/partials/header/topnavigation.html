@@ -1,10 +1,10 @@
 <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary shadow-lg">
   <div class="container">
-    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-start" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-start" "context" . ) -}}
     {{- partials.IncludeCached "header/navbar/brand.html" . -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-post-logo" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-post-logo" "context" . ) -}}
     {{- partials.IncludeCached "header/navbar/toggle-button.html" . -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-pre-mainnav" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-pre-mainnav" "context" . ) -}}
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
       <menu class="navbar-nav me-md-0 me-auto ms-auto">
         {{- $current := . -}}
@@ -54,7 +54,7 @@
         {{- partials.IncludeCached "header/navbar/theme-selector.html" . -}}
       </menu>
     </div>
-    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-post-mainnav" "context" . ) -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" "header-topnav-end" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-post-mainnav" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-end" "context" . ) -}}
   </div>
 </nav>

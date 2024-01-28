@@ -2,7 +2,7 @@
 {{- with .First }}
   {{- if ne $currentPageNumber .PageNumber }}
     <li class="page-item">
-      <a href="{{ .URL }}" aria-label="{{ i18n "theme.first" }}" class="page-link">
+      <a href="{{ .URL }}" aria-label="{{ lang.Translate "theme.first" }}" class="page-link">
         {{- partials.IncludeCached "bsicon.html" "chevron-double-left" "chevron-double-left" -}}
       </a>
     </li>

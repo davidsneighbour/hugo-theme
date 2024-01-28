@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {{- partials.Include "init.html" . -}}
-{{- partials.Include "func/hook.html" ( dict "hook" "setup" "context" . ) -}}
-{{- $sitelang := site.LanguageCode | default "en-US" -}}
+{{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "setup" "context" . ) -}}
+{{- $sitelang := site.LanguageCode | compare.Default "en-US" -}}
 <html lang="{{- $sitelang -}}" data-bs-theme="{{- site.Params.dnb.theme.colorscheme -}}">
   <head>
     {{- partials.Include "head.html" . -}}
@@ -9,29 +9,29 @@
   {{- $classes := partials.IncludeCached "func/getBodyClasses.html" . . -}}
   <body class="{{- $classes }}" id="top">
     <a class="visually-hidden-focusable skip-to-main-link" href="#maincontent">
-      {{- i18n "theme.skip_to_content" -}}
+      {{- lang.Translate "theme.skip_to_content" -}}
     </a>
     <span id="top" class="d-none" aria-hidden="true"></span>
-    {{- partials.Include "func/hook.html" ( dict "hook" "body-start" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-start" "context" . ) -}}
     {{- partials.Include "header.html" . -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" "body-pre-main" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-pre-main" "context" . ) -}}
     {{- $pagefindMarker := "" -}}
-    {{- if in (slice "page") page.Kind }}
+    {{- if in (collections.Slice "page") page.Kind }}
       {{- $pagefindMarker = "data-pagefind-body" -}}
     {{- end -}}
     <main id="maincontent" {{ $pagefindMarker | safeHTMLAttr }} tabindex="-1">
-      {{- partials.Include "func/hook.html" ( dict "hook" "body-main-start" "context" . ) -}}
+      {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-main-start" "context" . ) -}}
       {{- block "main" . -}}{{- end -}}
-      {{- partials.Include "func/hook.html" ( dict "hook" "body-main-end" "context" . ) -}}
+      {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-main-end" "context" . ) -}}
     </main>
-    {{- partials.Include "func/hook.html" ( dict "hook" "body-post-main" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-post-main" "context" . ) -}}
     {{- partials.Include "footer.html" . . -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" "body-end-pre-script" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-end-pre-script" "context" . ) -}}
     {{- partials.Include "footer/script.html" . -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" "body-end" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-end" "context" . ) -}}
     {{- partials.Include "footer/service-worker.html" . -}}
     <a href="javascript:history.back();" data-hotkey="k+ArrowLeft" class="d-none">Back</a>
     <a href="javascript:history.forward();" data-hotkey="k+ArrowRight" class="d-none">Forward</a>
   </body>
 </html>
-{{- partials.Include "func/hook.html" ( dict "hook" "teardown" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "teardown" "context" . ) -}}

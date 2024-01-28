@@ -1,5 +1,5 @@
 {{- $post := .context -}}
-{{- $fullcontent := .fullcontent | default true -}}
+{{- $fullcontent := .fullcontent | compare.Default true -}}
 {{- $articleclasses := partials.IncludeCached "func/getArticleClasses.html" $post $post -}}
 <article class="{{- $articleclasses -}}">
   {{- partials.IncludeCached "components/content/status.html" $post $post -}}
@@ -10,7 +10,7 @@
   </div>
   <div class="text-end">
     <a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link">
-      {{ i18n "theme.read_posts_about" }} <strong>{{ $post.Title -}}</strong>
+      {{ lang.Translate "theme.read_posts_about" }} <strong>{{ $post.Title -}}</strong>
       <span class="ps-2">
         {{- partials.IncludeCached "bsicon.html" "body-text" "body-text" -}}
       </span>

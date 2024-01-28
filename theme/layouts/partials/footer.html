@@ -1,9 +1,9 @@
-{{- partials.Include "func/hook.html" ( dict "hook" "footer-pre" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-pre" "context" . ) -}}
 <footer id="footer">
-  {{- partials.Include "func/hook.html" ( dict "hook" "footer-start" "context" . ) -}}
+  {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-start" "context" . ) -}}
   <div class="widgets container text-center">
     <h2 class="d-none invisible">Footer Items</h2>
-    {{- partials.Include "func/hook.html" ( dict "hook" "footer-widgets-start" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-widgets-start" "context" . ) -}}
     {{- with site.Params.subscription -}}
       {{- partials.IncludeCached "footer/newsletter.html" site.Params.subscription site.Params.subscription -}}
     {{- end -}}
@@ -17,8 +17,9 @@
     {{- if hugo.IsServer -}}
       {{- partials.Include "footer/debugging.html" . -}}
     {{- end -}}
-    {{- partials.Include "func/hook.html" ( dict "hook" "footer-widgets-end" "context" . ) -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-widgets-end" "context" . ) -}}
   </div>
-  {{- partials.Include "func/hook.html" ( dict "hook" "footer-end" "context" . ) -}}
+  {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-end" "context" . ) -}}
 </footer>
-{{- partials.Include "func/hook.html" ( dict "hook" "footer-post" "context" . ) -}}
+{{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-post" "context" . ) -}}
+{{- partials.Include "icons/symbols.html" . -}}

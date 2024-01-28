@@ -14,7 +14,7 @@
       </ul>
     {{- end -}}
     <p class="pagination-note align-self-center text-body-secondary fs-8">
-      {{- i18n "theme.pagination.information" (dict
+      {{- lang.Translate "theme.pagination.information" (dict
             "posts" $paginator.TotalNumberOfElements
             "pages" $paginator.TotalPages) -}}
     </p>

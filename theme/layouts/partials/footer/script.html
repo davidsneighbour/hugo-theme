@@ -1,5 +1,5 @@
 {{- $scripts := resources.Get "js/script.ts" |
-      js.Build (dict "targetPath" "assets/js/script.js") |
+      js.Build (collections.Dictionary "targetPath" "assets/js/script.js") |
       minify |
       fingerprint "sha512" -}}
 <script
@@ -11,7 +11,7 @@
 {{- with resources.Get "js/main.js" -}}
   {{- $script := . | resources.ExecuteAsTemplate "plugins.js" . -}}
   {{- $script = $script |
-        js.Build (dict "targetPath" "assets/js/main.js") |
+        js.Build (collections.Dictionary "targetPath" "assets/js/main.js") |
         minify |
         fingerprint "sha512" -}}
   <script

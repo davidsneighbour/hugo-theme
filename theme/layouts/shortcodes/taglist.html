@@ -5,7 +5,7 @@
 {{- if (eq $limit -1) -}}
   {{- $limit = len site.Taxonomies.tags -}}
 {{- end -}}
-<h2>{{- $title| default "Related Posts" -}}</h2>
+<h2>{{- $title| compare.Default "Related Posts" -}}</h2>
 <ul>
 {{- range (first $limit $tags.Pages) -}}
   <li>

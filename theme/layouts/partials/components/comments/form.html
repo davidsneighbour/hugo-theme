@@ -1,7 +1,7 @@
 {{- $context := . -}}
 {{- $commentform := "true" -}}
 {{ if and (isset .Params "theme") (isset .Params.theme "comments") }}
-  {{- if (eq false (index .Params.theme "comments")) -}}
+  {{- if (eq false (collections.Index .Params.theme "comments")) -}}
     {{- $commentform = "false" -}}
   {{- end -}}
 {{- end -}}

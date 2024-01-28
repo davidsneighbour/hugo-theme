@@ -1,5 +1,5 @@
 {{- $post := .context -}}
-{{- $fullcontent := .fullcontent | default true -}}
+{{- $fullcontent := .fullcontent | compare.Default true -}}
 				{{- $articleclasses := partials.IncludeCached "func/getArticleClasses.html" $post $post -}}
         <article class="{{- $articleclasses -}}">
   {{- partials.IncludeCached "components/content/status.html" $post $post -}}
@@ -12,10 +12,10 @@
     {{- else -}}
 		<p class="text-truncate text-truncate-5">
 			{{- with $post.Summary -}}
-				{{- . | markdownify -}}
+				{{- . | transform.Markdownify -}}
 			{{- else -}}
 				{{- with $post.Description -}}
-					{{- . | markdownify -}}
+					{{- . | transform.Markdownify -}}
 				{{- else -}}
 					{{- $post.Content | plainify | truncate 200 -}}
 				{{- end -}}
@@ -23,15 +23,15 @@
 		</p>
   </div>
 	<div class="text-end">
-		<a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link" aria-label="{{- i18n "theme.read_article" -}}: {{ $post.Title -}}">
-			{{- i18n "theme.read_article" -}}
+		<a href="{{- $post.Permalink -}}" class="btn btn-link stretched-link" aria-label="{{- lang.Translate "theme.read_article" -}}: {{ $post.Title -}}">
+			{{- lang.Translate "theme.read_article" -}}
 			<span class="ps-2">
 				{{- partials.IncludeCached "bsicon.html" "body-text" "body-text" -}}
 			</span>
 		</a>
     {{- end -}}
     {{- with $fullcontent -}}
-      {{- partials.Include "func/hook.html" ( dict "hook" "post-after" "context" $post ) -}}
+      {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "post-after" "context" $post ) -}}
       {{- partials.IncludeCached "content/meta/footer.html" $post $post -}}
     {{- end -}}
   </div>

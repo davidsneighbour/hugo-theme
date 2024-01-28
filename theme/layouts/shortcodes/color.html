@@ -1,10 +1,10 @@
 {{- $style := .Get "css" -}}
-{{- $theme := .Get "scheme" | default "dark" -}}
+{{- $theme := .Get "scheme" | compare.Default "dark" -}}
 {{- $textcolor := "text-light" -}}
 {{- if eq $theme "dark" -}}
   {{- $textcolor = "text-dark" -}}
 {{- end -}}
-{{- $attribute := printf "style=\"background-color: %s\"" $style | safe.HTMLAttr -}}
+{{- $attribute := fmt.Printf "style=\"background-color: %s\"" $style | safe.HTMLAttr -}}
 <div class="col">
   <div class="border border-secondary-subtle px-2 py-4" {{ $attribute -}}>
     <span class="{{- $textcolor -}}">{{- $style -}}</span>
