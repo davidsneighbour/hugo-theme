@@ -5,7 +5,7 @@
       <li class="px-2 list-inline-item">
         <a href="{{- .URL | absLangURL -}}">
           {{- with .Params.bsicon }}
-            {{ partials.IncludeCached "bsicon.html" . . }}
+            {{ partials.Include "bsicon.html" . . }}
           {{ end -}}
           {{- .Name -}}
         </a>

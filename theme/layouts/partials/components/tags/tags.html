@@ -9,7 +9,7 @@
         {{ end }} ms-2"
       >
         {{ with .Params.icon -}}
-          {{ partials.IncludeCached "bsicon.html" . . }}
+          {{ partials.Include "bsicon.html" . . }}
         {{ end }}
         <a rel="tag" href="{{- .Permalink -}}">#{{- .Title | lower -}}</a>
       </span>
