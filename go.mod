@@ -7,7 +7,7 @@ toolchain go1.21.4
 require (
 	github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 // indirect
 	github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff // indirect
-	github.com/davidsneighbour/hugo-modules v0.0.0-20240121121020-7769c947ee25 // indirect
+	github.com/davidsneighbour/hugo-modules v0.0.0-20240126152714-1cf0efb3e240 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/debug v1.2023.31 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/feeds v1.2023.9 // indirect
