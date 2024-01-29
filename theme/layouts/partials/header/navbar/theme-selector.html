@@ -6,10 +6,10 @@
     x-on:click="toggleTheme"
     data-hotkey="k+t">
     <span :class="{ 'd-none': theme !== 'light', 'd-inline-block': theme === 'light' }" id="toggle-button-light" title="Switch to light mode">
-      {{- partials.Include "bsicon.html" "sun-fill" "sun-fill" -}}
+      {{- partials.Include "bsicon.html" "sun-fill" -}}
     </span>
     <span :class="{ 'd-none': theme !== 'dark', 'd-inline-block': theme === 'dark' }" id="toggle-button-dark" title="Switch to dark mode">
-      {{- partials.Include "bsicon.html" "moon-stars-fill" "moon-stars-fill" -}}
+      {{- partials.Include "bsicon.html" "moon-stars-fill" -}}
     </span>
   </div>
 </li>
