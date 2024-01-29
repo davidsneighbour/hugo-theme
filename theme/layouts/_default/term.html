@@ -7,7 +7,7 @@
           <h1 class="post-title">
             {{- lang.Translate "theme.posts_tagged_with" -}}
             {{ with .Params.icon }}
-              {{ partials.Include "bsicon.html" . . }}
+              {{ partials.Include "bsicon.html" . }}
             {{ end }}
             #{{ .Title }}
           </h1>

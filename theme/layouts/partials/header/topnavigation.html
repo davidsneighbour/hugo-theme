@@ -21,7 +21,7 @@
                 data-toggle="dropdown"
                 aria-expanded="false">
                 {{- with .Params.bsicon -}}
-                  {{- partials.Include "bsicon.html" . . -}}
+                  {{- partials.Include "bsicon.html" . -}}
                 {{- end -}}
                 {{- .Name -}}
               </a>
@@ -31,7 +31,7 @@
                     <a class="dropdown-item" href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                       {{- with .Params.bsicon -}}
-                        {{- partials.Include "bsicon.html" . . -}}
+                        {{- partials.Include "bsicon.html" . -}}
                       {{- end -}}
                       {{- .Name -}}
                     </a>
@@ -44,7 +44,7 @@
               <a class="nav-link" href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                 {{- with .Params.bsicon -}}
-                  {{- partials.Include "bsicon.html" . . -}}
+                  {{- partials.Include "bsicon.html" . -}}
                 {{- end -}}
                 {{- .Name -}}
               </a>

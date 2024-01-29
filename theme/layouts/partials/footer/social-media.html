@@ -43,9 +43,8 @@
           title="{{- $network.label -}}">
           {{- with (site.Params.dnb.social.sharebuttons.icons | compare.Default true) -}}
             {{- if eq . true -}}
-              <span aria-hidden="true" class="icon">
-                {{- partials.Include "bsicon.html" $network.icon $network.icon -}}
-              </span>
+              {{- $options := dict "icon" $network.icon "class" "c-20" -}}
+              {{- partials.Include "bsicon.html" $options -}}
             {{- end -}}
           {{- end -}}
           <span class="visually-hidden">

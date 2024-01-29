@@ -8,6 +8,8 @@
 // https://getbootstrap.com/docs/5.3/utilities/api/
 $containers: (
   12: 12px,
+  16: 16px,
+  20: 20px,
   24: 24px,
   36: 36px,
   48: 48px,
@@ -32,6 +34,10 @@ $utilities: (
   'containerx': (property: width,
     values: $containers,
     class: cx,
+  ),
+  'container': (property: width,
+    values: $containers,
+    class: c,
   ),
   'fontsize2': (property: font-size,
     class: fsv,

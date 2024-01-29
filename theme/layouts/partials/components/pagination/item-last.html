@@ -4,7 +4,7 @@
   {{- if ne $currentPageNumber .PageNumber }}
     <li class="page-item">
       <a href="{{ .URL }}" aria-label="{{ lang.Translate "theme.last" }}" class="page-link">
-        {{- partials.Include "bsicon.html" "chevron-double-right" "chevron-double-right" -}}
+        {{- partials.Include "bsicon.html" "chevron-double-right" -}}
       </a>
     </li>
   {{- end }}

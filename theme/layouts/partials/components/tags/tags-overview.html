@@ -4,7 +4,7 @@
     <li class="list-inline-item mx-2">
       <a href="/tags/{{ $index }}/" class="text-decoration-none">
         {{- if eq $current $index -}}<strong>{{- end -}}
-        {{- partials.Include "bsicon.html" "tag-fill" "tag-fill" -}}
+        {{- partials.Include "bsicon.html" "tag-fill" -}}
         {{- $index -}} ({{- .Count -}})
         {{- if eq $current $index -}}</strong>{{- end -}}
       </a>
