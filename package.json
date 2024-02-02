@@ -11,7 +11,7 @@
     "@alpinejs/collapse": "3.13.5",
     "alpinejs": "3.13.5",
     "@davidsneighbour/standard-version-config": "^5.8.7",
-    "@davidsneighbour/stylelint-config": "5.8.8",
+    "@davidsneighbour/stylelint-config": "5.8.9",
     "@davidsneighbour/tools": "5.8.8",
     "@github/hotkey": "3.1.0",
     "@types/alpinejs": "3.13.6"
