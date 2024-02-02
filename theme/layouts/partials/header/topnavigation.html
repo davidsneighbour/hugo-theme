@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary shadow-lg">
-  <div class="container">
+  <div class="container-md">
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-start" "context" . ) -}}
     {{- partials.IncludeCached "header/navbar/brand.html" . -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-post-logo" "context" . ) -}}
