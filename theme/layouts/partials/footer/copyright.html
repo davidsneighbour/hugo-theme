@@ -1,10 +1,10 @@
-<div class="hstack justify-content-center mt-5 gap-3">
-  <div class="p-2">
+<div class="d-flex flex-column flex-md-row justify-content-center mt-5 column-gap-3 row-gap-2">
+  <div>
     {{- $year := partials.IncludeCached "func/getYear.html" . -}}
     {{- fmt.Printf (lang.Translate "theme.copyright-text") (string $year) | .RenderString | safeHTML -}}
   </div>
-  <div class="vr"></div>
-  <div class="p-2" x-data="versionData">
+  <div class="d-none d-md-inline-block vr"></div>
+  <div x-data="versionData">
     {{ lang.Translate "theme.version" }}
     <a :href="url" class="version" x-text="version" target="_blank"></a>
   </div>
