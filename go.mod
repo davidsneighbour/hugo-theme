@@ -33,8 +33,6 @@ require (
 	github.com/davidsneighbour/hugo-modules/modules/social v0.1.37 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/youtube v1.2023.16 // indirect
 	github.com/paulirish/lite-youtube-embed v0.3.0 // indirect
-	github.com/tabler/tabler-icons v2.47.0+incompatible // indirect
-	github.com/tailwindlabs/heroicons v2.1.1+incompatible // indirect
 	github.com/twbs/icons v1.11.3 // indirect
 	github.com/zenorocha/clipboard.js v2.0.11+incompatible // indirect
 )
