@@ -95,4 +95,5 @@ path = "github.com/davidsneighbour/hugo-modules/modules/social"
 path = "github.com/davidsneighbour/hugo-modules/modules/youtube"
 
 [[imports]]
+# we need this for the documentation of the modules below `/components/`
 path = "github.com/davidsneighbour/hugo-modules"
