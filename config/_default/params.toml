@@ -22,5 +22,5 @@ default = "dark" # `dark`, `light` or whatever `dnb.theme.switcher.themes` offer
 [dnb.theme.backtotop]
 enabled = true
 icon = "chevron-double-up"
-class = ""
+class = "widget--back-to-top"
 top_id = "top"

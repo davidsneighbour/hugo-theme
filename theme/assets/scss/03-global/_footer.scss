@@ -47,6 +47,16 @@
   @extend .text-center;
 }
 
+.widget--back-to-top {
+  a {
+    @extend .text-decoration-none;
+
+    &:hover {
+      @extend .text-decoration-none;
+    }
+  }
+}
+
 #footer {
   @extend .pb-9;
   @extend .pt-7;
@@ -72,8 +82,4 @@
     @extend .fs-6;
   }
 
-  .hstack a {
-    text-decoration: underline !important;
-    @extend .mb-5;
-  }
 }

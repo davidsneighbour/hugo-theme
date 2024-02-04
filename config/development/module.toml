@@ -49,9 +49,6 @@ path = "github.com/davidsneighbour/hugo-modules/modules/giscus"
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/head"
 
-# [[imports]]
-# path = "github.com/davidsneighbour/hugo-modules/modules/humans"
-
 [[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/icons"
 

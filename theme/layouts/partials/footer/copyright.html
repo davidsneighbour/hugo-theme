@@ -1,4 +1,4 @@
-<div class="d-flex flex-column flex-md-row justify-content-center mt-5 column-gap-3 row-gap-2">
+<div class="d-flex flex-column flex-md-row justify-content-center mt-6 column-gap-3 row-gap-2">
   <div>
     {{- $year := partials.IncludeCached "func/getYear.html" . -}}
     {{- fmt.Printf (lang.Translate "theme.copyright-text") (string $year) | .RenderString | safeHTML -}}
