@@ -58,8 +58,6 @@
 }
 
 #footer {
-  @extend .pb-9;
-  @extend .pt-7;
   color: #989da3; //var(--bs-tertiary-color);
   background-color: var(--bs-tertiary-bg);
   min-height: 100vw;
@@ -76,10 +74,6 @@
       color: var(--bs-primary-color);
       @extend .text-decoration-none;
     }
-  }
-
-  h3 {
-    @extend .fs-6;
   }
 
 }
