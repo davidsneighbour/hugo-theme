@@ -1,6 +1,6 @@
 {
   "editor.linkedEditing": true,
-  "stylelint.configFile": ".stylelintrc.json",
+  "stylelint.configFile": "",
   "stylelint.packageManager": "npm",
   "stylelint.reportDescriptionlessDisables": true,
   "stylelint.reportInvalidScopeDisables": true,

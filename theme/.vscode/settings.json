@@ -3,26 +3,14 @@
     "*.html": "gohtml",
     "*.xml": "goxml",
     "*.json": "gojson",
-    "*.txt": "gotemplate",
+    "*.txt": "gotemplate"
   },
   "editor.linkedEditing": true,
-  "stylelint.configFile": ".stylelintrc.json",
+  "stylelint.configFile": "",
   "stylelint.packageManager": "npm",
   "stylelint.reportDescriptionlessDisables": true,
   "stylelint.reportInvalidScopeDisables": true,
   "stylelint.reportNeedlessDisables": true,
-  "stylelint.snippet": [
-    "css",
-    "less",
-    "postcss",
-    "scss",
-    "sass"
-  ],
-  "stylelint.validate": [
-    "css",
-    "less",
-    "postcss",
-    "sass",
-    "scss"
-  ]
+  "stylelint.snippet": ["css", "less", "postcss", "scss", "sass"],
+  "stylelint.validate": ["css", "less", "postcss", "sass", "scss"]
 }
