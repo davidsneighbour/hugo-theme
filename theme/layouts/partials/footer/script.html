@@ -1,6 +1,11 @@
 {{- $scripts := resources.Get "js/script.ts" |
-      js.Build (collections.Dictionary "targetPath" "assets/js/script.js") |
-      minify |
+      js.Build (collections.Dictionary "targetPath" "assets/js/script.js"
+
+                                        "minify" false
+                                        "format" "esm"
+
+
+                                        ) |
       fingerprint "sha512" -}}
 <script
   src="{{- $scripts.Permalink -}}"
@@ -11,8 +16,13 @@
 {{- with resources.Get "js/main.js" -}}
   {{- $script := . | resources.ExecuteAsTemplate "plugins.js" . -}}
   {{- $script = $script |
-        js.Build (collections.Dictionary "targetPath" "assets/js/main.js") |
-        minify |
+        js.Build (collections.Dictionary "targetPath" "assets/js/main.js"
+
+                                        "minify" false
+                                        "format" "esm"
+
+
+                                        ) |
         fingerprint "sha512" -}}
   <script
     src="{{- $script.Permalink -}}"
