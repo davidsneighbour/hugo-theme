@@ -1,4 +1,8 @@
 [[mounts]]
+source = "package.json"
+target = "assets/versions/dnb-hugo-theme.json"
+
+[[mounts]]
 source = "theme/archetypes"
 target = "archetypes"
 
