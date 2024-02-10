@@ -2,8 +2,6 @@ github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 h1:K8ukOfj0MOBEW
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff h1:nV9EWy0+/rvtipXqDQMVeFfgyXgP9yY40bbx0h2qS+8=
 github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff/go.mod h1:OG5Jqzdk8/OaniOKZRA9w8agzQBskTkDYFCfDjwuz1A=
-github.com/davidsneighbour/hugo-modules v1.2024.4 h1:D9ote7Ro3tCEr5Kj0aDNV3GMyD+s+3vUnT3kwzakr+s=
-github.com/davidsneighbour/hugo-modules v1.2024.4/go.mod h1:/o/5tkfKEGRf5zbTObZD3LuwUzZ2ljA3RYdQ8G3NHgY=
 github.com/davidsneighbour/hugo-modules v1.2024.5 h1:uyzmK6ch34IWO3QaXsYVd6P466V1391QcC/xcq+EdBU=
 github.com/davidsneighbour/hugo-modules v1.2024.5/go.mod h1:/o/5tkfKEGRf5zbTObZD3LuwUzZ2ljA3RYdQ8G3NHgY=
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2023.13 h1:TNjqpiXkwVflELokzo+UTXdRT2b7M3Qtb2YnKbKI8A8=
@@ -12,8 +10,6 @@ github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.0 h1:Zbuh73iqTRjs6
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.0/go.mod h1:llu9bxa3/HSDaeJDTh0QyNa7snE9AdV+IyuNaLVFQ4E=
 github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.0 h1:SyrlaVvxAYBMaikSOIWIkK1BXXyRYvJOPl+KRZ+nVW8=
 github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.0/go.mod h1:B+h0GNzYnwX+GqWcFGJig/58xj2rLy3U5bM+cilxdxc=
-github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.0 h1:4TZhXQQ3PCVqj8jIkEZ2Mkkh+I6est3XMVMmESJdXGs=
-github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.0/go.mod h1:mMpTa/CPuBifHgzsHWORFM32ICKhDKjREQ1hKPk3oeU=
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.1 h1:1KvjWVXMTqyEls1m+1s05GgFRgfy9V1+Y1LUjcfd0tY=
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.1/go.mod h1:y7hfQJQUUQNeOtprPVvfLp82KhwsS1ZuxU7/bEE6u1w=
 github.com/davidsneighbour/hugo-modules/modules/giscus v1.2023.3 h1:Pr7WJ5/gWJSWri2GTCrLEndarcLyKRUS6SnUZgfrYUM=
