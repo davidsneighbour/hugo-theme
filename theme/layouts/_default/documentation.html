@@ -9,10 +9,11 @@
           </header>
           {{- .Content -}}
           <hr/>
-          <h2>Documentation Overview</h2>
+
+          <h2>Overview</h2>
           <ul>
-            <li><a href="/theme-documentation/">Overview</a></li>
-            {{- range (site.GetPage "theme-documentation").Pages.ByWeight -}}
+            <li><a href="{{- printf "/%s/" .Section -}}">Overview</a></li>
+            {{- range (site.GetPage .Section).Pages.ByWeight -}}
             <li>
               <a href="{{- .Permalink -}}">{{- .Title }}</a>
               {{- with .Summary }}

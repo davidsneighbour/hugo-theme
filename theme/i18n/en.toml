@@ -42,7 +42,7 @@ description = ""
 other = "Social"
 
 [theme.copyright-text]
-description = ""
+description = "copyright description text"
 other = "&copy; %s - Webwork done by [David&apos;s Neighbour](https://davids-neighbour.com)"
 
 [theme.at]
