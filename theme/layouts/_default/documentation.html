@@ -11,18 +11,8 @@
           <hr/>
 
           <h2>Overview</h2>
-          <ul>
-            <li><a href="{{- printf "/%s/" .Section -}}">Overview</a></li>
-            {{- range (site.GetPage .Section).Pages.ByWeight -}}
-            <li>
-              <a href="{{- .Permalink -}}">{{- .Title }}</a>
-              {{- with .Summary }}
-                &mdash;
-                {{ . | transform.Markdownify -}}
-              {{- end -}}
-            </li>
-            {{- end -}}
-          </ul>
+          {{- $options := dict "section" .Section "summary" true -}}
+          {{- partial "func/getSectionNavigation.html" $options $options -}}
         </div>
       </div>
     </div>
