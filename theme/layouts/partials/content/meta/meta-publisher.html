@@ -25,7 +25,7 @@
 {{- end -}}
 <div class="d-flex flex-row gap-2">
   <div class="icon">
-    {{- partials.Include "bsicon.html" "calendar3" }}
+    {{- partials.Include "icon.html" "calendar3" }}
   </div>
   <div class="d-flex flex-row gap-0 column-gap-2 flex-wrap">
     <span>Published: {{ $published }}</span>
@@ -37,7 +37,7 @@
         href="vscode://file/{{- .File.Filename -}}"
         aria-label="Edit in VSCode"
       >
-        {{- partials.Include "bsicon.html" "vector-pen" -}}
+        {{- partials.Include "icon.html" "vector-pen" -}}
       </a>
     {{- end -}}
   </div>
@@ -45,7 +45,7 @@
 {{ with $hashlink }}
   <div class="d-flex flex-row gap-2">
     <div class="icon">
-      {{- partials.Include "bsicon.html" "github" }}
+      {{- partials.Include "icon.html" "github" }}
     </div>
     <div class="d-flex flex-row gap-2">
       <span>Git: {{ . | safeHTML }}</span>
@@ -54,7 +54,7 @@
         target="_blank"
         rel="nofollow,noreferrer"
       >
-        {{- partials.Include "bsicon.html" "vector-pen" }}
+        {{- partials.Include "icon.html" "vector-pen" }}
         {{ lang.Translate "theme.suggest_edit" }}
       </a>
     </div>
@@ -63,7 +63,7 @@
 {{- with (.GetTerms "tags") -}}
   <div class="d-flex flex-row gap-2">
     <div class="icon">
-      {{- partials.Include "bsicon.html" "tags" }}
+      {{- partials.Include "icon.html" "tags" }}
     </div>
     <div class="d-flex flex-row gap-2">
       <span>{{ lang.Translate "theme.tags" }}: </span>

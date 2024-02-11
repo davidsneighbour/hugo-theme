@@ -13,25 +13,24 @@
           {{- $active = or $active (eq .Name $current.Title) -}}
           {{- if .HasChildren -}}
             <li class="nav-item dropdown">
-              <a
+              <div
                 class="nav-link dropdown-toggle d-inline-block {{ if $active -}}
                   active
                 {{- end -}}"
-                href="#"
                 data-toggle="dropdown"
                 aria-expanded="false">
                 {{- with .Params.bsicon -}}
-                  {{- partials.Include "bsicon.html" . -}}
+                  {{- partials.Include "icon.html" . -}}
                 {{- end -}}
                 {{- .Name -}}
-              </a>
+              </div>
               <ul class="dropdown-menu">
                 {{- range .Children -}}
                   <li>
                     <a class="dropdown-item" href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                       {{- with .Params.bsicon -}}
-                        {{- partials.Include "bsicon.html" . -}}
+                        {{- partials.Include "icon.html" . -}}
                       {{- end -}}
                       {{- .Name -}}
                     </a>
@@ -44,7 +43,7 @@
               <a class="nav-link" href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                 {{- with .Params.bsicon -}}
-                  {{- partials.Include "bsicon.html" . -}}
+                  {{- partials.Include "icon.html" . -}}
                 {{- end -}}
                 {{- .Name -}}
               </a>

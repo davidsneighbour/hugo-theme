@@ -6,7 +6,7 @@
         <a href="{{- .URL | absLangURL -}}">
           {{- with .Params.bsicon }}
             {{ $options := dict "icon" . "size" "1.5em" "class" "me-2" }}
-            {{ partials.Include "bsicon.html" $options }}
+            {{ partials.Include "icon.html" $options }}
           {{ end -}}
           {{- .Name -}}
         </a>

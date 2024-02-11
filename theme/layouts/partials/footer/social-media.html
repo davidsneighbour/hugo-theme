@@ -45,7 +45,7 @@
             {{- with (site.Params.dnb.social.sharebuttons.icons | compare.Default true) -}}
               {{- if eq . true -}}
                 {{- $options := dict "icon" $network.icon "class" "c-20" "width" "32" "height" "32" -}}
-                {{- partials.Include "bsicon.html" $options -}}
+                {{- partials.Include "icon.html" $options -}}
               {{- end -}}
             {{- end -}}
             <span class="visually-hidden">
