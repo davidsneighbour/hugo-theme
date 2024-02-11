@@ -28,7 +28,7 @@ top_id = "top"
 [dnb.theme.jsbuild.options]
 # options for the js.Build method
 # see https://gohugo.io/hugo-pipes/js/
-minify = true
+minify = false
 format = "iife"
 target = "es2020"
 # [dnb.theme.jsbuild.options.externals]
