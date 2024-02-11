@@ -23,6 +23,7 @@
 {{- $order := collections.Slice -}}
 {{- $networks := .network | compare.Default collections.Dictionary -}}
 {{- $sharebuttons := .sharebuttons | compare.Default collections.Slice -}}
+{{- $config := site.Params.dnb.social.sharebuttons -}}
 {{- with $sharebuttons -}}
   {{- $order = .networks -}}
 {{- else -}}
@@ -42,14 +43,14 @@
             aria-label="{{- $network.label -}}"
             class="icon-{{ $network.icon }} p-2 d-inline-block"
             title="{{- $network.label -}}">
-            {{- with (site.Params.dnb.social.sharebuttons.icons | compare.Default true) -}}
+            {{- with ($config.icons | compare.Default true) -}}
               {{- if eq . true -}}
                 {{- $options := dict "icon" $network.icon "class" "c-20" "width" "32" "height" "32" -}}
                 {{- partials.Include "icon.html" $options -}}
               {{- end -}}
             {{- end -}}
             <span class="visually-hidden">
-            {{- with (site.Params.dnb.social.sharebuttons.sharetext | compare.Default false) -}}
+            {{- with ($config.sharetext | compare.Default false) -}}
               {{- if eq . true -}}
                 {{- $network.label -}}
               {{- end -}}
