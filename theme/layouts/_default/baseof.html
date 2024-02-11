@@ -4,16 +4,20 @@
 {{- $sitelang := site.LanguageCode | compare.Default "en-US" -}}
 <html lang="{{- $sitelang -}}" data-bs-theme="{{- site.Params.dnb.theme.colorscheme -}}">
   <head>
+    {{- /* loading head module
+           see https://github.com/davidsneighbour/hugo-modules/tree/main/modules/head */ -}}
     {{- partials.Include "head.html" . -}}
   </head>
   {{- $classes := partials.IncludeCached "func/getBodyClasses.html" . . -}}
-  <body class="{{- $classes }}" id="top">
+  <body class="{{- $classes -}}" id="top">
     <a class="visually-hidden-focusable skip-to-main-link" href="#maincontent">
       {{- lang.Translate "theme.skip_to_content" -}}
     </a>
     <span id="top" class="d-none" aria-hidden="true"></span>
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-start" "context" . ) -}}
-    {{- partials.Include "header.html" . -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-pre" "context" . ) -}}
+    {{- partials.Include "header/topnavigation.html" . -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-post" "context" . ) -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-pre-main" "context" . ) -}}
     {{- $pagefindMarker := "" -}}
     {{- if in (collections.Slice "page") page.Kind }}
@@ -25,7 +29,30 @@
       {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-main-end" "context" . ) -}}
     </main>
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-post-main" "context" . ) -}}
-    {{- partials.Include "footer.html" . . -}}
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-pre" "context" . ) -}}
+    <footer id="footer" class="p-7">
+      {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-start" "context" . ) -}}
+      <div class="widgets container text-center">
+        <h2 class="d-none invisible">Footer Items</h2>
+        {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-widgets-start" "context" . ) -}}
+        {{- with site.Params.subscription -}}
+          {{- partials.IncludeCached "footer/newsletter.html" site.Params.subscription site.Params.subscription -}}
+        {{- end -}}
+        {{- with site.Menus.footer -}}
+          {{- partials.IncludeCached "footer/footer-menu.html" . -}}
+        {{- end -}}
+        {{- with site.Params.dnb.social -}}
+          {{- partials.IncludeCached "footer/social-media.html" . . -}}
+        {{- end -}}
+        {{- partials.IncludeCached "footer/copyright.html" . -}}
+        {{- if hugo.IsServer -}}
+          {{- partials.Include "footer/debugging.html" . -}}
+        {{- end -}}
+        {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-widgets-end" "context" . ) -}}
+      </div>
+      {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-end" "context" . ) -}}
+    </footer>
+    {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-post" "context" . ) -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-end-pre-script" "context" . ) -}}
     {{- partials.Include "footer/script.html" . -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-end" "context" . ) -}}

@@ -24,3 +24,18 @@ enabled = true
 icon = "chevron-double-up"
 class = "widget--back-to-top"
 top_id = "top"
+
+[dnb.theme.jsbuild.options]
+# options for the js.Build method
+# see https://gohugo.io/hugo-pipes/js/
+minify = true
+format = "iife"
+target = "es2020"
+# [dnb.theme.jsbuild.options.externals]
+# - "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+# - "node_modules/jquery/dist/jquery.min.js"
+# [dnb.theme.jsbuild.options.inject]
+# - "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+# - "node_modules/jquery/dist/jquery.min.js"
+# [dnb.theme.jsbuild.options.params]
+# api = "https://example.org/api"
