@@ -39,3 +39,37 @@ target = "es2020"
 # - "node_modules/jquery/dist/jquery.min.js"
 # [dnb.theme.jsbuild.options.params]
 # api = "https://example.org/api"
+
+################################################################################
+# hooks setup
+################################################################################
+[dnb.hooks]
+debug = true
+
+[[dnb.hooks.items.footer-post]]
+file = "footer-post"
+cached = false
+
+[[dnb.hooks.items.footer-widgets-start]]
+file = "footer-widgets-start"
+cached = true
+
+[[dnb.hooks.items.head-post-css]]
+file = "head-post-css"
+cached = true
+
+[[dnb.hooks.items.head-pre-css]]
+file = "head-pre-css"
+cached = true
+
+[[dnb.hooks.items.head-start]]
+file = "head-start"
+cached = true
+
+[[dnb.hooks.items.header-topnav-pre]]
+file = "header-topnav-pre"
+cached = false
+
+[[dnb.hooks.items.post-after]]
+file = "post-after"
+cached = false
