@@ -42,7 +42,7 @@ class ClickSpark extends HTMLElement {
     };
 
     let options = {
-      duration: 660,
+      duration: 330,
       easing: "cubic-bezier(0.25, 1, 0.5, 1)",
       fill: "forwards",
     };
@@ -64,7 +64,7 @@ class ClickSpark extends HTMLElement {
           display: contents;
         }
 
-        svg {
+        #click-spark {
           pointer-events: none;
           position: absolute;
           rotate: -20deg;
@@ -77,7 +77,7 @@ class ClickSpark extends HTMLElement {
           transform-origin: center;
         }
       </style>
-      <svg width="30" height="30" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+      <svg id="click-spark" width="30" height="30" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
         ${Array.from({ length: 8 }, (_) => `<line x1="50" y1="30" x2="50" y2="4"/>`).join("")}
       </svg>
     `;

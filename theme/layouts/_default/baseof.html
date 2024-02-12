@@ -59,6 +59,7 @@
     {{- partials.Include "footer/service-worker.html" . -}}
     <a href="javascript:history.back();" data-hotkey="k+ArrowLeft" class="d-none">Back</a>
     <a href="javascript:history.forward();" data-hotkey="k+ArrowRight" class="d-none">Forward</a>
+    <click-effect style="--click-spark-color: #ff4359;"></click-spark>
   </body>
 </html>
 {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "teardown" "context" . ) -}}

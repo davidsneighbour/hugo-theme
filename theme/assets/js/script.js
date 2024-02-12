@@ -1,10 +1,10 @@
-// import 'web-vitals-element';
 import 'web-vitals-element';
 import './scripts/keyboard-layout';
-// import ClickSpark from './scripts/click-effect';
 
 // import bootstrap scripts
 import './scripts/bs-tabs.js';
 import './scripts/bs-tooltips.js';
 
-// customElements.define("click-effect", ClickSpark);
+// import custom elements
+import ClickSpark from './components/click-effect';
+customElements.define("click-effect", ClickSpark);
