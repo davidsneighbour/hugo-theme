@@ -1,4 +1,4 @@
-{{- with resources.Get "js/scripts/theme-toggle.ts" -}}
+{{- with resources.Get "js/scripts/theme-toggle.js" -}}
   {{- $scripts := . | js.Build -}}
   {{- $scripts := $scripts | fingerprint "sha512" -}}
   <script integrity="{{- $scripts.Data.Integrity -}}">

@@ -1,5 +1,5 @@
 {{- $options := site.Params.dnb.theme.jsbuild.options -}}
-{{- $scripts := resources.Get "js/script.ts" |
+{{- $scripts := resources.Get "js/script.js" |
       js.Build (
         collections.Merge $options (collections.Dictionary "targetPath" "assets/js/script.js")
       ) | fingerprint "sha512" -}}
