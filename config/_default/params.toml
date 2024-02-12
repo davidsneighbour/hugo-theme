@@ -46,30 +46,30 @@ target = "es2020"
 [dnb.hooks]
 debug = true
 
-[[dnb.hooks.items.footer-post]]
+[[dnb.hooks.items.theme.footer-post]]
 file = "footer-post"
 cached = false
 
-[[dnb.hooks.items.footer-widgets-start]]
+[[dnb.hooks.items.theme.footer-widgets-start]]
 file = "footer-widgets-start"
 cached = true
 
-[[dnb.hooks.items.head-post-css]]
+[[dnb.hooks.items.theme.head-post-css]]
 file = "head-post-css"
-cached = true
+cached = false
 
-[[dnb.hooks.items.head-pre-css]]
+[[dnb.hooks.items.theme.head-pre-css]]
 file = "head-pre-css"
 cached = true
 
-[[dnb.hooks.items.head-start]]
+[[dnb.hooks.items.theme.head-start]]
 file = "head-start"
 cached = true
 
-[[dnb.hooks.items.header-topnav-pre]]
+[[dnb.hooks.items.theme.header-topnav-pre]]
 file = "header-topnav-pre"
 cached = false
 
-[[dnb.hooks.items.post-after]]
+[[dnb.hooks.items.theme.post-after]]
 file = "post-after"
 cached = false
