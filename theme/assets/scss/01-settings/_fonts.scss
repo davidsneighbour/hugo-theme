@@ -7,7 +7,7 @@ $fontdir: '/assets/webfonts';
 
 @font-face {
   font-family: "Exo 2";
-  src: url('#{$fontdir}/exo/normal.ttf') format('truetype');
+  src: url('#{$fontdir}/exo/normal.woff2') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@ $fontdir: '/assets/webfonts';
 
 @font-face {
   font-family: "Exo 2";
-  src: url('#{$fontdir}/exo/italic.ttf') format('truetype');
+  src: url('#{$fontdir}/exo/italic.woff2') format('truetype');
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
