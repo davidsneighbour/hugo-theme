@@ -45,6 +45,9 @@ path = "github.com/davidsneighbour/hugo-modules/modules/modder"
 path = "github.com/davidsneighbour/hugo-modules/modules/auditor"
 
 [[imports]]
+path = "github.com/davidsneighbour/hugo-modules/modules/errors"
+
+[[imports]]
 path = "github.com/davidsneighbour/hugo-modules/modules/feeds"
 
 [[imports]]

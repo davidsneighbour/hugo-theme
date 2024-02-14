@@ -12,5 +12,12 @@
   "stylelint.reportInvalidScopeDisables": true,
   "stylelint.reportNeedlessDisables": true,
   "stylelint.snippet": ["css", "less", "postcss", "scss", "sass"],
-  "stylelint.validate": ["css", "less", "postcss", "sass", "scss"]
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "sass",
+    "scss"
+  ],
+  "html.format.wrapLineLength": 100
 }
