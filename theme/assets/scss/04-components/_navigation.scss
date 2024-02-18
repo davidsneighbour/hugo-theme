@@ -26,6 +26,12 @@
       @extend .me-1;
       @extend .align-bottom;
     }
+
+  }
+
+  .nav-item.active .nav-link {
+    color: $primary !important;
+
   }
 
   .navbar-brand {

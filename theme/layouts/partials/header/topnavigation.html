@@ -9,8 +9,16 @@
       <menu class="navbar-nav me-md-0 me-auto ms-auto">
         {{- $current := . -}}
         {{- range site.Menus.main -}}
-          {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
-          {{- $active = or $active (eq .Name $current.Title) -}}
+
+          {{- $active := "" -}}
+          {{- if or ($current.HasMenuCurrent .Menu .) ($current.IsMenuCurrent .Menu .) -}}
+            {{- $active = "active" -}}
+          {{- else  }}
+            {{ if (and $current.IsHome (eq .Name "Home"))}}
+              {{- $active = "active" -}}
+            {{ end }}
+          {{- end -}}
+
           {{- if .HasChildren -}}
             <li class="nav-item dropdown">
               <div
@@ -39,13 +47,17 @@
               </ul>
             </li>
           {{- else -}}
-            <li class="nav-item {{ if $active -}}active{{- end -}}">
-              <a class="nav-link" href="{{- .URL | absLangURL -}}"
+            <li class="nav-item {{ $active -}}">
+              <a class="nav-link
+              d-flex flex-row  align-items-center column-gap-2
+              " href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                 {{- with .Params.bsicon -}}
                   {{- partials.Include "icon.html" . -}}
                 {{- end -}}
-                {{- .Name -}}
+                <span>
+                  {{- .Name -}}
+                </span>
               </a>
             </li>
           {{- end -}}
