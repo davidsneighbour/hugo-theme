@@ -6,16 +6,16 @@
     {{- partials.IncludeCached "header/navbar/toggle-button.html" . -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-pre-mainnav" "context" . ) -}}
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
-      <menu class="navbar-nav me-md-0 me-auto ms-auto">
+      <menu class="navbar-nav mt-0 me-md-0 me-auto ms-auto">
         {{- $current := . -}}
         {{- range site.Menus.main -}}
 
           {{- $active := "" -}}
           {{- if or ($current.HasMenuCurrent .Menu .) ($current.IsMenuCurrent .Menu .) -}}
-            {{- $active = "active" -}}
+            {{- $active = "active text-primary link-primary" -}}
           {{- else  }}
             {{ if (and $current.IsHome (eq .Name "Home"))}}
-              {{- $active = "active" -}}
+              {{- $active = "active text-primary link-primary" -}}
             {{ end }}
           {{- end -}}
 
@@ -49,7 +49,8 @@
           {{- else -}}
             <li class="nav-item {{ $active -}}">
               <a class="nav-link
-              d-flex flex-row  align-items-center column-gap-2
+
+              d-flex flex-row  align-items-center column-gap-2 {{ $active -}}
               " href="{{- .URL | absLangURL -}}"
                         {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                 {{- with .Params.bsicon -}}
