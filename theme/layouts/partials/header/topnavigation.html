@@ -1,7 +1,21 @@
 <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary shadow-lg">
   <div class="container-md">
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-start" "context" . ) -}}
-    {{- partials.IncludeCached "header/navbar/brand.html" . -}}
+    {{- /* Logo/Brand name */ -}}
+    <div class="navbar-brand fsize-12 fw-bold text-decoration-none ff-title">
+      {{- if site.Params.dnb.theme.logo -}}
+      <a href="{{- site.BaseURL | relLangURL -}}" class="d-inline-block mt-2 text-decoration-none">
+        <img class="rounded-circle" src="{{- site.Params.dnb.theme.logo | urls.AbsURL  -}}"
+            alt="Logo of {{ site.Title -}}"
+            height="{{- site.Params.dnb.theme.logo_height -}}"
+            width="{{- site.Params.dnb.theme.logo_width -}}">
+      </a>
+      {{- else -}}
+      <a href="{{- site.BaseURL | relLangURL -}}" class="d-inline-block mt-2 text-decoration-none">
+        {{- site.Title -}}
+      </a>
+      {{- end -}}
+    </div>
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-post-logo" "context" . ) -}}
     {{- partials.IncludeCached "header/navbar/toggle-button.html" . -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-pre-mainnav" "context" . ) -}}
