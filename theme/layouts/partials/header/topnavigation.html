@@ -2,7 +2,7 @@
   <div class="container-md">
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-start" "context" . ) -}}
     {{- /* Logo/Brand name */ -}}
-    <div class="navbar-brand fsize-12 fw-bold text-decoration-none ff-title">
+    <div class="navbar-brand fsize-12 fw-bold text-decoration-none ff-headline">
       {{- if site.Params.dnb.theme.logo -}}
       <a href="{{- site.BaseURL | relLangURL -}}" class="d-inline-block mt-2 text-decoration-none">
         <img class="rounded-circle" src="{{- site.Params.dnb.theme.logo | urls.AbsURL  -}}"
