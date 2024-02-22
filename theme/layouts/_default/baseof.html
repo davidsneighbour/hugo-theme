@@ -260,6 +260,9 @@
         </a>
       </div>
     {{- end -}}
+    {{- if templates.Exists "partials/schema.html" -}}
+      {{- partials.Include "schema.html" . . -}}
+    {{- end -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-post" "context" . ) -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-end-pre-script" "context" . ) -}}
     {{- $options := site.Params.dnb.theme.jsbuild.options -}}
