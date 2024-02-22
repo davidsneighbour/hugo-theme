@@ -1,8 +1,0 @@
-{{- with resources.Get "js/scripts/theme-toggle.js" -}}
-  {{- $scripts := . | js.Build -}}
-  {{- $scripts := $scripts | fingerprint "sha512" -}}
-  <script integrity="{{- $scripts.Data.Integrity -}}">
-    {{- $scripts.Content | safeJS -}}
-  </script>
-{{- end -}}
-<meta name="view-transition" content="same-origin" />
