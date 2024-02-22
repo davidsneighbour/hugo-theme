@@ -9,8 +9,6 @@
   {{- end -}}
 {{- end -}}
 
-{{ partialCached "indicator.html" . . }}
-
 <div class="container p-0">
   <div class="row">
     {{- range $index, $item := collections.First 8 (collections.Shuffle $items) -}}

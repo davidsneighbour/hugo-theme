@@ -18,13 +18,14 @@
 {{- end -}}
 
 {{- if hugo.IsServer -}}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      {{- partials.IncludeCached "infotabs.html" page page -}}
+  {{ partialCached "indicator.html" . . }}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        {{- partials.IncludeCached "infotabs.html" page page -}}
+      </div>
     </div>
   </div>
-</div>
 {{- end -}}
 
 {{- if templates.Exists "partials/schema.html" -}}
