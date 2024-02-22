@@ -73,3 +73,6 @@ cached = false
 [[dnb.hooks.items.theme.post-after]]
 file = "post-after"
 cached = false
+
+[dnb.head]
+colorschemeOrder = "dark light"
