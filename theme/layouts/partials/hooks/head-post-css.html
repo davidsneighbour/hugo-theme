@@ -1,3 +1,4 @@
+{{- /* hooking into head.html hook head-post-css */ -}}
 {{- with resources.Get "js/scripts/theme-toggle.js" -}}
   {{- $scripts := . | js.Build -}}
   {{- $scripts := $scripts | fingerprint "sha512" -}}
