@@ -17,7 +17,7 @@
   {{- $p = sort $p "Date" "desc" -}}
   {{- $paginator = $.Paginate $p 25 -}}
 {{- else -}}
-  {{- $paginator = $.Paginator -}}
+  {{/* {{- $paginator = $.Paginator -}} */}}
 {{- end -}}
 {{- .Scratch.Set "paginator" $paginator -}}
 {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "init-end" "context" . ) -}}
