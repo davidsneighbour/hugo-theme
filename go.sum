@@ -8,8 +8,8 @@ github.com/davidsneighbour/hugo-modules/modules/auditor v1.2024.1 h1:3+WmzSYysAi
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2024.1/go.mod h1:LibI1IDZCBBzIo/klOpNTLTZ3H6DeZc0K0qyh7j6Zus=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.5 h1:Szq3fkROEzF7rcL1uCVsryozeF+oG3sBBW8nss/jJJ8=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.5/go.mod h1:Y5hMznpym+EBY2ZtEzoHiV5m+dzZ1hkPQbq5JuxJJ0c=
-github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240224140641-356c6569cb65 h1:dUjMQv0017OsYHLm5bEdBMTWD9cRMSH7fQyY8iRR3dg=
-github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240224140641-356c6569cb65/go.mod h1:19ZtwsMLIs2XThZd6c+gMnktRW2DfuMXRgKouWgnTpY=
+github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240225105456-acb130446e73 h1:bp+4cKJ4odvU16ZxSRPQBDrUC4iFC+HSMFA5Guc4+Yw=
+github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240225105456-acb130446e73/go.mod h1:19ZtwsMLIs2XThZd6c+gMnktRW2DfuMXRgKouWgnTpY=
 github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.3 h1:hQzjd3iBC/kClzatTW1VaizkFMm+GZ20ataZI+gAOmk=
 github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.3/go.mod h1:fEBnXrvtGuO69gTrdf9KrjJAywtZlX0DOScKE03JG/c=
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.2 h1:PmTuazaQsNSvGAWe7upBmE8FYj3W750DSi8bTeKPXeE=
