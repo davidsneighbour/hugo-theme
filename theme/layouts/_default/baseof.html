@@ -16,7 +16,7 @@
     <span id="top" class="d-none" aria-hidden="true"></span>
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-start" "context" . ) -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-pre" "context" . ) -}}
-    <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary shadow-lg">
+    <nav class="navbar sticky-top navbar-expand-md">
       <div class="container-md">
         {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-start" "context" . ) -}}
         {{- /* Logo/Brand name */ -}}
