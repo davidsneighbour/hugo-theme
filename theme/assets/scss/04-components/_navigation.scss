@@ -6,7 +6,6 @@
  * - https://getbootstrap.com/docs/5.2/components/navs-tabs/
  ******************************************************************************/
 .navbar {
-  background-color: rgb(33, 37, 41);
 
   .navbar-brand {
     a {
@@ -22,4 +21,12 @@
     vertical-align: text-bottom;
     margin-bottom: 4px;
   }
+}
+
+body.dark .navbar {
+  background-color: rgb(33, 37, 41)
+}
+
+body.light .navbar {
+  background-color: rgb(255, 255, 255)
 }
