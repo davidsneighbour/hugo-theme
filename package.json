@@ -10,7 +10,7 @@
   "dependencies": {
     "@alpinejs/collapse": "3.13.5",
     "alpinejs": "3.13.5",
-    "@davidsneighbour/standard-version-config": "^5.9.0",
+    "@davidsneighbour/standard-version-config": "^5.9.3",
     "@davidsneighbour/stylelint-config": "5.9.3",
     "@davidsneighbour/tools": "5.9.3",
     "@github/hotkey": "3.1.0",
