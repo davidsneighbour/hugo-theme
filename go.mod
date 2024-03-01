@@ -9,8 +9,8 @@ require (
 	github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff // indirect
 	github.com/davidsneighbour/hugo-modules v1.2024.12 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/auditor v1.2024.1 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.8 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240226150854-281cba0bc7b6 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.11 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240301121445-391f5c802e04 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.3 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.2 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/giscus v1.2024.0 // indirect
@@ -24,7 +24,7 @@ require (
 	github.com/davidsneighbour/hugo-modules/modules/pictures v1.2024.0 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/publisher v0.0.4 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/pwa v1.2024.5 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/renderhooks v1.2024.0 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/renderhooks v1.2024.3 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/robots v1.2024.0 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/schema v0.0.6 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/security v1.2023.3 // indirect
