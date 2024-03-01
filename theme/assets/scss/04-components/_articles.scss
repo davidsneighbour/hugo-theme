@@ -15,7 +15,6 @@ article {
     font-size: css-max(#{30px}, #{3.5vw});
 
     a {
-      @extend .text-uppercase;
       @extend .text-decoration-none;
     }
 
