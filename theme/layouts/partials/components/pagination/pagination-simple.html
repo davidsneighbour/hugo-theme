@@ -1,4 +1,4 @@
-<nav class="row">
+<nav class="row" aria-label="Page Navigation">
   <div class="d-flex flex-column">
     {{- $paginator := .Scratch.Get "paginator" -}}
     {{- if gt $paginator.TotalPages 1 -}}
