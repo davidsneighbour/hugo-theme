@@ -9,19 +9,12 @@ weight: 100
 > This documentation is under (re)construction. Check back later for changes and feel free to open
 > an issue if you have questions or suggestions.
 
-<!-- markdownlint-disable MD010 MD007 -->
-<!--lint ignore-->
-
 - [General notes](#general-notes)
-
-<!-- markdownlint-enable MD010 MD007 -->
 
 ---
 
 Hooks are listed in their order of appearance.
 
-<!-- prettier-ignore-start -->
-<!--lint ignore-->
 | Hook  | File  | Runs | Depends on | Description  |
 | --- | --- | --- | --- | --- |
 | init  | partials/init.html  | 1  |  | before anything else runs (before the pagination object is created) |
@@ -35,5 +28,3 @@ Hooks are listed in their order of appearance.
 | body-end-pre-script | _default/baseof.html | 1  |  |  |
 | body-end  | _default/baseof.html | 1  |  |  |
 | teardown  | _default/baseof.html | 1  |  |  |
-
-<!-- prettier-ignore-end -->
