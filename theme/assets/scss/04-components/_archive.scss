@@ -46,12 +46,10 @@
       display: inline-block;
 
       @include media-breakpoint-up(sm) {
-
-        display: block;
+        @extend .d-block;
 
         &:nth-child(1) {
           font-size: 25px;
-
           text-transform: uppercase;
         }
 

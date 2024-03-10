@@ -22,7 +22,7 @@
   }
 
   .is-good {
-    color: #1fb26e;
+    @extend .text-success;
   }
 
   .is-bad {
