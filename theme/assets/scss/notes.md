@@ -1,4 +1,4 @@
-color schemes mixin
+# Color schemes
 
 ```sass
 .custom-element {

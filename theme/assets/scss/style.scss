@@ -5,6 +5,8 @@
 
 // DNB: theme settings
 @import '01-settings/fonts';
+@import '01-settings/colormode-light';
+@import '01-settings/colormode-dark';
 @import '01-settings/theme';
 @import '01-settings/utilities';
 
@@ -14,9 +16,6 @@
 
 // DNB: map overrides
 @import '01-settings/maps';
-
-// @import '01-settings/colormode-light';
-// @import '01-settings/colormode-dark';
 
 // BS: other required parts
 @import 'bootstrap/scss/maps';
