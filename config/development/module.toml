@@ -11,7 +11,7 @@ source = "theme/assets"
 target = "assets"
 
 [[mounts]]
-source = "theme/documentation"
+source = "documentation"
 target = "content/documentation"
 
 [[mounts]]
