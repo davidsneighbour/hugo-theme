@@ -1,11 +1,13 @@
 import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';
+// @ts-ignore
+import * as params from '@params';
 
 function themeSwitcher() {
+  let _this = this;
   return {
     theme: 'dark',
     init: function () {
-      let _this = this;
       this.theme = this.getColorPreference();
       this.reflectPreference();
       this.changeGiscusTheme();
@@ -52,12 +54,12 @@ function themeSwitcher() {
 document.addEventListener('DOMContentLoaded', function () {
   window.Alpine = Alpine;
   window.themeSwitcher = themeSwitcher;
+  console.log(params);
   Alpine.plugin(collapse);
-  const data = require("./assets/data/build.json");
   Alpine.data('versionData', function () {
     return {
-      'version': data.tag_name,
-      'url': data.html_url,
+      'version': params.tag_name,
+      'url': params.html_url,
     };
   });
   Alpine.start();

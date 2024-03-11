@@ -1,7 +1,11 @@
 {{- /* hooking into head.html hook head-post-css */ -}}
 {{- with resources.Get "js/scripts/theme-toggle.js" -}}
-  {{- $scripts := . | js.Build -}}
-  {{- $scripts := $scripts | fingerprint "sha512" -}}
+  {{- $options := dict -}}
+  {{- with resources.Get "data/build.json" -}}
+    {{- $options = dict "params" (transform.Unmarshal .Content) -}}
+  {{- end -}}
+  {{- $scripts := . | js.Build $options -}}
+  {{- $scripts := $scripts | minify | fingerprint "sha512" -}}
   <script integrity="{{- $scripts.Data.Integrity -}}">
     {{- $scripts.Content | safeJS -}}
   </script>
