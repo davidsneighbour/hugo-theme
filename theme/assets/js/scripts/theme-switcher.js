@@ -3,12 +3,13 @@ export function themeSwitcher() {
   return {
     theme: 'dark',
     init: function () {
+      _this = this;
       this.theme = this.getColorPreference();
       this.reflectPreference();
       this.changeGiscusTheme();
       setTimeout(function () {
         return _this.changeGiscusTheme();
-      }, 5000);
+      }, 2000);
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
         _this.theme = e.matches ? 'dark' : 'light';
         _this.setPreference();
