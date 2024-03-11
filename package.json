@@ -9,12 +9,16 @@
   "homepage": "https://github.com/davidsneighbour/hugo-theme#readme",
   "dependencies": {
     "@alpinejs/collapse": "3.13.7",
-    "alpinejs": "3.13.7",
     "@davidsneighbour/standard-version-config": "^5.9.7",
     "@davidsneighbour/stylelint-config": "5.9.7",
     "@davidsneighbour/tools": "5.9.7",
     "@github/hotkey": "3.1.0",
-    "@types/alpinejs": "3.13.7"
+    "@types/alpinejs": "3.13.7",
+    "alpinejs": "3.13.7"
+  },
+  "devDependencies": {
+    "@types/alpinejs__collapse": "^3.13.4",
+    "@types/node": "^20.11.25"
   },
   "scripts": {
     "clean": "wireit",

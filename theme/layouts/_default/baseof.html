@@ -265,6 +265,11 @@
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-post" "context" . ) -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-end-pre-script" "context" . ) -}}
     {{- $options := site.Params.dnb.theme.jsbuild.options -}}
+    {{- $params := dict }}
+    {{- with resources.Get "data/build.json" -}}
+      {{- $params = dict "params" (transform.Unmarshal .Content) -}}
+    {{- end -}}
+    {{- $options = collections.Merge $options $params -}}
     {{- $scripts := resources.Get "js/script.js" |
           js.Build (
             collections.Merge $options (collections.Dictionary "targetPath" "assets/js/script.js")
