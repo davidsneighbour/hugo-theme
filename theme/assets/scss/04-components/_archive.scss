@@ -46,7 +46,7 @@
       display: inline-block;
 
       @include media-breakpoint-up(sm) {
-        @extend .d-block;
+        display: block;
 
         &:nth-child(1) {
           font-size: 25px;

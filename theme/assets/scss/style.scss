@@ -68,6 +68,7 @@
 @import 'bootstrap/scss/utilities/api';
 
 // DNB: mixins
+@import '02-mixins/colors';
 @import '02-mixins/css_functions';
 @import '02-mixins/scrollbars';
 @import '02-mixins/scrollsnap';
@@ -81,21 +82,23 @@
 @import '03-global/responsive';
 @import '03-global/transitions';
 
-// DNB: Components
+// adding scrollbars
 @include dnb-scrollbars;
 
-@import '04-components/archive';
-@import '04-components/utilities';
+// DNB: Components
 @import '04-components/alerts';
-@import '04-components/navigation';
+@import '04-components/archive';
 @import '04-components/articles';
-@import '04-components/figure';
-@import '04-components/highlight';
-@import '04-components/search';
-@import '04-components/text';
-@import '04-components/forms';
 @import '04-components/features';
+@import '04-components/figure';
+@import '04-components/forms';
+@import '04-components/highlight';
+@import '04-components/markup';
+@import '04-components/navigation';
+@import '04-components/search';
 @import '04-components/tabs';
+@import '04-components/text';
+@import '04-components/utilities';
 
 // DNB: prose - article content formatting
 @include dnb-scrollbars('.prose', 3px);
@@ -104,16 +107,15 @@
   @import '05-prose/prose';
   @import '05-prose/footnotes';
   @import '05-prose/components';
-
-  // @import '05-prose/tables';
+  @import '05-prose/tables';
 }
 
 // DNB: plugins
 // @import '06-plugins/devaudit';
-@import '06-plugins/syntax';
-@import '06-plugins/theme-toggle';
 @import '06-plugins/responsive-ruler';
 @import '06-plugins/shortcodes';
+@import '06-plugins/syntax';
+@import '06-plugins/theme-toggle';
 
 // DNB: hugo-blockify
 // @import 'blockify';

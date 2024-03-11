@@ -1,9 +1,7 @@
 figure {
-
   @extend .mx-auto;
 
   font-variant: small-caps;
-  /* stylelint-disable-next-line plugin/no-unsupported-browser-features -- Opera Mini, muahahaha */
   transition: border 8000ms ease-out;
 
   .inline-icons {
@@ -25,7 +23,6 @@ figure {
   video {
     object-fit: cover;
     overflow: hidden;
-    // aspect-ratio: 2/1;
 
     @extend .rounded-1;
     @extend .w-100;
