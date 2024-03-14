@@ -37,6 +37,7 @@ td {
   text-wrap: pretty;
 
   @extend .hyphenate;
+
   @include word-wrap;
 }
 
@@ -84,14 +85,12 @@ table {
     @extend .px-2;
     @extend .py-1;
 
-    &:nth-of-type(1),
-    &:nth-of-type(2) {
+    &:nth-of-type(1) {
       white-space: nowrap;
     }
   }
 
   th {
-
     @extend .px-2;
     @extend .py-1;
   }
