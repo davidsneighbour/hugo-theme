@@ -13,12 +13,13 @@
     "@davidsneighbour/stylelint-config": "5.10.1",
     "@davidsneighbour/tools": "5.10.1",
     "@github/hotkey": "3.1.0",
-    "@types/alpinejs": "3.13.7",
-    "alpinejs": "3.13.7"
+    "@types/alpinejs": "3.13.9",
+    "alpinejs": "3.13.7",
+    "openai": "^4.29.1"
   },
   "devDependencies": {
     "@types/alpinejs__collapse": "^3.13.4",
-    "@types/node": "^20.11.26"
+    "@types/node": "^20.11.28"
   },
   "scripts": {
     "clean": "wireit",
