@@ -6,27 +6,21 @@
  * - https://getbootstrap.com/docs/5.2/components/navs-tabs/
  ******************************************************************************/
 .navbar {
-
-  .navbar-brand {
-    a {
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
+  body.dark & {
+    background-color: rgb(33, 37, 41)
   }
 
-  svg {
-    margin: 0;
-    vertical-align: text-bottom;
-    margin-bottom: 4px;
+  body.light & {
+    background-color: rgb(255, 255, 255)
   }
-}
 
-body.dark .navbar {
-  background-color: rgb(33, 37, 41)
-}
+  &-brand a:hover {
+    text-decoration: none;
+  }
 
-body.light .navbar {
-  background-color: rgb(255, 255, 255)
+  // svg {
+  //   margin: 0;
+  //   vertical-align: text-bottom;
+  //   margin-bottom: 4px;
+  // }
 }
