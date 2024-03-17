@@ -44,34 +44,8 @@ target = "es2020"
 # hooks setup
 ################################################################################
 [dnb.hooks]
-debug = true
-
-[[dnb.hooks.items.theme.footer-post]]
-file = "footer-post"
-cached = false
-
-[[dnb.hooks.items.theme.footer-widgets-start]]
-file = "footer-widgets-start"
-cached = true
-
 [[dnb.hooks.items.theme.head-post-css]]
 file = "head-post-css"
-cached = false
-
-[[dnb.hooks.items.theme.head-pre-css]]
-file = "head-pre-css"
-cached = true
-
-[[dnb.hooks.items.theme.head-start]]
-file = "head-start"
-cached = true
-
-[[dnb.hooks.items.theme.header-topnav-pre]]
-file = "header-topnav-pre"
-cached = false
-
-[[dnb.hooks.items.theme.post-after]]
-file = "post-after"
 cached = false
 
 [dnb.head]
