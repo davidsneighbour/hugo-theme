@@ -11,8 +11,8 @@
                         "hook" "post-jsbuild-options"
                         "context" $options ) -}}
   {{- $scripts := . | js.Build $options -}}
-  {{- $scripts := $scripts | minify | fingerprint "sha512" -}}
+  {{- $scripts := $scripts | resources.Minify | resources.Fingerprint "sha512" -}}
   <script integrity="{{- $scripts.Data.Integrity -}}">
-    {{- $scripts.Content | safeJS -}}
+    {{- $scripts.Content | safe.JS -}}
   </script>
 {{- end -}}

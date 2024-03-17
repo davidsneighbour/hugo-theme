@@ -7,9 +7,9 @@
           <h1 class="post-title">{{ lang.Translate "theme.tags" }}</h1>
         </div>
         {{- range $key, $taxonomy := .Site.Taxonomies.tags.ByCount -}}
-          {{- if lt $counter 4 -}}
+          {{- if compare.Lt $counter 4 -}}
             {{- with site.GetPage (fmt.Printf "/tags/%s/" .Name) -}}
-              {{- if ne .Content "" -}}
+              {{- if compare.Ne .Content "" -}}
                 {{- $post := collections.Dictionary "context" . "fullcontent" false "responsive" "halfwidth" -}}
                 <div class="col-md-6 mb-3">
                   {{- partials.Include "content/post.html" $post -}}

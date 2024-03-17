@@ -1,7 +1,7 @@
 {{- $style := .Get "css" -}}
 {{- $theme := .Get "scheme" | compare.Default "dark" -}}
 {{- $textcolor := "text-light" -}}
-{{- if eq $theme "dark" -}}
+{{- if compare.Eq $theme "dark" -}}
   {{- $textcolor = "text-dark" -}}
 {{- end -}}
 {{- $attribute := fmt.Printf "style=\"background-color: %s\"" $style | safe.HTMLAttr -}}

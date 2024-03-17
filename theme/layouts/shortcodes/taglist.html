@@ -1,13 +1,13 @@
 {{- $title := $.Params.title -}}
 {{- $tag := $.Params.tag -}}
-{{- $limit := int ($.Params.limit) -}}
-{{- $tags := (index site.Taxonomies.tags $tag) -}}
-{{- if (eq $limit -1) -}}
+{{- $limit := cast.ToInt ($.Params.limit) -}}
+{{- $tags := (collections.Index site.Taxonomies.tags $tag) -}}
+{{- if (compare.Eq $limit -1) -}}
   {{- $limit = len site.Taxonomies.tags -}}
 {{- end -}}
 <h2>{{- $title| compare.Default "Related Posts" -}}</h2>
 <ul>
-{{- range (first $limit $tags.Pages) -}}
+{{- range (collections.First $limit $tags.Pages) -}}
   <li>
     <a href="{{- .Permalink -}}">{{- .Title -}}</a>
   </li>

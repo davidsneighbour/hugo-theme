@@ -6,7 +6,7 @@
     {{- $posttype = . -}}
   {{- end -}}
 {{- end -}}
-{{- if eq $context.Type "tags" -}}
+{{- if compare.Eq $context.Type "tags" -}}
   {{- $posttype = "tag" -}}
 {{- end -}}
 

@@ -17,19 +17,19 @@
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-start" "context" . ) -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-pre" "context" . ) -}}
     <nav class="navbar sticky-top navbar-expand-md" aria-label="Top Navigation Bar">
-      <div class="container-md">
+      <div class="container">
         {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-start" "context" . ) -}}
         {{- /* Logo/Brand name */ -}}
         <div class="navbar-brand fsize-12 fw-bold text-decoration-none ff-headline">
           {{- if site.Params.dnb.theme.logo -}}
-          <a href="{{- site.BaseURL | relLangURL -}}" class="d-inline-block mt-2 text-decoration-none">
+          <a href="{{- site.BaseURL | urls.RelLangURL -}}" class="d-inline-block mt-2 text-decoration-none">
             <img class="rounded-circle" src="{{- site.Params.dnb.theme.logo | urls.AbsURL  -}}"
                 alt="Logo of {{ site.Title -}}"
                 height="{{- site.Params.dnb.theme.logo_height -}}"
                 width="{{- site.Params.dnb.theme.logo_width -}}">
           </a>
           {{- else -}}
-          <a href="{{- site.BaseURL | relLangURL -}}" class="d-inline-block mt-2 text-decoration-none">
+          <a href="{{- site.BaseURL | urls.RelLangURL -}}" class="d-inline-block mt-2 text-decoration-none">
             {{- site.Title -}}
           </a>
           {{- end -}}
@@ -51,7 +51,7 @@
               {{- if or ($current.HasMenuCurrent .Menu .) ($current.IsMenuCurrent .Menu .) -}}
                 {{- $active = "active text-primary link-primary" -}}
               {{- else  }}
-                {{ if (and $current.IsHome (eq .Name "Home"))}}
+                {{ if (and $current.IsHome (compare.Eq .Name "Home"))}}
                   {{- $active = "active text-primary link-primary" -}}
                 {{ end }}
               {{- end -}}
@@ -72,7 +72,7 @@
                   <ul class="dropdown-menu">
                     {{- range .Children -}}
                       <li>
-                        <a class="dropdown-item" href="{{- .URL | absLangURL -}}"
+                        <a class="dropdown-item" href="{{- .URL | urls.AbsLangURL -}}"
                             {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                           {{- with .Params.bsicon -}}
                             {{- partials.Include "icon.html" . -}}
@@ -88,7 +88,7 @@
                   <a class="nav-link
 
                   d-flex flex-row  align-items-center column-gap-2 {{ $active -}}
-                  " href="{{- .URL | absLangURL -}}"
+                  " href="{{- .URL | urls.AbsLangURL -}}"
                             {{- with .Params.hotkey }} data-hotkey="{{ . }}"{{ end }}>
                     {{- with .Params.bsicon -}}
                       {{- partials.Include "icon.html" . -}}
@@ -124,10 +124,10 @@
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "header-topnav-post" "context" . ) -}}
     {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-pre-main" "context" . ) -}}
     {{- $pagefindMarker := "" -}}
-    {{- if in (collections.Slice "page") page.Kind }}
+    {{- if collections.In (collections.Slice "page") page.Kind }}
       {{- $pagefindMarker = "data-pagefind-body" -}}
     {{- end -}}
-    <main id="maincontent" {{ $pagefindMarker | safeHTMLAttr }} tabindex="-1">
+    <main id="maincontent" {{ $pagefindMarker | safe.HTMLAttr }} tabindex="-1">
       {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-main-start" "context" . ) -}}
       {{- block "main" . -}}{{- end -}}
       {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "body-main-end" "context" . ) -}}
@@ -148,7 +148,7 @@
             <ul class="mb-0 list-inline">
               {{- range . -}}
                 <li class="px-2 list-inline-item">
-                  <a href="{{- .URL | absLangURL -}}">
+                  <a href="{{- .URL | urls.AbsLangURL -}}">
                     {{- with .Params.bsicon }}
                       {{ $options := dict "icon" . "size" "1.5em" "class" "me-2" }}
                       {{ partials.Include "icon.html" $options }}
@@ -189,7 +189,7 @@
             {{- $order = .networks -}}
           {{- else -}}
             {{- range $key, $item := $networks -}}
-              {{- $order = $order | append $key -}}
+              {{- $order = $order | collections.Append $key -}}
             {{- end -}}
           {{- end -}}
           <div class="widget social-media">
@@ -197,7 +197,7 @@
             <div class="container">
               <div class="row row-cols-4 row-cols-md-6 justify-content-md-center">
                 {{- range $order -}}
-                  {{- $network := index $networks . -}}
+                  {{- $network := collections.Index $networks . -}}
                   <div class="col text-center">
                     <a
                       href="{{- $network.url -}}"
@@ -205,14 +205,14 @@
                       class="icon-{{ $network.icon }} p-2 d-inline-block"
                       title="{{- $network.label -}}">
                       {{- with ($config.icons | compare.Default true) -}}
-                        {{- if eq . true -}}
+                        {{- if compare.Eq . true -}}
                           {{- $options := dict "icon" $network.icon "class" "c-20" "width" "32" "height" "32" -}}
                           {{- partials.Include "icon.html" $options -}}
                         {{- end -}}
                       {{- end -}}
                       <span class="visually-hidden">
                       {{- with ($config.sharetext | compare.Default false) -}}
-                        {{- if eq . true -}}
+                        {{- if compare.Eq . true -}}
                           {{- $network.label -}}
                         {{- end -}}
                       {{- end -}}
@@ -227,7 +227,7 @@
         <div class="d-flex flex-column flex-md-row justify-content-center mt-6 column-gap-3 row-gap-2">
           <div>
             {{- $year := partials.IncludeCached "func/getYear.html" . -}}
-            {{- fmt.Printf (lang.Translate "theme.copyright-text") (string $year) | .RenderString | safeHTML -}}
+            {{- fmt.Printf (lang.Translate "theme.copyright-text") (cast.ToString $year) | .RenderString | safe.HTML -}}
           </div>
           <div class="d-none d-md-inline-block vr"></div>
           <div x-data="versionData">
@@ -243,7 +243,7 @@
       {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "footer-end" "context" . ) -}}
     </footer>
     {{- $config := site.Params.dnb.theme -}}
-    {{- if eq true $config.backtotop.enabled -}}
+    {{- if compare.Eq true $config.backtotop.enabled -}}
       {{- $icon := $config.backtotop.icon -}}
       {{- $class := $config.backtotop.class -}}
       {{- $top_id := $config.backtotop.top_id -}}
@@ -273,14 +273,14 @@
     {{- $scripts := resources.Get "js/script.js" |
           js.Build (
             collections.Merge $options (collections.Dictionary "targetPath" "assets/js/script.js")
-          ) | fingerprint "sha512" -}}
+          ) | resources.Fingerprint "sha512" -}}
     <script src="{{- $scripts.Permalink -}}" async defer integrity="{{- $scripts.Data.Integrity -}}"></script>
     {{- with resources.Get "js/main.js" -}}
       {{- $script := . | resources.ExecuteAsTemplate "plugins.js" . -}}
       {{- $script = $script |
             js.Build (
               collections.Merge $options (collections.Dictionary "targetPath" "assets/js/main.js")
-            ) | fingerprint "sha512" -}}
+            ) | resources.Fingerprint "sha512" -}}
       <script src="{{- $script.Permalink -}}" async defer integrity="{{- $script.Data.Integrity -}}"></script>
     {{- else -}}
       {{- partials.Include "debug.html" (dict

@@ -11,7 +11,7 @@
         {{ with .Params.icon -}}
           {{ partials.Include "icon.html" . }}
         {{ end }}
-        <a rel="tag" href="{{- .Permalink -}}">#{{- .Title | lower -}}</a>
+        <a rel="tag" href="{{- .Permalink -}}">#{{- .Title | strings.ToLower -}}</a>
       </span>
     {{- end -}}
   </div>

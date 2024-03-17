@@ -10,7 +10,7 @@
   {{ range .Site.RegularPages.ByDate.Reverse }}
     {{ $page := . }}
     {{ range .Params.tags }}
-      {{ if eq . $tag }}
+      {{ if compare.Eq . $tag }}
         <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
       {{ end }}
     {{ end }}

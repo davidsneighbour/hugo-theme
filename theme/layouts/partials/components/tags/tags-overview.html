@@ -1,13 +1,13 @@
 {{- $current := .Name -}}
 <ul class="list-inline">
-  {{- range $index, $value := (index site.Taxonomies .Type) -}}
-    {{- if gt .Count 1 -}}
+  {{- range $index, $value := (collections.Index site.Taxonomies .Type) -}}
+    {{- if compare.Gt .Count 1 -}}
     <li class="list-inline-item mx-2">
       <a href="/tags/{{ $index }}/" class="text-decoration-none">
-        {{- if eq $current $index -}}<strong>{{- end -}}
+        {{- if compare.Eq $current $index -}}<strong>{{- end -}}
         {{- partials.Include "icon.html" "tag-fill" -}}
         {{- $index -}} ({{- .Count -}})
-        {{- if eq $current $index -}}</strong>{{- end -}}
+        {{- if compare.Eq $current $index -}}</strong>{{- end -}}
       </a>
     </li>
     {{- end -}}

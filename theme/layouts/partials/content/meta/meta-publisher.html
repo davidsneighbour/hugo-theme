@@ -35,7 +35,7 @@
     {{- if hugo.IsServer -}}
       <a
         href="vscode://file/{{- .File.Filename -}}"
-        aria-label="Edit in VSCode"
+        aria-label="Edit collections.In VSCode"
       >
         {{- partials.Include "icon.html" "vector-pen" -}}
       </a>
@@ -48,7 +48,7 @@
       {{- partials.Include "icon.html" "github" }}
     </div>
     <div class="d-flex flex-row gap-2">
-      <span>Git: {{ . | safeHTML }}</span>
+      <span>Git: {{ . | safe.HTML }}</span>
       <a
         href="{{ $config.repository }}/edit/main/content/{{ $page.File.Path }}"
         target="_blank"
@@ -69,7 +69,7 @@
       <span>{{ lang.Translate "theme.tags" }}: </span>
       {{- range . -}}
         <a rel="tag" href="{{- .Permalink -}}"
-          >#{{- .Title | urlize | lower -}}</a
+          >#{{- .Title | urls.URLize | strings.ToLower -}}</a
         >
       {{- end -}}
     </div>

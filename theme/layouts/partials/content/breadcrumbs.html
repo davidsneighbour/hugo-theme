@@ -1,30 +1,30 @@
 <nav class="" aria-label="breadcrumb ">
   <ol class="breadcrumb justify-content-center">
     <li class="breadcrumb-item"><a href="/">{{lang.Translate "Home" }}</a></li>
-    {{ $lastUrlElement := index (last 1 (split (delimit (split .RelPermalink "/") "," "") ",")) 0 }}
+    {{ $lastUrlElement := collections.Index (collections.Last 1 (strings.Split (collections.Delimit (strings.Split .RelPermalink "/") "," "") ",")) 0 }}
     {{- $.Scratch.Set "url" "" -}}
-    {{- range (split .RelPermalink "/") -}}
-      {{- if (gt (len .) 0) -}}
+    {{- range (strings.Split .RelPermalink "/") -}}
+      {{- if (compare.Gt (len .) 0) -}}
         {{- $.Scratch.Set "isSection" "false" -}}
         {{- $.Scratch.Set "isPage" "false" -}}
-        {{- $.Scratch.Add "url" (print "/" . ) -}}
-        {{- if $.Site.GetPage (print . ".md") -}}
-          {{- with $.Site.GetPage (print . ".md") -}}
+        {{- $.Scratch.Add "url" (fmt.Print "/" . ) -}}
+        {{- if $.Site.GetPage (fmt.Print . ".md") -}}
+          {{- with $.Site.GetPage (fmt.Print . ".md") -}}
             {{- if .IsPage -}}
               {{- $.Scratch.Set "isPage" "true" -}}
             {{- end -}}
           {{- end -}}
         {{- end -}}
-        {{- if eq ($.Scratch.Get "isPage") "true" -}}
-          {{- with $.Site.GetPage (print . ".md") -}}
+        {{- if compare.Eq ($.Scratch.Get "isPage") "true" -}}
+          {{- with $.Site.GetPage (fmt.Print . ".md") -}}
             <li class="breadcrumb-item active" aria-current="page"><a href="{{ $.Scratch.Get `url` }}">
-            {{ if  (eq (lang.Translate .Title) "" ) }} {{ .Title  }}{{ else }}{{ lang.Translate .Title  }}{{ end }}</a></li>
+            {{ if  (compare.Eq (lang.Translate .Title) "" ) }} {{ .Title  }}{{ else }}{{ lang.Translate .Title  }}{{ end }}</a></li>
           {{- end -}}
         {{- else -}}
-          {{- if eq $lastUrlElement . -}}
-            <li class="breadcrumb-item active"><a href="{{ $.Scratch.Get `url` }}">{{ if  (eq (lang.Translate (humanize . )) "" ) }} {{   humanize .}}{{ else }}{{ lang.Translate (humanize . )  }}{{ end }}</a></li>
+          {{- if compare.Eq $lastUrlElement . -}}
+            <li class="breadcrumb-item active"><a href="{{ $.Scratch.Get `url` }}">{{ if  (compare.Eq (lang.Translate (inflect.Humanize . )) "" ) }} {{   inflect.Humanize .}}{{ else }}{{ lang.Translate (inflect.Humanize . )  }}{{ end }}</a></li>
           {{- else -}}
-            <li class="breadcrumb-item"><a href="{{ $.Scratch.Get `url` }}">{{ if  (eq (lang.Translate (humanize . )) "" ) }} {{   humanize .}}{{ else }}{{ lang.Translate (humanize . )  }}{{ end }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ $.Scratch.Get `url` }}">{{ if  (compare.Eq (lang.Translate (inflect.Humanize . )) "" ) }} {{   inflect.Humanize .}}{{ else }}{{ lang.Translate (inflect.Humanize . )  }}{{ end }}</a></li>
           {{- end -}}
         {{- end -}}
       {{- end -}}

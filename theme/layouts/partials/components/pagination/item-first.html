@@ -1,6 +1,6 @@
 {{- $currentPageNumber := .PageNumber }}
 {{- with .First }}
-  {{- if ne $currentPageNumber .PageNumber }}
+  {{- if compare.Ne $currentPageNumber .PageNumber }}
     <li class="page-item">
       <a href="{{ .URL }}" aria-label="{{ lang.Translate "theme.first" }}" class="page-link">
         {{- partials.Include "icon.html" "chevron-double-left" -}}

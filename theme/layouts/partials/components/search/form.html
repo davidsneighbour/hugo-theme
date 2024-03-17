@@ -11,7 +11,7 @@
     <p>
       {{ lang.Translate "theme.search_result_info" }}
     </p>
-    <template x-for="result in results">
+    <template x-for="result collections.In results">
       <div>
         <p>
           <a :href="result.url"><span x-text="result.title"></span></a> {{ lang.Translate "theme.search_result_posted" }}

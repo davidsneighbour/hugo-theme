@@ -1,5 +1,5 @@
 {{- define "main" -}}
-  {{- if lt (.Scratch.Get "paginator").PageNumber 2 -}}
+  {{- if compare.Lt (.Scratch.Get "paginator").PageNumber 2 -}}
     <section class="section--sitetitle">
 		<div class="container">
 			<div class="site-title ff-headline">

@@ -6,25 +6,25 @@
   {{/* optimum 50 to 60 characters */}}
   {{- $titleLength := len $page.Title -}}
   {{- $optimumLengthTitle := 60 -}}
-  {{- $titleDiff :=  sub $titleLength $optimumLengthTitle -}}
-  {{- $titleDiff = int (math.Pow $titleDiff 2 | math.Sqrt) -}}
+  {{- $titleDiff :=  math.Sub $titleLength $optimumLengthTitle -}}
+  {{- $titleDiff = cast.ToInt (math.Pow $titleDiff 2 | math.Sqrt) -}}
   {{/* optimum 110 to 160 characters */}}
   {{- $descriptionLength := len $page.Description -}}
   {{- $optimumLengthDescription := 160 -}}
-  {{- $descriptionDiff := sub $descriptionLength $optimumLengthDescription -}}
-  {{- $descriptionDiff = int (math.Pow $descriptionDiff 2 | math.Sqrt) -}}
+  {{- $descriptionDiff := math.Sub $descriptionLength $optimumLengthDescription -}}
+  {{- $descriptionDiff = cast.ToInt (math.Pow $descriptionDiff 2 | math.Sqrt) -}}
   {{- $titleClass := "" -}}
-  {{- if gt 30 $titleDiff -}}
+  {{- if compare.Gt 30 $titleDiff -}}
     {{- $titleClass = "danger" -}}
-  {{- else if gt 20 $titleDiff -}}
+  {{- else if compare.Gt 20 $titleDiff -}}
     {{- $titleClass = "warning" -}}
   {{- else -}}
     {{- $titleClass = "success" -}}
   {{- end -}}
   {{- $descriptionClass := "" -}}
-  {{- if gt 30 $descriptionDiff -}}
+  {{- if compare.Gt 30 $descriptionDiff -}}
     {{- $descriptionClass = "danger" -}}
-  {{- else if gt 20 $descriptionDiff -}}
+  {{- else if compare.Gt 20 $descriptionDiff -}}
     {{- $descriptionClass = "warning" -}}
   {{- else -}}
     {{- $descriptionClass = "success" -}}

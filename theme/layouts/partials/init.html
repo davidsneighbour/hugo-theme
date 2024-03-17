@@ -1,20 +1,20 @@
 {{- partials.Include "func/hook.html" ( collections.Dictionary "hook" "init" "context" . ) -}}
 {{- $paginator := collections.Dictionary -}}
-{{- if eq "home" .Kind -}}
+{{- if compare.Eq "home" .Kind -}}
   {{- /*
   - see https://discourse.gohugo.io/t/possible-first-list-page-showing-9-items-following-showing-10-items/36186/
   */ -}}
-  {{- $p := where site.RegularPages "Type" "in" site.Params.mainSections -}}
-  {{- $p = collections.Slice site.Home | append $p -}}
+  {{- $p := collections.Where site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- $p = collections.Slice site.Home | collections.Append $p -}}
   {{- $paginator = $.Paginate $p -}}
-{{- else if eq .Section "components" -}}
-  {{- $p := where site.RegularPages "Section" "eq" "components" -}}
-  {{- $p = where $p "Params.subcollection" "!=" "true" -}}
-  {{- $p = sort $p "Date" "desc" -}}
+{{- else if compare.Eq .Section "components" -}}
+  {{- $p := collections.Where site.RegularPages "Section" "eq" "components" -}}
+  {{- $p = collections.Where $p "Params.subcollection" "!=" "true" -}}
+  {{- $p = collections.Sort $p "Date" "desc" -}}
   {{- $paginator = $.Paginate $p -}}
-{{- else if eq .Section "archive" -}}
-  {{- $p := where site.RegularPages "Type" "in" site.Params.mainSections -}}
-  {{- $p = sort $p "Date" "desc" -}}
+{{- else if compare.Eq .Section "archive" -}}
+  {{- $p := collections.Where site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- $p = collections.Sort $p "Date" "desc" -}}
   {{- $paginator = $.Paginate $p 25 -}}
 {{- else if .IsNode -}}
   {{- $paginator = $.Paginator -}}

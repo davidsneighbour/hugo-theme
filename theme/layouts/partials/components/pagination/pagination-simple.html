@@ -1,7 +1,7 @@
 <nav class="row" aria-label="Page Navigation">
   <div class="d-flex flex-column">
     {{- $paginator := .Scratch.Get "paginator" -}}
-    {{- if gt $paginator.TotalPages 1 -}}
+    {{- if compare.Gt $paginator.TotalPages 1 -}}
       <ul class="pagination align-self-center mb-0">
         {{- with $paginator -}}
           {{- $currentPageNumber := .PageNumber -}}
