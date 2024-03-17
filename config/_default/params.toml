@@ -17,7 +17,7 @@ icontheme = "bootstrap"
 
 [dnb.theme.switcher]
 enabled = true   # boolean
-default = "dark" # `dark`, `light` or whatever `dnb.theme.switcher.themes` offers
+default = "dark" # `dark`, `light` or any theme of `dnb.theme.switcher.themes`
 
 [dnb.theme.backtotop]
 enabled = true
