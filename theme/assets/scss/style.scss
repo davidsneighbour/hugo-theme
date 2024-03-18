@@ -1,28 +1,28 @@
 @charset 'utf-8';
 
-// BS: configuration
+/// BS: configuration
 @import 'bootstrap/scss/functions';
 
-// DNB: theme settings
+/// DNB: theme settings
 @import '01-settings/fonts';
 @import '01-settings/colormode-light';
 @import '01-settings/colormode-dark';
 @import '01-settings/theme';
 @import '01-settings/utilities';
 
-// BS: theme settings
+/// BS: theme settings
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
 
-// DNB: map overrides
+/// DNB: map overrides
 @import '01-settings/maps';
 
-// BS: other required parts
+/// BS: other required parts
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/utilities';
 
-// BS: all other components as required
+/// BS: all other components as required
 @import 'bootstrap/scss/root';
 @import 'bootstrap/scss/reboot';
 @import 'bootstrap/scss/type';
@@ -61,13 +61,13 @@
 // @import 'bootstrap/scss/offcanvas';
 // @import 'bootstrap/scss/placeholders';
 
-// BS: helpers
+/// BS: helpers
 @import 'bootstrap/scss/helpers';
 
-// BS: utilities API
+/// BS: utilities API
 @import 'bootstrap/scss/utilities/api';
 
-// DNB: mixins
+/// DNB: mixins
 @import '02-mixins/colors';
 @import '02-mixins/css_functions';
 @import '02-mixins/scrollbars';
@@ -75,17 +75,17 @@
 @import '02-mixins/shadows';
 @import '02-mixins/typography';
 
-// DNB: Global
+/// DNB: Global
 @import '03-global/global';
 @import '03-global/header';
 @import '03-global/footer';
 @import '03-global/responsive';
 @import '03-global/transitions';
 
-// adding scrollbars
+/// adding scrollbars
 @include dnb-scrollbars;
 
-// DNB: Components
+/// DNB: Components
 @import '04-components/alerts';
 @import '04-components/archive';
 @import '04-components/articles';
@@ -100,7 +100,7 @@
 @import '04-components/text';
 @import '04-components/utilities';
 
-// DNB: prose - article content formatting
+/// DNB: prose - article content formatting
 @include dnb-scrollbars('.prose', 3px);
 
 .prose {
@@ -110,18 +110,18 @@
   @import '05-prose/tables';
 }
 
-// DNB: plugins
+/// DNB: plugins
 // @import '06-plugins/devaudit';
 @import '06-plugins/responsive-ruler';
 @import '06-plugins/shortcodes';
 @import '06-plugins/syntax';
 @import '06-plugins/theme-toggle';
 
-// DNB: hugo-blockify
+/// DNB: hugo-blockify
 // @import 'blockify';
 @import 'lite-yt-embed';
 
-// DNB: external plugins (imported from node_modules)
+/// DNB: external plugins (imported from node_modules)
 @import 'animate.css/animate';
 
 // @import 'auditor';

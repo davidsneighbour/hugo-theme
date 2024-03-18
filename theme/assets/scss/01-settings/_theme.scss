@@ -1,21 +1,17 @@
-////
-/// @author Patrick Kollitsch
-////
-
 /**
  * @deprecated
  */
 $primary: #ff6569;
 
-// global elements
+/// global elements
 $border-width: 2px;
 
-// typography
-// $font-size-root: 16px;
+/// typography
+/// $font-size-root: 16px;
 $font-size-base: 1.5rem;
 $font-family-sans-serif: "Exo 2", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-// headings
+/// headings
 $h1-font-size: $font-size-base * 1.75;
 $h2-font-size: $font-size-base * 1.5;
 $h3-font-size: $font-size-base * 1.25;
@@ -31,38 +27,38 @@ $headings-color: inherit;
 
 $component-active-color: var(--bs-dark);
 
-// links
+/// links
 $link-color: $primary;
 $link-color-dark: $primary;
 $link-hover-color: $primary;
 $link-decoration: none;
 $link-hover-decoration: underline;
 
-// badges
+/// badges
 $badge-font-weight: 500;
 $badge-font-size: 0.5em;
 
-// navigation
-// @see https://getbootstrap.com/docs/5.3/components/navbar/
-// @see https://getbootstrap.com/docs/5.3/components/navs-tabs/
+/// navigation
+/// @link https://getbootstrap.com/docs/5.3/components/navbar/
+/// @link https://getbootstrap.com/docs/5.3/components/navs-tabs/
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
 $navbar-brand-padding-y: 0;
 
-// settings
+/// settings
 $enable-shadows: true;
 $enable-negative-margins: true;
 $enable-rounded: false;
 $enable-important-utilities: false;
 
-// theme relevant settings
+/// theme relevant settings
 $heading-height: 70px;
 $mark-bg: var(--bs-primary);
 
-// root setup
+/// root setup
 :root {
-  // @see https://drafts.csswg.org/css-ui-4/#widget-accent
-  // @see https://caniuse.com/?search=accent-color
+  // @link https://drafts.csswg.org/css-ui-4/#widget-accent
+  // @link https://caniuse.com/?search=accent-color
   accent-color: var(--bs-primary);
   color-scheme: dark light;
 

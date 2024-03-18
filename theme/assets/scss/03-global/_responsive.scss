@@ -1,4 +1,4 @@
-// fix navigation overflow for anchor links
+/// fix navigation overflow for anchor links
 :target::before {
   @extend .d-block;
   height: $heading-height;

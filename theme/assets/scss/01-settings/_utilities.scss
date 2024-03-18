@@ -1,11 +1,8 @@
-////
 /// A collection of utility classes for Bootstrap, using the utility API.
 ///
-/// @author Patrick Kollitsch
-/// @see https://getbootstrap.com/docs/5.3/utilities/api/
-////
+/// @link https://getbootstrap.com/docs/5.3/utilities/api/
 
-// https://getbootstrap.com/docs/5.3/utilities/api/
+/// @link https://getbootstrap.com/docs/5.3/utilities/api/
 $containers: (
   12: 12px,
   16: 16px,
@@ -16,7 +13,7 @@ $containers: (
   60: 60px,
 );
 
-// setup utilities
+/// setup utilities
 $utilities: (
   'fsize': (property: font-size,
     class: fontsize,
