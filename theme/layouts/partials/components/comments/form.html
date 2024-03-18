@@ -12,10 +12,12 @@
     </div>
   {{- end -}}
 {{- end -}}
-{{- with (and site.Params.dnb.giscus $commentform) -}}
-  {{- if (compare.Eq "true" $commentform) -}}
-    <div class="col-12">
-      {{- partials.IncludeCached "content/giscus.html" $context $context -}}
-    </div>
+{{- if not hugo.IsServer -}}
+  {{- with (and site.Params.dnb.giscus $commentform) -}}
+    {{- if (compare.Eq "true" $commentform) -}}
+      <div class="col-12">
+        {{- partials.IncludeCached "content/giscus.html" $context $context -}}
+      </div>
+    {{- end -}}
   {{- end -}}
 {{- end -}}
