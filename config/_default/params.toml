@@ -40,6 +40,10 @@ target = "es2020"
 # [dnb.theme.jsbuild.options.params]
 # api = "https://example.org/api"
 
+[dnb.theme.related]
+exclude_tags = ["100DaysToOffload"]
+limit = 5
+
 ################################################################################
 # hooks setup
 ################################################################################

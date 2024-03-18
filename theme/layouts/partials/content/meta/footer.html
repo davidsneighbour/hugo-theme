@@ -9,3 +9,5 @@
     {{- partials.IncludeCached "content/meta/meta-seo.html" $page $page -}}
   {{- end -}}
 </div>
+
+{{- partials.IncludeCached "content/sections/related.html" $page $page.Params.tags -}}
