@@ -8,8 +8,12 @@ github.com/davidsneighbour/hugo-modules/modules/auditor v1.2024.1 h1:3+WmzSYysAi
 github.com/davidsneighbour/hugo-modules/modules/auditor v1.2024.1/go.mod h1:LibI1IDZCBBzIo/klOpNTLTZ3H6DeZc0K0qyh7j6Zus=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.18 h1:mhRyv4P7t8sSjnhsfgHfYNAovsSFJDtjuu39npI27hc=
 github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.18/go.mod h1:RNHwHaIFANFp+t6QRPsIoFeUz3gERr8K2vw5+NhVl5Q=
+github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.19 h1:ul3TXpjsPreOWQPDfWbZvhKZochHgiTOXCxdXSVLcpY=
+github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.19/go.mod h1:RNHwHaIFANFp+t6QRPsIoFeUz3gERr8K2vw5+NhVl5Q=
 github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240317164240-76fc3754984d h1:FUWhkHKti/FU06VD0+2daeyil/WIK3K26eOg2iQekzo=
 github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240317164240-76fc3754984d/go.mod h1:19ZtwsMLIs2XThZd6c+gMnktRW2DfuMXRgKouWgnTpY=
+github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240319100338-d05739b645bd h1:KWXisT6SGLT5rpb7N1QnubqTfvasLafidUwMaRs8bT0=
+github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240319100338-d05739b645bd/go.mod h1:19ZtwsMLIs2XThZd6c+gMnktRW2DfuMXRgKouWgnTpY=
 github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.5 h1:68l82DFmWuqebkMRl1N1tejWoMMhKMkO2D0e21Nv/2s=
 github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.5/go.mod h1:PLYderlhl7SVcRMriL6it9mHZevTpEY839U95RmboUI=
 github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.6 h1:ANj17Z2la3ZPtHjHiG9QV/CtoThkzIMo0WjlYfDKTwg=

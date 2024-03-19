@@ -9,8 +9,8 @@ require (
 	github.com/csswizardry/ct v0.0.0-20230131155739-4e0d88c1a9ff // indirect
 	github.com/davidsneighbour/hugo-modules v1.2024.19 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/auditor v1.2024.1 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.18 // indirect
-	github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240317164240-76fc3754984d // indirect
+	github.com/davidsneighbour/hugo-modules/modules/debug v1.2024.19 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/errors v0.0.0-20240319100338-d05739b645bd // indirect
 	github.com/davidsneighbour/hugo-modules/modules/feeds v1.2024.5 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/functions v1.2024.6 // indirect
 	github.com/davidsneighbour/hugo-modules/modules/giscus v1.2024.0 // indirect

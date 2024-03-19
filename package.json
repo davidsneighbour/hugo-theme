@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/alpinejs__collapse": "^3.13.4",
-    "@types/node": "^20.11.28"
+    "@types/node": "^20.11.29"
   },
   "scripts": {
     "clean": "wireit",
