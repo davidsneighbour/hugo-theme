@@ -1,7 +1,7 @@
 ---
 '$schema': /static/_schemata/blog.schema.yaml
-title: { { replace .Name "-" " " | title } }
-linkTitle: { { replace .Name "-" " " | title } }
+title: {{ replace .Name "-" " " | title }}
+linkTitle: {{ replace .Name "-" " " | title }}
 description: ''
 summary: ''
 
@@ -9,9 +9,9 @@ draft: true
 
 type: video
 
-date: { { .Date } }
-publishDate: { { .Date } }
-lastmod: { { .Date } }
+date: {{ .Date }}
+publishDate: {{ .Date }}
+lastmod: {{ .Date }}
 
 resources:
   - title: Photo by [Name](Link) via [Unsplash](https://unsplash.com/)
