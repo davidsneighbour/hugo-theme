@@ -12,7 +12,7 @@
     "@davidsneighbour/prettier-config": "^2024.0.3",
     "@davidsneighbour/standard-version-config": "^5.10.1",
     "@davidsneighbour/stylelint-config": "2024.0.3",
-    "@davidsneighbour/tools": "2024.0.3",
+    "@davidsneighbour/tools": "2024.1.0",
     "@github/hotkey": "3.1.0",
     "@types/alpinejs": "3.13.10",
     "alpinejs": "3.13.7",
